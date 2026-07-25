@@ -6,12 +6,15 @@ LP / コーポレートサイト。Vercel にデプロイする。
 
 | | | |
 |---|---|---|
-| Next.js | 16.x (App Router) | Active LTS。React Compiler が安定版として利用可 |
-| React | 19.x | Server Components がデフォルト |
-| TypeScript | 5.x | `strict: true` |
-| Tailwind CSS | v4 | CSS-first。設定は `app/globals.css` の `@theme` |
-| shadcn/ui | 最新 | Base UI プリミティブ上に構築 |
-| パッケージ管理 | pnpm | `corepack enable pnpm` |
+| Next.js | 16.2.11 (App Router) | Turbopack |
+| React | 19.2.4 | Server Components がデフォルト |
+| TypeScript | 5.9 | `strict: true` |
+| Tailwind CSS | 4.3 | CSS-first。設定は `app/globals.css` の `@theme` |
+| パッケージ管理 | pnpm 11 | Node 26 に corepack が無いので `npm i -g pnpm` |
+
+**shadcn/ui は導入していない。** このサイトに複雑なウィジェットが無く、
+`components/ui/` の 5 ファイルで足りているため。導入するなら `components/ui/` の
+命名がぶつかるので、先に移動させること。
 
 ## 判断の基準
 
@@ -23,23 +26,40 @@ LP / コーポレートサイト。Vercel にデプロイする。
 任意値（`mt-[37px]` `text-[#3a3a3a]`）を書きたくなったら、それはトークンが足りていない合図。
 
 **コピーは `content/` に置く。** JSX に直接書かない。非エンジニアが探せる場所に置くため。
+出典は掲載コピー集（Google ドキュメント）。文言を変えるときは向こうも直す。
 
 **375px から作る。** デスクトップから縮めると必ず壊れる。
+
+**見出しだけ `word-break: auto-phrase`。** 本文に掛けると行末が波打って読みにくくなる。
+
+**写真は `PhotoSlot` の枠で確保してある。** `data-photo` 属性を grep すれば
+差し替え箇所が全部出る。置き換え先は `next/image`（寸法明示、LCP画像のみ `priority`）。
 
 ## ディレクトリ
 
 ```
-app/                    App Router
-  (marketing)/          公開ページ
-  globals.css           Tailwind の @theme（デザイントークンの正）
+app/
+  (marketing)/          公開11ページ
+  actions/contact.ts    お問い合わせの Server Action
+  globals.css           @theme（デザイントークンの実装）
+  fonts.ts              next/font の定義
+  opengraph-image.tsx   OGP画像（ビルド時生成）
+  sitemap.ts robots.ts
 components/
-  sections/             LP のセクション
-  ui/                   shadcn/ui（直接編集しない）
-content/                コピー・データ
-.claude/
-  design/art-direction.md   視覚的な意思決定の正
-  skills/                   このプロジェクト用スキル
+  site/                 Header / Footer / MobileNav / MobileCta
+  sections/             複数ページで使うセクション
+  ui/                   自前のプリミティブ（layout / Button / Card / Stat / PhotoSlot）
+content/                コピー（ページごとに1ファイル）
+lib/                    cn / og-font
+.claude/design/art-direction.md   視覚的な意思決定の正
 ```
+
+### ルート
+
+`/` `/about` `/future` `/showa-mura` `/riku` `/experiments`
+`/members` `/partners` `/team` `/journal` `/contact`
+
+`/contact` だけ動的。`?interest=` で関心の種類を選択済みにして開くため。
 
 ## スキル
 

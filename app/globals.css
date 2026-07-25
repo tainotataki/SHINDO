@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* =============================================================
+   デザイントークン — 正は .claude/design/art-direction.md
+   ここに無い値を使いたくなったら、まず向こうを更新する。
+   ============================================================= */
+
+@theme {
+  /* --- 色：土・稲・森・雪・湧水 ------------------------------ */
+  --color-base: #f2eee4; /* 生成り */
+  --color-surface: #faf8f3; /* 雪 */
+  --color-ink: #23201c; /* 墨 */
+  --color-ink-muted: #5b554b;
+  --color-forest: #1e3a2f;
+  --color-forest-deep: #132318;
+  /* 実りの金。生成り地で 4.71:1 ＝ 13px のキッカーでも AA を満たす明度に調整済み */
+  --color-gold: #856427;
+  --color-water: #3f5c66; /* 図版のみ */
+  --color-line: #ddd6c6; /* 罫 */
+
+  /* --- タイポグラフィ --------------------------------------- */
+  --text-display: clamp(2rem, 5.5vw, 4rem);
+  --text-display--line-height: 1.3;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-h1: clamp(1.625rem, 3.5vw, 2.5rem);
+  --text-h1--line-height: 1.45;
+  --text-h1--letter-spacing: -0.015em;
+
+  --text-h2: clamp(1.25rem, 2.2vw, 1.625rem);
+  --text-h2--line-height: 1.55;
+  --text-h2--letter-spacing: -0.01em;
+
+  --text-h3: 1.0625rem;
+  --text-h3--line-height: 1.7;
+
+  --text-lead: clamp(1rem, 1.4vw, 1.125rem);
+  --text-lead--line-height: 2;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.9;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.75;
+
+  /* --- 余白・寸法 ------------------------------------------- */
+  --spacing-section: clamp(4rem, 9vw, 7.5rem);
+  --spacing-gutter: 1.25rem;
+
+  --container-content: 72rem;
+  --container-prose: 38rem; /* 全角 38 文字。日本語で追える上限 */
+  --container-wide: 84rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* --- モーション ------------------------------------------- */
+  --ease-quiet: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-gothic), "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-mincho: var(--font-mincho-jp), "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+/* =============================================================
+   ベース
+   ============================================================= */
+
+@layer base {
+  :root {
+    /* ダークモードは実装しない。理由は art-direction.md §4。 */
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* 固定ヘッダー分、アンカー着地位置を下げる */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-base);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 見出しは明朝。palt で日本語の約物アキを詰める */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-mincho);
+    font-feature-settings: "palt" 1;
+    font-weight: 400;
+  }
+
+  /*
+   * 見出しの改行位置。
+   *
+   * 既定では「終わりではな／く、」のように文節の途中で折り返してしまう。
+   * auto-phrase は文節境界を優先するため、短い行が続く見出しでよく効く。
+   * 未対応ブラウザでは normal に落ちるだけ。
+   *
+   * 本文には掛けない。行あたりの文字数が少ないモバイルでは、
+   * 文節優先の改行が行末を大きく波打たせ、かえって読みにくくなるため。
+   */
+  h1,
+  h2,
+  h3,
+  h4 {
+    word-break: auto-phrase;
+  }
+
+  /* 日本語の禁則処理。英単語の途中で切らないための break-word も併記する */
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  dt,
+  dd {
+    line-break: strict;
+    overflow-wrap: break-word;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-gold) 22%, transparent);
+  }
+}
+
+/* =============================================================
+   スクロール連動のフェードイン
+
+   scroll-driven animation を使い JavaScript を一切使わない。
+   INP に影響しないことと、未対応ブラウザでは
+   「最初から見えている」状態に素直に落ちることが選定理由。
+   ============================================================= */
+
+@layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .reveal {
+        animation: reveal-in linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 45%;
+      }
+    }
+  }
+
+  @keyframes reveal-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /*
+   * モバイルの追従CTAバー。
+   *
+   * ファーストビューにはヒーロー内にも同じ2つのボタンがあるため、
+   * 最初から出しておくと同じ導線が二重になり、狭い画面をさらに削る。
+   * スクロールを始めてから せり上がらせる。
+   *
+   * scroll() タイムラインが無いブラウザでは常時表示のまま。
+   * 「CTA が常にある」状態なので、劣化しても機能は損なわれない。
+   */
+  @supports (animation-timeline: scroll()) {
+    .sticky-cta {
+      animation: sticky-cta-in linear both;
+      animation-timeline: scroll();
+      animation-range: 0 420px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sticky-cta {
+        animation-name: sticky-cta-fade;
+      }
+    }
+  }
+
+  @keyframes sticky-cta-in {
+    0%,
+    55% {
+      opacity: 0;
+      transform: translateY(100%);
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+  }
+
+  /* 動きを減らす設定のときは、移動させず表示切り替えだけにする */
+  @keyframes sticky-cta-fade {
+    0%,
+    55% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

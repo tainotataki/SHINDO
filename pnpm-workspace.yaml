@@ -1,0 +1,5 @@
+allowBuilds:
+  # next/image の本番最適化に使う
+  sharp: true
+  # eslint-config-next のモジュール解決に使う
+  unrs-resolver: true
