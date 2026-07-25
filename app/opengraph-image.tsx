@@ -1,5 +1,6 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
-import { loadJapaneseFont } from "@/lib/og-font";
 import { site } from "@/content/site";
 
 export const alt = `${site.name} — ${site.tagline}`;
@@ -11,10 +12,19 @@ export const contentType = "image/png";
 const headingLines = ["共に土にまみれ、共鳴し、", "氣づき、創り上げる。"];
 const sub = "奥会津の小さな村から、暮らしの基盤を自分たちの手に。";
 
-export default async function OpengraphImage() {
-  const fontData = await loadJapaneseFont(
-    `${headingLines.join("")}${sub}${site.tagline}SHINDO`,
+/**
+ * サイト本体と同じ明朝を使う。
+ * Satori は woff2 を読めないため、サブセットの ttf のほうを渡す。
+ * ビルド時に静的生成されるので、ここでのファイル読み込みは実行時に走らない。
+ */
+async function loadMincho() {
+  return readFile(
+    path.join(process.cwd(), "app/fonts/SatsukiGendaiMincho-subset.ttf"),
   );
+}
+
+export default async function OpengraphImage() {
+  const fontData = await loadMincho();
 
   return new ImageResponse(
     (
@@ -27,13 +37,13 @@ export default async function OpengraphImage() {
           justifyContent: "space-between",
           backgroundColor: "#f2eee4",
           padding: "72px 80px",
-          fontFamily: "Shippori Mincho",
+          fontFamily: "Satsuki Gendai Mincho",
           color: "#23201c",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div style={{ width: 48, height: 2, backgroundColor: "#8a6a2b" }} />
-          <div style={{ fontSize: 24, letterSpacing: 6, color: "#8a6a2b" }}>
+          <div style={{ width: 48, height: 2, backgroundColor: "#856427" }} />
+          <div style={{ fontSize: 24, letterSpacing: 6, color: "#856427" }}>
             {site.tagline}
           </div>
         </div>
@@ -66,7 +76,14 @@ export default async function OpengraphImage() {
     ),
     {
       ...size,
-      fonts: [{ name: "Shippori Mincho", data: fontData, style: "normal", weight: 600 }],
+      fonts: [
+        {
+          name: "Satsuki Gendai Mincho",
+          data: fontData,
+          style: "normal",
+          weight: 500,
+        },
+      ],
     },
   );
 }

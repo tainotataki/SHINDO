@@ -95,7 +95,8 @@
   h4 {
     font-family: var(--font-mincho);
     font-feature-settings: "palt" 1;
-    font-weight: 400;
+    /* 明朝は Medium(500) の1ウェイトのみ。ここを 700 にすると偽ボールドになる */
+    font-weight: 500;
   }
 
   /*

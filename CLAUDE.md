@@ -32,6 +32,9 @@ LP / コーポレートサイト。Vercel にデプロイする。
 
 **見出しだけ `word-break: auto-phrase`。** 本文に掛けると行末が波打って読みにくくなる。
 
+**コピーを追加したら `python3 scripts/subset-font.py` を実行する。** 見出しの明朝は
+実際に使う文字だけを収録したサブセット。収録外の字はフォールバックに落ちて書体が変わる。
+
 **写真は `PhotoSlot` の枠で確保してある。** `data-photo` 属性を grep すれば
 差し替え箇所が全部出る。置き換え先は `next/image`（寸法明示、LCP画像のみ `priority`）。
 

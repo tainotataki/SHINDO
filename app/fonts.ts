@@ -1,17 +1,23 @@
-import { Shippori_Mincho, Zen_Kaku_Gothic_New } from "next/font/google";
+import localFont from "next/font/local";
+import { Zen_Kaku_Gothic_New } from "next/font/google";
 
 /**
  * 見出し用の明朝。「静けさと確かさ」を担当する。
- * 日本語フォントは unicode-range で細かく分割配信されるため、
- * preload: false にして「全スライスの先読み」を防ぐ。
- * ブラウザは実際に使う字だけを取りに行く。
+ *
+ * 元は 16MB あるため、サイトに出てくる文字だけに絞った woff2 を置いている。
+ * コピーを足したら scripts/subset-font.py を再実行すること。
+ * 収録外の文字は Hiragino Mincho ProN 等にフォールバックする。
+ *
+ * ウェイトは Medium(500) の1種類しかない。CSS 側で 700 を要求すると
+ * ブラウザが偽ボールドを合成して明朝の骨格が濁るので、見出しは 500 で使う。
  */
-export const minchoJp = Shippori_Mincho({
-  weight: ["400", "600"],
-  subsets: ["latin"],
+export const minchoJp = localFont({
+  src: "./fonts/SatsukiGendaiMincho-subset.woff2",
+  weight: "500",
+  style: "normal",
   display: "swap",
-  preload: false,
   variable: "--font-mincho-jp",
+  fallback: ["Hiragino Mincho ProN", "Yu Mincho", "serif"],
 });
 
 /** 本文用のゴシック。実務的な読みやすさを担当する。 */
