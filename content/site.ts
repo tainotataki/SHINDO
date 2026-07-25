@@ -11,8 +11,15 @@ export const site = {
   email: "official@zen-bu.co",
   publisher: "株式会社ZEN-BU",
   copublisher: "自然農法 無の会",
-  /** 本番ドメイン確定後に差し替える */
-  url: "https://shindo.zen-bu.co",
+  /**
+   * 正規URL。canonical・OGP の絶対URL・sitemap・JSON-LD の基準になる。
+   *
+   * Vercel では NEXT_PUBLIC_SITE_URL に本番ドメインを入れる。
+   * NEXT_PUBLIC_ を付けているのは、この値が公開情報であり、
+   * かつクライアント側から参照しても破綻しないようにするため。
+   * 未設定なら下の既定値になるので、ドメイン確定後は必ず設定すること。
+   */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://shindo.zen-bu.co",
 } as const;
 
 export type NavItem = { href: string; label: string };
