@@ -12,8 +12,10 @@ build/
 next-env.d.ts
 
 # env
-.env
-.env*.local
+# .env* で一括除外しつつ、雛形だけは追跡する。
+# 新しく参加した人が「何を設定すればいいか」を知る唯一の手がかりのため。
+.env*
+!.env.example
 
 # vercel
 .vercel/
