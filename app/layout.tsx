@@ -3,7 +3,7 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { MobileCta } from "@/components/site/MobileCta";
 import { site } from "@/content/site";
-import { gothic, minchoJp } from "./fonts";
+import { minchoJp } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${minchoJp.variable} ${gothic.variable}`}>
+    <html lang="ja" className={minchoJp.variable}>
       {/* 追従CTAバーの高さ分、最後の要素が隠れないよう下に余白を確保する */}
       <body className="pb-[76px] antialiased lg:pb-0">
         <a

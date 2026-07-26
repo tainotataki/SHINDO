@@ -1,15 +1,16 @@
 import localFont from "next/font/local";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
 
 /**
- * 見出し用の明朝。「静けさと確かさ」を担当する。
+ * サイト全体の書体。見出しも本文も Satsuki Gendai Mincho（皐月現代明朝）。
  *
- * 元は 16MB あるため、サイトに出てくる文字だけに絞った woff2 を置いている。
+ * 元ファイルは 16MB あるため、サイトに出てくる文字だけに絞った woff2 を置いている。
+ * サブセットはコピー全体（content / components / app）から生成しているので、
+ * 本文に使っても収録文字は増えず、サイズも変わらない。
  * コピーを足したら scripts/subset-font.py を再実行すること。
- * 収録外の文字は Hiragino Mincho ProN 等にフォールバックする。
+ * 収録外の字は Hiragino Mincho ProN 等にフォールバックする。
  *
- * ウェイトは Medium(500) の1種類しかない。CSS 側で 700 を要求すると
- * ブラウザが偽ボールドを合成して明朝の骨格が濁るので、見出しは 500 で使う。
+ * ウェイトは Medium(500) の1種類。サイト内で使っているのも font-medium だけなので、
+ * 偽ボールドの合成は起きない。700 を要求する指定を足さないこと。
  */
 export const minchoJp = localFont({
   src: "./fonts/SatsukiGendaiMincho-subset.woff2",
@@ -18,13 +19,4 @@ export const minchoJp = localFont({
   display: "swap",
   variable: "--font-mincho-jp",
   fallback: ["Hiragino Mincho ProN", "Yu Mincho", "serif"],
-});
-
-/** 本文用のゴシック。実務的な読みやすさを担当する。 */
-export const gothic = Zen_Kaku_Gothic_New({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-  variable: "--font-gothic",
 });

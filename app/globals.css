@@ -59,7 +59,11 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-gothic), "Hiragino Sans", "Noto Sans JP", sans-serif;
+  /*
+   * 見出しも本文も同じ明朝。--font-sans という名前は Tailwind の既定トークン名
+   * なので残しているが、中身はゴシックではない。
+   */
+  --font-sans: var(--font-mincho-jp), "Hiragino Mincho ProN", "Yu Mincho", serif;
   --font-mincho: var(--font-mincho-jp), "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
@@ -84,8 +88,16 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-size: var(--text-body);
+    /* 実在する唯一のウェイト。400 のままでもブラウザが 500 を選ぶが、明示しておく */
+    font-weight: 500;
     line-height: 1.9;
-    -webkit-font-smoothing: antialiased;
+    /*
+     * 本文も明朝なので、画面上での読みやすさを2点で補う。
+     * ・わずかに字間を空ける。明朝は横画が細く、ベタ組みだと字がつながって見える
+     * ・antialiased（グレースケール）を掛けない。サブピクセルのほうが
+     *   縦画横画のコントラストが残り、小さい字でも骨格が潰れにくい
+     */
+    letter-spacing: 0.02em;
   }
 
   /* 見出しは明朝。palt で日本語の約物アキを詰める */
