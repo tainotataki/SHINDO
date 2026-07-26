@@ -30,5 +30,11 @@ coverage/
 npm-debug.log*
 pnpm-debug.log*
 
+# 連携インストーラが入れるベンダー製のエージェント向けドキュメント。
+# 参照資料でありプロダクトのコードではないので、リポジトリには含めない。
+# 必要になったら `vercel integration add` で再取得できる。
+.agents/
+skills-lock.json
+
 # macOS
 .DS_Store
