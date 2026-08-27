@@ -376,3 +376,20 @@ img, video, iframe { max-width: 100%; height: auto; }
 @media (max-width: 900px){
   .hero-cta{margin-left:auto !important;margin-right:auto !important}
 }
+
+/* =========================================================
+   about.html「WORLDVIEW ── SHINDOに至る歴史観」の区切り線
+
+   左右2段組の右カラムに border-left で縦の区切り線を引いているが、
+   640px以下（スマートフォンの縦向き）では1列に畳まれるため、
+   縦線が本文の左脇に取り残されて意味をなさない。
+   上下の区切りに変え、前のブロックとの境目に置く。
+   ========================================================= */
+@media (max-width: 640px){
+  .worldview-right{
+    border-left:0 !important;
+    padding-left:0 !important;
+    border-top:1px solid #D9C97E !important;
+    padding-top:32px !important;
+  }
+}
