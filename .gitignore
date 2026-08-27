@@ -1,40 +1,4 @@
-# Claude Code local settings
-.claude/settings.local.json
-
-# dependencies
-node_modules/
-.pnpm-store/
-
-# next.js
-.next/
-out/
-build/
-next-env.d.ts
-
-# env
-# .env* で一括除外しつつ、雛形だけは追跡する。
-# 新しく参加した人が「何を設定すればいいか」を知る唯一の手がかりのため。
-.env*
-!.env.example
-
-# vercel
-.vercel/
-
-# testing / tooling caches
-coverage/
-.turbo/
-*.tsbuildinfo
-
-# logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-
-# 連携インストーラが入れるベンダー製のエージェント向けドキュメント。
-# 参照資料でありプロダクトのコードではないので、リポジトリには含めない。
-# 必要になったら `vercel integration add` で再取得できる。
-.agents/
-skills-lock.json
-
-# macOS
 .DS_Store
+**/.DS_Store
+Thumbs.db
+.vercel

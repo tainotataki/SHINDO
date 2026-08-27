@@ -1,0 +1,147 @@
+/* =========================================================
+   SHINDO ── レスポンシブ対応（追加分）
+
+   既存HTMLのインラインスタイル（デスクトップ幅前提の数値）を、
+   画面幅に応じて上書きします。
+   HTML本体の構造・文言・デザインは変更していません。
+   デスクトップ（901px以上）の表示は一切変わりません。
+   ========================================================= */
+
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* ---------- タブレット以下：900px ---------- */
+@media (max-width: 900px) {
+
+  /* 左右の余白 60px / 48px → 28px */
+  [style*="px 60px"], [style*="0 60px"],
+  [style*="px 48px"], [style*="0 48px"] {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  /* 3列・4列 → 2列 */
+  [style*="repeat(3,1fr)"], [style*="repeat(3, 1fr)"],
+  [style*="repeat(4,1fr)"], [style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* 固定px幅を含む段組み（サイドバー型・表組み型）→ 1列 */
+  [style*="grid-template-columns:170px"], [style*="grid-template-columns: 170px"],
+  [style*="grid-template-columns:120px"], [style*="grid-template-columns: 120px"],
+  [style*="grid-template-columns:180px"], [style*="grid-template-columns: 180px"],
+  [style*="grid-template-columns:200px"], [style*="grid-template-columns: 200px"],
+  [style*="grid-template-columns:280px"], [style*="grid-template-columns: 280px"],
+  [style*="1fr 320px"], [style*="1fr 360px"], [style*="1fr 90px 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [style*="gap:60px"], [style*="gap: 60px"] { gap: 32px !important; }
+
+  /* 見出しの固定幅・固定高を解除 */
+  h1, h2, h3 { width: auto !important; height: auto !important; }
+}
+
+/* ---------- スマートフォン：640px ---------- */
+@media (max-width: 640px) {
+
+  html, body { overflow-x: hidden; }
+
+  /* 固定px幅を画面内に収める */
+  div, section, article, header, footer,
+  h1, h2, h3, h4, p, a, span, ul, ol, li, table {
+    max-width: 100% !important;
+  }
+
+  [style*="px 60px"], [style*="0 60px"],
+  [style*="px 48px"], [style*="0 48px"] {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* 段組みはすべて1列 */
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  [style*="gap:60px"], [style*="gap: 60px"],
+  [style*="gap:30px"], [style*="gap: 30px"],
+  [style*="gap:28px"], [style*="gap: 28px"] { gap: 18px !important; }
+
+  /* 大きな級数の見出しを縮小 */
+  [style*="font-size:58px"], [style*="font-size: 58px"] { font-size: 30px !important; }
+  [style*="font-size:44px"], [style*="font-size: 44px"] { font-size: 26px !important; }
+  [style*="font-size:40px"], [style*="font-size: 40px"] { font-size: 25px !important; }
+  [style*="font-size:36px"], [style*="font-size: 36px"] { font-size: 24px !important; }
+  [style*="font-size:32px"], [style*="font-size: 32px"] { font-size: 23px !important; }
+  [style*="font-size:30px"], [style*="font-size: 30px"] { font-size: 22px !important; }
+  [style*="font-size:28px"], [style*="font-size: 28px"] { font-size: 21px !important; }
+  [style*="font-size:26px"], [style*="font-size: 26px"] { font-size: 20px !important; }
+  [style*="font-size:24px"], [style*="font-size: 24px"] { font-size: 19px !important; }
+  [style*="font-size:22px"], [style*="font-size: 22px"] { font-size: 18px !important; }
+
+  h1, h2 { letter-spacing: .03em !important; }
+
+  /* 帯状の背景画像の高さを抑える */
+  [style*="height:460px"], [style*="height: 460px"] { height: 240px !important; }
+  [style*="height:420px"], [style*="height: 420px"] { height: 220px !important; }
+  [style*="height:380px"], [style*="height: 380px"] { height: 210px !important; }
+  [style*="height:340px"], [style*="height: 340px"] { height: 200px !important; }
+  [style*="height:300px"], [style*="height: 300px"] { height: 190px !important; }
+
+  /* 上下の余白を圧縮 */
+  [style*="padding:96px"], [style*="padding: 96px"],
+  [style*="padding:88px"], [style*="padding: 88px"],
+  [style*="padding:84px"], [style*="padding: 84px"],
+  [style*="padding:80px"], [style*="padding: 80px"],
+  [style*="padding:76px"], [style*="padding: 76px"] {
+    padding-top: 44px !important;
+    padding-bottom: 36px !important;
+  }
+
+  /* ヘッダー：ロゴ・タグライン・ナビを折り返す */
+  [style*="position:sticky"] > div {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  [style*="position:sticky"] > div > div:last-child {
+    margin-left: 0 !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    row-gap: 6px !important;
+  }
+
+  /* 横並びで詰まる箇所を折り返す */
+  [style*="justify-content:space-between"] {
+    flex-wrap: wrap !important;
+    row-gap: 14px !important;
+  }
+
+  [style*="white-space:nowrap"] { white-space: normal !important; }
+
+  table { display: block; overflow-x: auto; }
+}
+
+/* ---------- 仕上げの微調整：640px以下 ---------- */
+@media (max-width: 640px) {
+
+  /* 本文中の強制改行（<br>）を無効化し、画面幅で自然に折り返す。
+     デスクトップ用に入れられた改行位置が、狭い画面では
+     「拠点に、」のような不自然な行を生むため。
+     ロゴ横のタグライン・フッターの住所表記など、
+     意図的な改行は除外する。 */
+  p[style*="line-height:2.15"] br,
+  p[style*="line-height: 2.15"] br { display: none; }
+
+  /* ヒーローの募集ボタン：正方形から横長へ。指で押しやすくする */
+  a[href="recruit.html"][style*="min-height:168px"],
+  a[href="recruit.html"][style*="min-height: 168px"] {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 22px 20px !important;
+  }
+
+  /* 本文の行間を少し詰める（狭い画面では間延びして見えるため） */
+  p[style*="line-height:2.15"], p[style*="line-height: 2.15"] { line-height: 1.95 !important; }
+}
