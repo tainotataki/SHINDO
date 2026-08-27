@@ -145,3 +145,78 @@ img, video, iframe { max-width: 100%; height: auto; }
   /* 本文の行間を少し詰める（狭い画面では間延びして見えるため） */
   p[style*="line-height:2.15"], p[style*="line-height: 2.15"] { line-height: 1.95 !important; }
 }
+
+/* =========================================================
+   モバイル用ハンバーガーメニュー（640px以下）
+
+   チェックボックスとlabelだけで開閉する。JavaScript は使わない。
+   デスクトップの表示には一切影響しない。
+   ========================================================= */
+
+/* 開閉状態を保持するチェックボックス本体。
+   display:none にするとキーボード操作ができなくなるため、
+   見えない大きさに潰して残す。 */
+.nav-toggle{position:absolute;width:1px;height:1px;opacity:0;margin:0;pointer-events:none}
+
+/* 三本線アイコンはデスクトップでは出さない */
+.nav-burger{display:none}
+
+@media (max-width: 640px){
+
+  /* --- 三本線アイコン：ヘッダー左端に置く --- */
+  .nav-burger{
+    display:flex;flex-direction:column;justify-content:center;
+    gap:5px;width:26px;height:26px;flex:0 0 auto;
+    cursor:pointer;
+    /* DOM上はロゴより前にあるが、表示はヘッダー右端に置く。
+       （:checked ~ .site-nav の兄弟セレクタを保つためDOM順は変えない） */
+    order:1;margin-left:auto;
+    /* タップ時に既定の青い矩形が光るのを抑える */
+    -webkit-tap-highlight-color:transparent;
+  }
+  .nav-burger span{
+    display:block;width:22px;height:1.5px;background:#4A1520;
+    transition:transform .25s ease,opacity .15s ease;
+  }
+
+  /* --- 既定はメニューを閉じておく --- */
+  .site-nav{display:none !important}
+
+  /* --- 開いたとき：縦並びのリストにする --- */
+  .nav-toggle:checked ~ .site-nav{
+    display:flex !important;
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    margin-left:0 !important;
+    gap:0 !important;
+    padding-top:6px;
+    order:2;              /* 三本線より後ろ＝次の行に折り返す */
+  }
+  .nav-toggle:checked ~ .site-nav a{
+    padding:13px 2px;
+    border-top:1px solid #D9C97E;
+    font-size:14px;
+    letter-spacing:.14em;
+  }
+
+  /* --- 開いている間はアイコンを × に変える --- */
+  .nav-toggle:checked + .nav-burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle:checked + .nav-burger span:nth-child(2){opacity:0}
+  .nav-toggle:checked + .nav-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+  /* キーボード操作でフォーカスが当たっている位置を示す */
+  .nav-toggle:focus-visible + .nav-burger{outline:2px solid #93293C;outline-offset:3px}
+}
+
+/* =========================================================
+   about.html「奥会津に建てる、5つの柱。」の中央縦線
+
+   3列レイアウト（1fr 90px 1fr）は900px以下で1列に畳まれるが、
+   縦線は left:50% に絶対配置されたままなので、
+   畳まれた本文の上を縦断して可読性を損なう。
+   レイアウトが畳まれる幅から線を消す。
+   ========================================================= */
+@media (max-width: 900px){
+  [style*="linear-gradient(#CBB96A,#93293C,#CBB96A)"]{display:none !important}
+}
