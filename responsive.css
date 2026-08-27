@@ -218,5 +218,41 @@ img, video, iframe { max-width: 100%; height: auto; }
    レイアウトが畳まれる幅から線を消す。
    ========================================================= */
 @media (max-width: 900px){
+
+  /* 中央の縦線は、1列に畳まれた時点で本文の上を縦断してしまうので消す */
   [style*="linear-gradient(#CBB96A,#93293C,#CBB96A)"]{display:none !important}
+
+  /* 円（場・食・住・エネ・健康・共育）を左端に縦一列で揃え、
+     ラベルと本文を右側の列にまとめる。
+
+     元のHTMLは行ごとに左右が入れ替わる作りで、
+     奇数行はラベルが左・見出しが右、偶数行はその逆になっている。
+     そのままでは読む順序がばらつくため、グリッドの明示配置で
+     「ラベル → 見出し・本文」の順に揃える。 */
+  .pillar-row{
+    grid-template-columns:66px 1fr !important;
+    column-gap:20px;
+    row-gap:4px;
+    align-items:start !important;
+    padding:22px 0 !important;
+  }
+  .pillar-circle{
+    grid-column:1;
+    grid-row:1 / span 2;
+    justify-content:flex-start !important;
+  }
+  .pillar-label{
+    grid-column:2;
+    grid-row:1;
+    text-align:left !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+  .pillar-text{
+    grid-column:2;
+    grid-row:2;
+    text-align:left !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
 }
