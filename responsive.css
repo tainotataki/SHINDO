@@ -185,9 +185,15 @@ img, video, iframe { max-width: 100%; height: auto; }
 /* 三本線アイコンはデスクトップでは出さない */
 .nav-burger{display:none}
 
-@media (max-width: 640px){
+/* 適用範囲は 767px まで。641〜767px ではナビ5項目が横に収まらず、
+   各リンクが縦に折り返されてヘッダーが最大245pxまで伸びてしまうため
+   （画面の3割をヘッダーが占める状態になる）。 */
+@media (max-width: 767px){
 
-  /* --- 三本線アイコン：ヘッダー左端に置く --- */
+  /* メニューを開いたときにナビを次の行へ送れるようにする */
+  [style*="position:sticky"] > div{flex-wrap:wrap !important}
+
+  /* --- 三本線アイコン：ヘッダー右端に置く --- */
   .nav-burger{
     display:flex;flex-direction:column;justify-content:center;
     gap:5px;width:26px;height:26px;flex:0 0 auto;
@@ -328,4 +334,33 @@ img, video, iframe { max-width: 100%; height: auto; }
   [style*="display:flex;align-items:baseline;gap:18px"] > a{
     margin-left:0 !important;
   }
+}
+
+/* =========================================================
+   カード下部の矢印リンク（画面幅を問わず適用）
+
+   元はただのテキスト（span）だったものをリンク化した箇所。
+   色はカードの配色に合わせてインラインで指定しているため、
+   ここでは下線のホバー反応だけを与える。
+   ========================================================= */
+.card-link{
+  display:inline-block;
+  padding-bottom:2px;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s ease;
+}
+.card-link:hover{border-bottom-color:currentColor}
+
+
+/* =========================================================
+   アンカーの着地位置
+
+   ヘッダーは sticky で、幅によって高さが 62px（ハンバーガー時）〜
+   75px（デスクトップ）と変わる。HTML側の scroll-margin-top は
+   88px / 80px とばらつきがあり、条件によっては見出しの先頭が
+   ヘッダーの裏へ潜り込むため、余裕を持たせて統一する。
+   ========================================================= */
+[style*="scroll-margin-top"]{scroll-margin-top:96px !important}
+@media (max-width: 767px){
+  [style*="scroll-margin-top"]{scroll-margin-top:84px !important}
 }
