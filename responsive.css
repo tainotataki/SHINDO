@@ -365,3 +365,14 @@ img, video, iframe { max-width: 100%; height: auto; }
 @media (max-width: 767px){
   [style*="scroll-margin-top"]{scroll-margin-top:84px !important}
 }
+
+/* =========================================================
+   トップページ「パートナーと現場メンバーを募集しています」
+
+   ヒーローは 1fr / 360px の2段組だが、900px以下では1列に畳まれる。
+   このボックスには width:221px が焼き込まれているため、
+   畳まれると画面左端に寄ってしまう。幅はそのままに中央へ置く。
+   ========================================================= */
+@media (max-width: 900px){
+  .hero-cta{margin-left:auto !important;margin-right:auto !important}
+}
