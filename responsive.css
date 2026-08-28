@@ -526,3 +526,20 @@ img, video, iframe { max-width: 100%; height: auto; }
   .entry-form button[type="submit"]{width:100%;padding:16px 20px}
   .ef-choice{flex:1 1 100%}
 }
+
+/* =========================================================
+   ヘッダー左上のロゴ
+
+   「SHINDO」と隣のタグラインを1つのリンクにまとめ、
+   どちらをクリックしてもトップページへ戻るようにしている。
+   横の間隔は、元々ヘッダー側の gap で空いていた分をここで持つ。
+   ========================================================= */
+.site-logo{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  text-decoration:none;
+}
+@media (max-width: 640px){
+  .site-logo{gap:10px}
+}
