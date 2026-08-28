@@ -56,7 +56,7 @@ a:hover{color:#93293C}
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#93293C;letter-spacing:.12em;padding:18px 0;border-top:1px solid #D9C97E">対象</div>
     <div style="font-size:13.5px;line-height:2;color:#26261F;padding:18px 0;border-top:1px solid #D9C97E">契約は本人のみ。年齢は10代後半〜40代半ばまで。農作業・田舎暮らしは未経験可。ご家族での移住も歓迎。</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#93293C;letter-spacing:.12em;padding:18px 0;border-top:1px solid #D9C97E">委託料</div>
-    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:18px 0;border-top:1px solid #D9C97E">月額16万円。契約開始は最も早くて2026年10月より。最大3年間、本条件にて延長可能。生産されたお米と野菜、味噌、油を支給。住居整備の補助、家賃補助、活動費補助有り。契約更新の有無は、毎年1月末までに決定。</div>
+    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:18px 0;border-top:1px solid #D9C97E">月額29万円。契約開始は最も早くて2026年10月より。最大3年間、本条件にて延長可能。生産されたお米と野菜、味噌、油を支給。住居整備の補助、家賃補助、活動費補助有り。契約更新の有無は、毎年1月末までに決定。</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#93293C;letter-spacing:.12em;padding:18px 0;border-top:1px solid #D9C97E">社会保障</div>
     <div style="font-size:13.5px;line-height:2;color:#26261F;padding:18px 0;border-top:1px solid #D9C97E">雇用関係は発生しないため、労働保険・社会保険の適用は無し。国民健康保険・国民年金へ各自ご加入ください。</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#93293C;letter-spacing:.12em;padding:18px 0;border-top:1px solid #D9C97E">医療</div>
@@ -153,6 +153,56 @@ a:hover{color:#93293C}
     </div>
   </div>
 </div>
+<div id="r-contact" style="border-top:1px solid #D9C97E;background:#F6EEB6;scroll-margin-top:88px">
+  <div style="max-width:1180px;margin:0 auto;padding:80px 60px 88px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;color:#93293C;margin-bottom:14px">CONTACT ── お問い合わせ</div>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:30px;letter-spacing:.06em;line-height:1.7;margin:0 0 18px">まずは、お話を聞かせてください。</h2>
+    <p style="font-size:13.5px;line-height:2.15;color:#26261F;max-width:46em;margin:0 0 36px;text-wrap:pretty">移住メンバー・通いメンバーのどちらについても、こちらからご相談いただけます。現時点で決めきれていないことがあっても構いません。いただいた内容は担当者が確認し、追ってご返信します。</p>
+
+    <form class="entry-form" novalidate>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+        <label class="ef-field">
+          <span class="ef-label">お名前<i class="ef-req">必須</i></span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="ef-field">
+          <span class="ef-label">メールアドレス<i class="ef-req">必須</i></span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="ef-field">
+          <span class="ef-label">年齢<i class="ef-any">任意</i></span>
+          <input type="text" name="age" autocomplete="off" placeholder="例：28">
+        </label>
+        <label class="ef-field">
+          <span class="ef-label">所属<i class="ef-any">任意</i></span>
+          <input type="text" name="affiliation" autocomplete="organization" placeholder="お勤め先・学校など">
+        </label>
+      </div>
+
+      <fieldset class="ef-field ef-fieldset">
+        <legend class="ef-label">検討しているポジション<i class="ef-req">必須</i></legend>
+        <div class="ef-choices">
+          <label class="ef-choice"><input type="radio" name="position" value="移住メンバー" required><span>移住メンバー</span></label>
+          <label class="ef-choice"><input type="radio" name="position" value="通いメンバー"><span>通いメンバー</span></label>
+        </div>
+      </fieldset>
+
+      <label class="ef-field">
+        <span class="ef-label">お問い合わせ内容<i class="ef-req">必須</i></span>
+        <textarea name="message" rows="7" required placeholder="ご相談・ご質問、いまのお仕事や暮らしのことなど、差し支えない範囲でお書きください。"></textarea>
+      </label>
+
+      <input type="text" name="website" class="ef-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="ef-submit">
+        <button type="submit">送信する</button>
+        <p class="ef-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="ef-note">送信いただいた情報は、ご相談への回答および選考のために利用します。取り扱いは<a href="privacy-policy.html">プライバシーポリシー</a>をご確認ください。うまく送信できない場合は <a href="mailto:official@zen-bu.co">official@zen-bu.co</a> まで直接ご連絡ください。</p>
+    </form>
+  </div>
+</div>
 
 <div style="border-top:1px solid #D9C97E;background:#EFE49B">
   <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
@@ -176,5 +226,54 @@ a:hover{color:#93293C}
 
 </div>
 
+<script>
+(function () {
+  var form = document.querySelector('.entry-form');
+  if (!form) return;
+  var status = form.querySelector('.ef-status');
+  var button = form.querySelector('button[type="submit"]');
+
+  function say(kind, html) {
+    status.className = 'ef-status' + (kind ? ' is-' + kind : '');
+    status.innerHTML = html;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.classList.add('ef-tried');
+
+    if (!form.checkValidity()) {
+      say('error', '未入力の項目があります。ご確認ください。');
+      var bad = form.querySelector(':invalid');
+      if (bad) bad.focus();
+      return;
+    }
+
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+    button.disabled = true;
+    say('', '送信しています…');
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; })
+              .then(function (j) { return { ok: r.ok && j.ok === true }; });
+    }).then(function (res) {
+      button.disabled = false;
+      if (!res.ok) throw new Error('failed');
+      form.reset();
+      form.classList.remove('ef-tried');
+      say('ok', '送信しました。担当者が確認のうえ、追ってご返信します。');
+    }).catch(function () {
+      button.disabled = false;
+      say('error', '送信できませんでした。お手数ですが <a href="mailto:official@zen-bu.co">official@zen-bu.co</a> まで直接ご連絡ください。');
+    });
+  });
+})();
+</script>
 </body>
 </html>

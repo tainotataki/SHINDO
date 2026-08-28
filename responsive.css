@@ -393,3 +393,136 @@ img, video, iframe { max-width: 100%; height: auto; }
     padding-top:32px !important;
   }
 }
+
+/* =========================================================
+   Recruit ページの応募フォーム
+
+   サイトに他のフォームが無いため、入力欄の体裁はここで定義する。
+   配色・書体は既存のカード類（クリーム地＋黄土色の罫線）に合わせた。
+   ========================================================= */
+
+.entry-form{max-width:860px}
+
+.ef-field{display:block;margin:0}
+.ef-fieldset{border:0;padding:0;margin:0}
+
+.ef-label{
+  display:block;
+  font-size:12px;
+  letter-spacing:.1em;
+  color:#45453C;
+  margin-bottom:9px;
+  padding:0;
+}
+/* 必須・任意の小さな見出し */
+.ef-req,.ef-any{
+  font-style:normal;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9.5px;
+  letter-spacing:.1em;
+  margin-left:10px;
+  padding:2px 6px;
+  border:1px solid currentColor;
+  vertical-align:1px;
+}
+.ef-req{color:#93293C}
+.ef-any{color:#8A8A78}
+
+.entry-form input[type="text"],
+.entry-form input[type="email"],
+.entry-form textarea{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  background:#FFFBE8;
+  border:1px solid #CBB96A;
+  border-radius:0;
+  padding:13px 14px;
+  font-family:inherit;
+  font-size:14px;
+  line-height:1.8;
+  color:#1A1A16;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.entry-form textarea{resize:vertical;min-height:150px}
+
+.entry-form input::placeholder,
+.entry-form textarea::placeholder{color:#A79E78}
+
+.entry-form input:focus,
+.entry-form textarea:focus{
+  outline:none;
+  border-color:#4A1520;
+  box-shadow:0 0 0 2px rgba(74,21,32,.12);
+}
+/* 送信を試みたあとだけ、未入力・不正値を色で示す */
+.entry-form.ef-tried :invalid{border-color:#93293C;background:#FFF4F1}
+
+/* ポジション選択 */
+.ef-choices{display:flex;flex-wrap:wrap;gap:12px}
+.ef-choice{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #CBB96A;
+  background:#FFFBE8;
+  padding:12px 18px;
+  font-size:13.5px;
+  color:#26261F;
+  cursor:pointer;
+  transition:border-color .18s ease,background .18s ease;
+}
+.ef-choice:hover{border-color:#4A1520}
+.ef-choice input{accent-color:#4A1520;margin:0}
+.ef-choice:has(input:checked){border-color:#4A1520;background:#EFE49B}
+
+/* 人には見せない、ボットよけの入力欄。
+   input への width:100% 指定より詳細度を高くしないと打ち消されるため、
+   .entry-form を前置したうえで !important を付けている。 */
+.entry-form .ef-trap{
+  position:absolute !important;
+  width:1px !important;height:1px !important;
+  min-height:0 !important;
+  padding:0 !important;margin:-1px !important;
+  overflow:hidden;clip:rect(0 0 0 0);
+  white-space:nowrap;border:0 !important;
+  opacity:0;
+}
+
+.ef-field + .ef-field,
+.entry-form > div + .ef-field,
+.entry-form > .ef-field + .ef-fieldset,
+.entry-form > * + *{margin-top:26px}
+
+.ef-submit{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.entry-form button[type="submit"]{
+  font-family:'Zen Old Mincho',serif;
+  font-size:15px;
+  letter-spacing:.16em;
+  color:#F6EEB6;
+  background:#4A1520;
+  border:1px solid #4A1520;
+  border-radius:0;
+  padding:15px 46px;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.entry-form button[type="submit"]:hover{background:#93293C;border-color:#93293C}
+.entry-form button[type="submit"]:disabled{opacity:.5;cursor:default}
+
+.ef-status{margin:0;font-size:13px;line-height:1.8}
+.ef-status.is-ok{color:#3F6B3A}
+.ef-status.is-error{color:#93293C}
+
+.ef-note{
+  font-size:11.5px;
+  line-height:2;
+  color:#6A6A5D;
+  margin:26px 0 0;
+}
+.ef-note a{border-bottom:1px solid #CBB96A}
+
+@media (max-width: 640px){
+  .entry-form button[type="submit"]{width:100%;padding:16px 20px}
+  .ef-choice{flex:1 1 100%}
+}
