@@ -15,6 +15,7 @@ a:hover{color:#93293C}
 .hv1:hover{background:#3C1019 !important}
 </style>
 <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="design.css?v=23">
 </head>
 <body>
 <div style="background:#F6EEB6;color:#1A1A16">
@@ -231,11 +232,29 @@ a:hover{color:#93293C}
   if (!form) return;
   var status = form.querySelector('.ef-status');
   var button = form.querySelector('button[type="submit"]');
+  var fields = [].slice.call(form.querySelectorAll('input[required], textarea[required], select[required]'));
+  status.id = 'entry-form-status';
 
   function say(kind, html) {
     status.className = 'ef-status' + (kind ? ' is-' + kind : '');
+    status.setAttribute('role', kind === 'error' ? 'alert' : 'status');
     status.innerHTML = html;
   }
+
+  function markInvalid(field, invalid) {
+    if (invalid) {
+      field.setAttribute('aria-invalid', 'true');
+      field.setAttribute('aria-describedby', status.id);
+    } else {
+      field.removeAttribute('aria-invalid');
+      if (field.getAttribute('aria-describedby') === status.id) field.removeAttribute('aria-describedby');
+    }
+  }
+
+  fields.forEach(function (field) {
+    field.addEventListener('input', function () { if (field.checkValidity()) markInvalid(field, false); });
+    field.addEventListener('change', function () { if (field.checkValidity()) markInvalid(field, false); });
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -243,11 +262,13 @@ a:hover{color:#93293C}
 
     if (!form.checkValidity()) {
       say('error', '未入力の項目があります。ご確認ください。');
+      fields.forEach(function (field) { markInvalid(field, !field.checkValidity()); });
       var bad = form.querySelector(':invalid');
       if (bad) bad.focus();
       return;
     }
 
+    fields.forEach(function (field) { markInvalid(field, false); });
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
 
@@ -274,5 +295,6 @@ a:hover{color:#93293C}
   });
 })();
 </script>
+<script src="design.js?v=23"></script>
 </body>
 </html>
