@@ -112,6 +112,44 @@
     }
   });
 
+  function createJourneyMotif(className, viewBox, pathData) {
+    var motif = document.createElement('div');
+    motif.className = 'journey-motif ' + className;
+    motif.setAttribute('aria-hidden', 'true');
+    motif.innerHTML =
+      '<svg viewBox="' + viewBox + '" preserveAspectRatio="none" focusable="false">' +
+        '<path class="journey-motif__stroke journey-motif__stroke--echo" d="' + pathData + '"></path>' +
+        '<path class="journey-motif__stroke journey-motif__stroke--main" d="' + pathData + '"></path>' +
+      '</svg>';
+    return motif;
+  }
+
+  var heroJourneyPaths = {
+    index: 'M430 42 C355 50 342 112 283 122 C235 130 190 104 198 67 C207 27 275 18 302 52 C331 89 300 139 257 126 C206 111 201 176 180 218 C146 286 91 311 8 368',
+    about: 'M430 30 C360 75 362 126 302 138 C244 150 201 121 205 80 C208 42 260 25 292 48 C330 75 322 126 280 149 C232 176 216 225 173 249 C125 276 94 322 12 354',
+    people: 'M430 72 C365 48 327 84 313 126 C298 172 246 184 214 153 C183 123 206 72 250 67 C296 61 328 107 309 147 C285 198 221 205 196 250 C159 315 96 292 10 372',
+    projects: 'M432 28 C370 61 384 127 318 139 C263 149 219 114 226 75 C233 36 287 22 316 49 C350 81 326 128 285 139 C226 155 218 220 181 257 C136 302 85 325 8 366',
+    partnership: 'M430 54 C378 32 336 68 332 111 C328 153 286 181 247 163 C210 146 208 98 242 75 C278 50 329 72 339 114 C351 163 294 184 248 208 C196 236 180 301 123 321 C86 335 51 348 8 371',
+    recruit: 'M430 24 C359 40 352 101 301 119 C250 137 205 114 204 75 C203 36 255 18 290 39 C328 63 324 111 287 136 C249 162 230 213 190 241 C143 273 97 308 8 363',
+    'privacy-policy': 'M430 65 C366 40 329 74 322 116 C315 158 273 173 241 151 C210 130 219 86 251 72 C286 57 328 78 329 117 C330 166 275 198 228 224 C174 255 127 316 8 354'
+  };
+
+  if (shells[0]) {
+    shells[0].appendChild(createJourneyMotif(
+      'journey-motif--hero journey-motif--hero-' + pageName,
+      '0 0 420 420',
+      heroJourneyPaths[pageName] || heroJourneyPaths.index
+    ));
+  }
+
+  if (footer) {
+    footer.insertBefore(createJourneyMotif(
+      'journey-motif--footer',
+      '0 0 520 160',
+      'M-12 124 C49 97 74 32 137 36 C183 40 205 91 174 117 C139 145 93 118 104 79 C118 29 193 22 239 65 C292 114 368 82 528 38'
+    ), footer.firstChild);
+  }
+
   document.querySelectorAll('[style*="height:460px"], [style*="height:420px"], [style*="height:380px"], [style*="height:340px"], [style*="height:300px"]').forEach(function (photo) {
     if ((photo.getAttribute('style') || '').indexOf('background-image') !== -1) {
       photo.classList.add('photo-break');
