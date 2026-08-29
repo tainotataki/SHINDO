@@ -461,23 +461,10 @@ body.redesign [style*="border-bottom: 1px solid #CBB96A"] {
   align-content: center;
 }
 
-.is-page-hero::before,
 .is-page-hero::after {
   content: "";
   position: absolute;
   pointer-events: none;
-}
-
-.is-page-hero::before {
-  top: clamp(38px, 6vw, 80px);
-  right: clamp(76px, 13vw, 180px);
-  width: clamp(110px, 16vw, 220px);
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(90deg, transparent 49.5%, var(--line-soft) 50%, transparent 50.5%),
-    linear-gradient(transparent 49.5%, var(--line-soft) 50%, transparent 50.5%);
-  transform: rotate(2.5deg);
 }
 
 .is-page-hero::after {
@@ -496,6 +483,60 @@ body.redesign [style*="border-bottom: 1px solid #CBB96A"] {
   align-items: end !important;
   min-height: min(720px, 76svh);
 }
+
+/* A single hand-drawn path: mountain ridge, snowmelt and a road forward. */
+.journey-motif {
+  position: absolute;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.journey-motif svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.journey-motif__stroke {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.journey-motif__stroke--main {
+  stroke: var(--fire-600);
+  stroke-width: 2;
+  opacity: .6;
+}
+
+.journey-motif__stroke--echo {
+  stroke: var(--fire-300);
+  stroke-width: 1;
+  opacity: .4;
+  transform: translate(1px, -1px);
+}
+
+.journey-motif--hero {
+  top: 48px;
+  right: -24px;
+  width: 420px;
+  height: 420px;
+}
+
+.is-page-hero > :not(.journey-motif) {
+  position: relative;
+  z-index: 1;
+}
+
+.page-about .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--water-300); }
+.page-people .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--ume-300); }
+.page-projects .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--rice-300); }
+.page-partnership .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--flower-300); }
+.page-recruit .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--water-300); }
+.page-privacy-policy .journey-motif--hero .journey-motif__stroke--echo { stroke: var(--ume-300); }
 
 body.redesign h1,
 body.redesign h2,
@@ -717,17 +758,6 @@ body.redesign .on-dark.field-card::after {
   width: auto !important;
   align-items: flex-end;
   padding: 0 24px 32px 0 !important;
-}
-
-.page-index .hero-cta::before {
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: -8px;
-  width: 176px;
-  height: 176px;
-  border: 1px dashed var(--line);
-  transform: rotate(7deg);
 }
 
 .page-index .hero-cta a {
@@ -1260,19 +1290,26 @@ body.redesign .site-footer {
   color: var(--paper) !important;
 }
 
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: -27px;
-  left: clamp(26px, 8vw, 120px);
-  width: 54px;
-  height: 54px;
-  border: 1px solid var(--paper);
-  background: var(--fire);
-  transform: rotate(8deg);
+.journey-motif--footer {
+  top: -48px;
+  left: -72px;
+  width: 520px;
+  height: 160px;
+}
+
+.journey-motif--footer .journey-motif__stroke--main {
+  stroke: var(--neutral-100);
+  opacity: .65;
+}
+
+.journey-motif--footer .journey-motif__stroke--echo {
+  stroke: var(--flower-300);
+  opacity: .3;
 }
 
 .site-footer__inner {
+  position: relative;
+  z-index: 1;
   width: min(100%, var(--content)) !important;
   max-width: var(--content) !important;
   margin: 0 auto !important;
@@ -1459,12 +1496,6 @@ body.redesign :where(.on-dark, .site-footer) :where(a, button, input, textarea, 
     padding-bottom: 64px !important;
   }
 
-  .is-page-hero::before {
-    top: 34px;
-    right: 24px;
-    width: 92px;
-  }
-
   .is-page-hero::after {
     right: 38px;
     bottom: 38px;
@@ -1487,11 +1518,29 @@ body.redesign :where(.on-dark, .site-footer) :where(a, button, input, textarea, 
     padding: 0 0 18px !important;
   }
 
-  .page-index .hero-cta::before {
-    left: 14px;
+  .journey-motif--hero {
+    top: auto;
+    right: -72px;
+    bottom: 0;
+    width: 240px;
+    height: 240px;
+  }
+
+  body.redesign:not(.page-index) .journey-motif--hero {
+    position: relative;
+    top: auto;
     right: auto;
-    width: 136px;
-    height: 136px;
+    bottom: auto;
+    width: 192px;
+    height: 128px;
+    margin: 24px -24px -24px auto;
+  }
+
+  .journey-motif--footer {
+    top: -20px;
+    left: -56px;
+    width: 320px;
+    height: 110px;
   }
 
   .page-index .hero-cta a {
