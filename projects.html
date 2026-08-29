@@ -15,6 +15,7 @@ a:hover{color:#93293C}
 
 </style>
 <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="design.css?v=23">
 </head>
 <body>
 <div style="background:#F6EEB6;color:#1A1A16">
@@ -47,14 +48,15 @@ a:hover{color:#93293C}
 </div>
 
 <div style="max-width:1180px;margin:0 auto;padding:0 60px 10px">
-  <div style="display:flex;flex-wrap:wrap;gap:8px">
-    <span data-tab="ongoing" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #4A1520;background:#4A1520;color:#F6EEB6">進行中 ／ Ongoing</span>
-    <span data-tab="done" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #CBB96A;background:transparent;color:#45453C">完了 ／ Complete</span>
-    <span data-tab="future" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #CBB96A;background:transparent;color:#45453C">これから ／ Upcoming</span>
+  <div class="project-tabs" role="tablist" aria-label="表示するプロジェクト" style="display:flex;flex-wrap:wrap;gap:8px">
+    <button type="button" role="tab" id="project-tab-ongoing" aria-controls="project-panel-ongoing" aria-selected="true" tabindex="0" data-tab="ongoing" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #4A1520;background:#4A1520;color:#F6EEB6">進行中 ／ Ongoing</button>
+    <button type="button" role="tab" id="project-tab-done" aria-controls="project-panel-done" aria-selected="false" tabindex="-1" data-tab="done" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #CBB96A;background:transparent;color:#45453C">完了 ／ Complete</button>
+    <button type="button" role="tab" id="project-tab-future" aria-controls="project-panel-future" aria-selected="false" tabindex="-1" data-tab="future" style="padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #CBB96A;background:transparent;color:#45453C">これから ／ Upcoming</button>
   </div>
 </div>
 
-<div data-panel="ongoing">
+<div id="project-panel-ongoing" role="tabpanel" aria-labelledby="project-tab-ongoing" data-panel="ongoing">
+<h2 class="visually-hidden">進行中</h2>
 <div style="max-width:1180px;margin:0 auto;padding:34px 60px 20px">
   
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
@@ -141,7 +143,8 @@ a:hover{color:#93293C}
 </div>
 </div>
 
-<div data-panel="done" style="display:none">
+<div id="project-panel-done" role="tabpanel" aria-labelledby="project-tab-done" data-panel="done" style="display:none" hidden>
+<h2 class="visually-hidden">完了</h2>
 <div style="max-width:1180px;margin:0 auto;padding:34px 60px 20px">
   
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
@@ -237,7 +240,8 @@ a:hover{color:#93293C}
 </div>
 </div>
 
-<div data-panel="future" style="display:none">
+<div id="project-panel-future" role="tabpanel" aria-labelledby="project-tab-future" data-panel="future" style="display:none" hidden>
+<h2 class="visually-hidden">これから</h2>
 <div style="max-width:1180px;margin:0 auto;padding:34px 60px 20px">
   
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
@@ -313,15 +317,35 @@ a:hover{color:#93293C}
 
 <script>
 (function(){
-  var on='padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #4A1520;background:#4A1520;color:#F6EEB6', off='padding:10px 20px;font-size:12.5px;letter-spacing:.08em;cursor:pointer;border:1px solid #CBB96A;background:transparent;color:#45453C';
   var tabs=[].slice.call(document.querySelectorAll('[data-tab]'));
-  tabs.forEach(function(t){ t.addEventListener('click', function(){
-    tabs.forEach(function(x){ x.setAttribute('style', x===t?on:off); });
-    document.querySelectorAll('[data-panel]').forEach(function(p){
-      p.style.display = p.getAttribute('data-panel')===t.getAttribute('data-tab') ? '' : 'none';
+  function activate(t, moveFocus) {
+    tabs.forEach(function(x){
+      var active = x === t;
+      x.setAttribute('aria-selected', String(active));
+      x.tabIndex = active ? 0 : -1;
     });
-  }); });
+    document.querySelectorAll('[data-panel]').forEach(function(p){
+      var active = p.getAttribute('data-panel') === t.getAttribute('data-tab');
+      p.hidden = !active;
+      p.style.display = active ? '' : 'none';
+    });
+    if (moveFocus) t.focus();
+  }
+  tabs.forEach(function(t, index){
+    t.addEventListener('click', function(){ activate(t, false); });
+    t.addEventListener('keydown', function(e){
+      var next = index;
+      if (e.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabs.length - 1;
+      else return;
+      e.preventDefault();
+      activate(tabs[next], true);
+    });
+  });
 })();
 </script>
+<script src="design.js?v=23"></script>
 </body>
 </html>
