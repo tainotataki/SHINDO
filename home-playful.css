@@ -1,0 +1,1585 @@
+/*
+ * SHINDO homepage / snowmelt field notes
+ * A spacious, playful layer inspired by the living landscape of Aizu.
+ * Loaded after home.css so the rest of the site stays untouched.
+ */
+
+body.home-v3 {
+  --play-ink: #20372d;
+  --play-forest: #294b39;
+  --play-leaf: #6f9b62;
+  --play-sky: #dcecef;
+  --play-sky-deep: #88bdc8;
+  --play-snow: #fbfaf5;
+  --play-paper: #f5f0df;
+  --play-straw: #f0d66f;
+  --play-rust: #d86445;
+  --play-rule: rgba(32, 55, 45, .18);
+  background: var(--play-snow) !important;
+  color: var(--play-ink) !important;
+}
+
+body.home-v3 .site-frame {
+  overflow: clip;
+  background: var(--play-snow) !important;
+}
+
+body.home-v3 .site-header {
+  border-bottom-color: rgba(32, 55, 45, .12) !important;
+  background: rgba(251, 250, 245, .86) !important;
+  backdrop-filter: blur(18px) saturate(130%) !important;
+}
+
+body.home-v3 .site-header__inner {
+  width: min(100%, 1380px) !important;
+  max-width: 1380px !important;
+  min-height: 76px !important;
+  padding: 16px clamp(24px, 4vw, 58px) !important;
+}
+
+body.home-v3 .site-logo > span:first-child {
+  color: var(--play-ink) !important;
+  font-size: 24px !important;
+  letter-spacing: .48em !important;
+}
+
+body.home-v3 .site-logo > span:last-child {
+  color: rgba(32, 55, 45, .62) !important;
+}
+
+body.home-v3 .site-nav {
+  gap: clamp(20px, 2.7vw, 38px) !important;
+}
+
+body.home-v3 .site-nav a {
+  position: relative;
+  padding: 8px 0 !important;
+  color: var(--play-ink) !important;
+  font-family: "Zen Kaku Gothic New", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: .14em !important;
+}
+
+body.home-v3 .site-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--play-rust);
+  transform: scaleX(0) rotate(-1deg);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+body.home-v3 .site-nav a:hover::after,
+body.home-v3 .site-nav a:focus-visible::after {
+  transform: scaleX(1) rotate(-1deg);
+}
+
+body.home-v3 .home-shell {
+  width: min(100%, 1280px);
+  max-width: 1280px;
+  padding-right: clamp(24px, 5vw, 72px);
+  padding-left: clamp(24px, 5vw, 72px);
+}
+
+body.home-v3 .home-section-heading {
+  max-width: 900px;
+  margin-bottom: clamp(56px, 7vw, 92px);
+}
+
+body.home-v3 .home-section-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  margin-bottom: 22px !important;
+  padding: 5px 14px 5px 16px;
+  border: 1px solid currentColor;
+  border-radius: 46% 54% 49% 51% / 58% 45% 55% 42%;
+  color: var(--play-rust) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  letter-spacing: .13em !important;
+  transform: rotate(-1.5deg);
+}
+
+body.home-v3 .home-section-label--light,
+body.home-v3 .home-section-heading--dark .home-section-label {
+  color: #f7e796 !important;
+}
+
+body.home-v3 .home-section-heading h2,
+body.home-v3 .home-movie-section h2 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif !important;
+  font-size: clamp(36px, 4.2vw, 58px) !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: .04em !important;
+}
+
+body.home-v3 .home-section-lead {
+  max-width: 710px;
+  margin-top: 24px !important;
+  color: rgba(32, 55, 45, .72) !important;
+  font-size: 15px !important;
+  line-height: 2.15 !important;
+}
+
+body.home-v3 .home-text-link {
+  gap: 26px;
+  padding: 14px 20px 14px 24px;
+  border: 1px solid var(--play-ink);
+  border-radius: 999px;
+  color: var(--play-ink) !important;
+  background: rgba(255, 255, 255, .32);
+}
+
+body.home-v3 .home-button {
+  min-height: 54px;
+  padding: 13px 24px;
+  border-color: var(--play-ink);
+  border-radius: 999px;
+  color: var(--play-ink) !important;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.home-v3 .home-button--primary {
+  border-color: var(--play-ink);
+  color: var(--play-snow) !important;
+  background: var(--play-ink);
+}
+
+body.home-v3 .home-button:hover {
+  border-color: var(--play-rust);
+  color: var(--play-snow) !important;
+  background: var(--play-rust);
+  transform: translateY(-3px) rotate(-.5deg);
+}
+
+/* Hero — open sky, floating field notes, one wandering route. */
+body.home-v3 .home-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 700px;
+  overflow: hidden;
+  border: 0;
+  background:
+    radial-gradient(circle at 7% 18%, rgba(240, 214, 111, .34) 0 8px, transparent 9px),
+    linear-gradient(108deg, var(--play-paper) 0 55%, var(--play-sky) 55% 100%);
+}
+
+body.home-v3 .home-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -36%;
+  right: -10%;
+  width: min(720px, 57vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(32, 55, 45, .16);
+  border-radius: 48% 52% 42% 58% / 57% 43% 57% 43%;
+  transform: rotate(16deg);
+}
+
+body.home-v3 .home-hero::after {
+  content: "雪 → 水 → 土 → 稲 → 食卓";
+  position: absolute;
+  right: clamp(24px, 3vw, 48px);
+  bottom: 88px;
+  color: rgba(32, 55, 45, .48);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 10px;
+  letter-spacing: .22em;
+  writing-mode: vertical-rl;
+}
+
+body.home-v3 .home-hero__orbit {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+}
+
+body.home-v3 .home-hero__orbit svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+body.home-v3 .home-hero__orbit path,
+body.home-v3 .home-hero__orbit circle {
+  fill: none;
+  stroke: rgba(216, 100, 69, .58);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+body.home-v3 .home-hero__orbit path {
+  stroke-dasharray: 8 9;
+  animation: home-route 28s linear infinite;
+}
+
+body.home-v3 .home-hero__season {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 17px;
+  margin: 0;
+  color: rgba(32, 55, 45, .44);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: .18em;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+}
+
+body.home-v3 .home-hero__inner,
+body.home-v3.redesign .home-hero__inner.is-page-hero {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1380px) !important;
+  max-width: 1380px !important;
+  min-height: clamp(700px, calc(100svh - 76px), 860px) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(440px, .92fr) !important;
+  gap: clamp(54px, 6vw, 96px) !important;
+  align-items: center !important;
+  padding: clamp(58px, 7vw, 92px) clamp(42px, 6vw, 86px) clamp(70px, 7vw, 100px) !important;
+}
+
+body.home-v3 .home-hero__inner.is-page-hero::after {
+  content: none;
+}
+
+body.home-v3 .home-hero__rice-grains {
+  position: absolute;
+  z-index: 1;
+  right: clamp(30px, 8vw, 112px);
+  bottom: clamp(28px, 5vw, 68px);
+  width: 82px;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+}
+
+body.home-v3 .home-hero__rice-grain use {
+  stroke: rgba(32, 55, 45, .18);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+body.home-v3 .home-hero__rice-grain > path {
+  fill: none;
+  stroke: rgba(251, 250, 245, .72);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+body.home-v3 .home-hero__rice-grain--rust use { fill: #df8e7a; }
+body.home-v3 .home-hero__rice-grain--straw use { fill: #e5c43e; }
+body.home-v3 .home-hero__rice-grain--sky use { fill: #91c5cb; }
+body.home-v3 .home-hero__rice-grain--leaf use { fill: #a5b842; }
+
+body.home-v3 .home-hero__copy {
+  max-width: 650px;
+  padding-top: 10px;
+}
+
+body.home-v3 .home-hero__category {
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body.home-v3 .home-hero__category-origin {
+  display: inline-block;
+  margin: 0 0 9px !important;
+  padding: 5px 12px 6px;
+  border: 1px solid var(--play-rust);
+  border-radius: 999px;
+  color: var(--play-rust) !important;
+  font-size: 10px !important;
+  transform: rotate(-1deg);
+}
+
+body.home-v3 .home-hero__category-place {
+  color: var(--play-ink) !important;
+  font-size: 14px !important;
+  letter-spacing: .08em !important;
+}
+
+body.home-v3.redesign .home-hero h1 {
+  max-width: none;
+  margin: 0 0 28px !important;
+  color: var(--play-ink) !important;
+  font-size: clamp(46px, 5vw, 72px) !important;
+  font-weight: 500 !important;
+  line-height: 1.36 !important;
+  letter-spacing: .025em !important;
+}
+
+body.home-v3.redesign .home-hero h1 > span {
+  white-space: nowrap;
+}
+
+body.home-v3 .home-hero__description {
+  max-width: 590px;
+  padding-top: 21px;
+  border-top: 1px solid var(--play-rule);
+}
+
+body.home-v3 .home-hero__description p {
+  color: rgba(32, 55, 45, .77) !important;
+  font-size: 16px !important;
+  line-height: 2 !important;
+}
+
+body.home-v3 .home-hero__actions {
+  gap: 10px;
+  margin-top: 26px;
+}
+
+body.home-v3 .home-hero__recruit {
+  margin-top: 16px !important;
+}
+
+body.home-v3 .home-hero__recruit a {
+  color: rgba(32, 55, 45, .66) !important;
+  text-underline-offset: 5px;
+}
+
+body.home-v3 .home-hero__collage {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, minmax(28px, 3.35vw));
+  min-height: 560px;
+}
+
+body.home-v3 .home-hero__collage::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 4%;
+  right: -2%;
+  width: 82%;
+  height: 84%;
+  border: 1px solid rgba(32, 55, 45, .15);
+  border-radius: 46% 54% 63% 37% / 47% 39% 61% 53%;
+  background: rgba(251, 250, 245, .54);
+  transform: rotate(-3deg);
+}
+
+body.home-v3 .home-hero__photo {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.home-v3 .home-hero__photo img {
+  width: 100%;
+  height: 100%;
+  border: 7px solid rgba(251, 250, 245, .96);
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(32, 55, 45, .17);
+}
+
+body.home-v3 .home-hero__photo figcaption {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--play-snow) !important;
+  background: var(--play-ink) !important;
+  font-size: 9px !important;
+  letter-spacing: .1em;
+}
+
+body.home-v3 .home-hero__photo--field {
+  z-index: 1;
+  grid-column: 1 / 10;
+  grid-row: 1 / 8;
+  transform: rotate(-2.5deg) !important;
+}
+
+body.home-v3 .home-hero__photo--field img {
+  border-radius: 45% 55% 12% 12% / 18% 22% 8% 10%;
+}
+
+body.home-v3 .home-hero__photo--field figcaption {
+  top: 15px;
+  left: -12px;
+}
+
+body.home-v3 .home-hero__photo--house {
+  z-index: 3;
+  grid-column: 7 / 13;
+  grid-row: 7 / 12;
+  transform: rotate(3.5deg) !important;
+}
+
+body.home-v3 .home-hero__photo--house img {
+  border-radius: 10% 42% 16% 40% / 13% 18% 36% 24%;
+}
+
+body.home-v3 .home-hero__photo--house figcaption {
+  right: -10px;
+  bottom: -8px;
+}
+
+body.home-v3 .home-hero__photo--gather {
+  z-index: 4;
+  grid-column: 1 / 8;
+  grid-row: 8 / 13;
+  transform: rotate(-1.5deg) !important;
+}
+
+body.home-v3 .home-hero__photo--gather img {
+  border-radius: 34% 10% 38% 12% / 14% 22% 18% 32%;
+}
+
+body.home-v3 .home-hero__photo--gather figcaption {
+  bottom: -8px;
+  left: 12px;
+}
+
+body.home-v3 .home-hero__note {
+  position: absolute;
+  z-index: 5;
+  top: 14%;
+  right: -2%;
+  padding: 16px 18px;
+  border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
+  color: var(--play-ink);
+  background: var(--play-straw);
+  font-family: "Zen Old Mincho", serif;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: .08em;
+  transform: rotate(7deg);
+}
+
+/* Four actions — an airy scrapbook rather than a row of boxes. */
+body.home-v3 .home-actions {
+  position: relative;
+  z-index: 2;
+  margin-top: -34px;
+  padding: clamp(150px, 15vw, 210px) 0 clamp(140px, 14vw, 200px);
+  border-radius: 58px 58px 0 0;
+  background: var(--play-snow);
+}
+
+body.home-v3 .home-actions::before {
+  content: "耕す  ·  直す  ·  試す  ·  集う";
+  position: absolute;
+  top: 78px;
+  right: 5vw;
+  color: rgba(32, 55, 45, .38);
+  font-family: "Zen Old Mincho", serif;
+  font-size: 11px;
+  letter-spacing: .25em;
+  transform: rotate(2deg);
+}
+
+body.home-v3 .home-actions__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 42px);
+  align-items: start;
+}
+
+body.home-v3 .home-action-card {
+  position: relative;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.home-v3 .home-action-card:nth-child(even) {
+  margin-top: 82px;
+}
+
+body.home-v3 .home-action-card img {
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 14px 14px;
+  object-fit: cover;
+  filter: saturate(.84) contrast(.96);
+  transition: border-radius .45s ease, transform .45s ease, filter .45s ease;
+}
+
+body.home-v3 .home-action-card:nth-child(2) img,
+body.home-v3 .home-action-card:nth-child(4) img {
+  border-radius: 16px 16px 50% 50%;
+}
+
+body.home-v3 .home-action-card:hover img {
+  border-radius: 34px;
+  filter: saturate(1) contrast(1);
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+body.home-v3 .home-action-card__body {
+  position: relative;
+  margin: -18px 12px 0;
+  padding: 26px 20px 22px;
+  border-radius: 24px;
+  background: var(--play-paper);
+}
+
+body.home-v3 .home-action-card:nth-child(2) .home-action-card__body,
+body.home-v3 .home-action-card:nth-child(3) .home-action-card__body {
+  background: var(--play-sky);
+}
+
+body.home-v3 .home-action-card__number {
+  top: -24px;
+  right: 18px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--play-snow) !important;
+  background: var(--play-rust);
+  font-size: 10px;
+  transform: rotate(8deg);
+}
+
+body.home-v3 .home-action-card h3 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 26px !important;
+}
+
+body.home-v3 .home-action-card p {
+  color: rgba(32, 55, 45, .72) !important;
+  font-size: 16px !important;
+  line-height: 1.95 !important;
+}
+
+/* Film — a quiet clearing at night. */
+body.home-v3 .home-movie-section {
+  position: relative;
+  padding: clamp(130px, 14vw, 190px) 0;
+  border-radius: 58px;
+  color: var(--play-snow);
+  background:
+    radial-gradient(circle at 86% 14%, rgba(136, 189, 200, .2), transparent 24%),
+    var(--play-ink);
+}
+
+body.home-v3 .home-movie-section::before {
+  content: "MOVIE";
+  position: absolute;
+  top: 44px;
+  left: -10px;
+  color: rgba(251, 250, 245, .045);
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(100px, 19vw, 280px);
+  line-height: 1;
+  letter-spacing: .08em;
+}
+
+body.home-v3 .home-movie-section__header {
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+body.home-v3 .home-movie-section h2 {
+  color: var(--play-snow) !important;
+}
+
+body.home-v3 .home-movie-section__header > p {
+  max-width: 290px;
+  color: rgba(251, 250, 245, .68) !important;
+  line-height: 2 !important;
+}
+
+body.home-v3 .home-movie-section__frame {
+  width: 91%;
+  margin-left: auto;
+  overflow: hidden;
+  border: 8px solid rgba(251, 250, 245, .92);
+  border-radius: 48% 12px 12px 12px / 16% 12px 12px 12px;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, .28);
+  transform: rotate(1deg);
+}
+
+body.home-v3 .home-movie-section__frame::after {
+  background: linear-gradient(90deg, rgba(13, 35, 26, .52), rgba(13, 35, 26, .04));
+}
+
+body.home-v3 .home-movie-section__play {
+  width: 150px;
+  height: 150px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--play-ink);
+  background: var(--play-straw);
+  box-shadow: 0 0 0 12px rgba(240, 214, 111, .18);
+}
+
+body.home-v3 .home-movie-section__play:hover {
+  color: var(--play-snow);
+  background: var(--play-rust);
+  transform: translate(-50%, -50%) scale(1.06) rotate(-3deg);
+}
+
+body.home-v3 .home-movie-section__credit {
+  width: 91%;
+  margin: 22px 0 0 auto !important;
+  color: rgba(251, 250, 245, .5) !important;
+}
+
+/* Projects — soft blue terrain with a featured first experiment. */
+body.home-v3 .home-projects {
+  position: relative;
+  padding: clamp(150px, 15vw, 210px) 0;
+  background: var(--play-sky);
+}
+
+body.home-v3 .home-projects::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 9%;
+  width: 110px;
+  height: 54px;
+  border: 2px solid rgba(32, 55, 45, .26);
+  border-right: 0;
+  border-left: 0;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+
+body.home-v3 .home-projects__legacy {
+  color: var(--play-rust) !important;
+}
+
+body.home-v3 .home-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+body.home-v3 .home-project-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 38px 38px 16px 16px;
+  color: var(--play-ink) !important;
+  background: rgba(251, 250, 245, .88);
+  box-shadow: 0 12px 0 rgba(32, 55, 45, .07);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+body.home-v3 .home-project-card:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  border-radius: 90px 24px 24px 24px;
+}
+
+body.home-v3 .home-project-card:nth-child(3),
+body.home-v3 .home-project-card:nth-child(5) {
+  margin-top: 66px;
+}
+
+body.home-v3 .home-project-card:hover {
+  box-shadow: 0 22px 0 rgba(216, 100, 69, .17);
+  transform: translateY(-10px) rotate(-.6deg);
+}
+
+body.home-v3 .home-project-card img {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  filter: saturate(.84);
+}
+
+body.home-v3 .home-project-card:first-child img {
+  height: 100%;
+  min-height: 460px;
+  aspect-ratio: auto;
+}
+
+body.home-v3 .home-project-card__body {
+  padding: clamp(28px, 4vw, 48px);
+}
+
+body.home-v3 .home-project-card h3 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(23px, 2.4vw, 34px) !important;
+}
+
+body.home-v3 .home-project-card__place {
+  color: var(--play-rust) !important;
+}
+
+body.home-v3 .home-project-card__body > p:not(.home-project-card__place) {
+  color: rgba(32, 55, 45, .7) !important;
+  line-height: 2 !important;
+}
+
+body.home-v3 .home-status {
+  border: 0;
+  border-radius: 999px;
+  color: var(--play-snow) !important;
+  background: var(--play-forest);
+}
+
+/* Why — the village landscape gets an entire breath. */
+body.home-v3 .home-why {
+  min-height: 820px;
+  padding: 0;
+  background:
+    linear-gradient(90deg, rgba(19, 43, 30, .14), rgba(19, 43, 30, .02)),
+    url("home-onogawa.jpg") center / cover no-repeat;
+}
+
+body.home-v3 .home-why__inner {
+  min-height: 820px;
+  grid-template-columns: minmax(280px, .85fr) minmax(430px, .75fr);
+  align-items: center;
+  gap: clamp(60px, 8vw, 130px);
+}
+
+body.home-v3 .home-why__heading {
+  align-self: end;
+  margin-bottom: 94px;
+}
+
+body.home-v3 .home-why__heading .home-section-label,
+body.home-v3 .home-why__heading h2 {
+  color: var(--play-snow) !important;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
+}
+
+body.home-v3 .home-why__copy {
+  padding: clamp(42px, 5vw, 70px);
+  border-radius: 50% 50% 30px 30px / 14% 14% 30px 30px;
+  background: rgba(251, 250, 245, .94);
+  box-shadow: 0 28px 80px rgba(22, 48, 34, .2);
+}
+
+body.home-v3 .home-why__copy p {
+  color: rgba(32, 55, 45, .77) !important;
+  font-size: 16px !important;
+  line-height: 2.12 !important;
+}
+
+/* Organization — a small constellation of collaborators. */
+body.home-v3 .home-organization {
+  padding: clamp(150px, 15vw, 210px) 0;
+  background: var(--play-paper);
+}
+
+body.home-v3 .home-org-chart {
+  position: relative;
+  padding: clamp(36px, 5vw, 70px);
+  border: 0;
+  border-radius: 48px;
+  background: rgba(251, 250, 245, .72);
+}
+
+body.home-v3 .home-org-chart__root {
+  width: 250px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 84px;
+  padding: 34px;
+  border: 0;
+  border-radius: 50% 46% 52% 48% / 45% 55% 47% 53%;
+  color: var(--play-snow);
+  background: var(--play-forest);
+  transform: rotate(-2deg);
+}
+
+body.home-v3 .home-org-chart__root::after {
+  height: 86px;
+  bottom: -86px;
+  border-left: 2px dashed rgba(32, 55, 45, .28);
+}
+
+body.home-v3 .home-org-chart__root strong {
+  color: var(--play-snow) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 32px;
+  letter-spacing: .16em;
+}
+
+body.home-v3 .home-org-chart__root span,
+body.home-v3 .home-org-chart__root p {
+  color: rgba(251, 250, 245, .7) !important;
+}
+
+body.home-v3 .home-org-chart__branches {
+  gap: 18px;
+  border-top: 2px dashed rgba(32, 55, 45, .24);
+}
+
+body.home-v3 .home-org-chart__branches article {
+  min-height: 210px;
+  border: 0;
+  border-radius: 32px;
+  background: var(--play-snow);
+}
+
+body.home-v3 .home-org-chart__branches article:nth-child(2) {
+  background: var(--play-sky);
+  transform: translateY(20px);
+}
+
+body.home-v3 .home-org-chart__branches article:nth-child(3) {
+  background: #e6edcf;
+}
+
+body.home-v3 .home-org-chart__branches h3 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif;
+}
+
+/* Numbers — sunlit, tactile, deliberately uneven. */
+body.home-v3 .home-metrics {
+  position: relative;
+  padding: clamp(150px, 15vw, 210px) 0;
+  background: var(--play-straw);
+}
+
+body.home-v3 .home-metrics::after {
+  content: "↗ まだ、途中。";
+  position: absolute;
+  top: 92px;
+  right: 7vw;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 13px;
+  letter-spacing: .14em;
+  transform: rotate(5deg);
+}
+
+body.home-v3 .home-metrics__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+body.home-v2.home-v3 .home-metric {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: clamp(32px, 3.3vw, 44px) !important;
+  border: 0;
+  border-radius: 60px 20px 60px 20px;
+  background: rgba(251, 250, 245, .82);
+}
+
+body.home-v3 .home-metric:nth-child(2),
+body.home-v3 .home-metric:nth-child(3) {
+  border-radius: 20px 60px 20px 60px;
+}
+
+body.home-v3 .home-metric:nth-child(even) {
+  transform: translateY(28px);
+}
+
+body.home-v3 .home-metric__owner {
+  min-height: 0;
+  margin: 0 0 18px !important;
+}
+
+body.home-v3 .home-metric__value,
+body.home-v3 .home-metric--timeline .home-metric__value {
+  min-height: 0;
+  margin: 0 0 18px !important;
+}
+
+body.home-v3 .home-metric h3 {
+  margin: 0 0 18px !important;
+  padding-bottom: 14px;
+}
+
+body.home-v3 .home-metric > p:last-child,
+body.home-v3 .home-metric ol {
+  margin-top: 0 !important;
+}
+
+body.home-v3 .home-metric--timeline .home-metric__value {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+}
+
+body.home-v3 .home-metric--timeline .home-metric__value strong {
+  font-size: clamp(54px, 6.5vw, 88px) !important;
+}
+
+body.home-v3 .home-metric__value strong {
+  color: var(--play-rust) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(58px, 7vw, 90px) !important;
+  font-weight: 500 !important;
+}
+
+body.home-v3 .home-metric__value span,
+body.home-v3 .home-metric__owner,
+body.home-v3 .home-metric p,
+body.home-v3 .home-metric li {
+  color: rgba(32, 55, 45, .7) !important;
+}
+
+body.home-v3 .home-metric h3 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif;
+}
+
+/* People — portrait windows in an Aizu-blue room. */
+body.home-v3 .home-people {
+  padding: clamp(160px, 16vw, 220px) 0;
+  background: #c9e2e4;
+}
+
+body.home-v3 .home-people__grid {
+  gap: clamp(20px, 2.7vw, 36px);
+}
+
+body.home-v3 .home-person {
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+body.home-v3 .home-person:nth-child(even) {
+  margin-top: 72px;
+}
+
+body.home-v3 .home-person img {
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 12px 12px;
+  filter: saturate(.82);
+  object-fit: cover;
+  transition: border-radius .4s ease, filter .4s ease, transform .4s ease;
+}
+
+body.home-v3 .home-person:hover img {
+  border-radius: 26px;
+  filter: saturate(1);
+  transform: translateY(-8px);
+}
+
+body.home-v3 .home-person__body {
+  position: relative;
+  margin: -22px 12px 0;
+  padding: 28px 22px;
+  border: 0;
+  border-radius: 24px;
+  background: rgba(251, 250, 245, .9);
+}
+
+body.home-v3 .home-person h3 {
+  color: var(--play-ink) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 25px !important;
+}
+
+body.home-v3 .home-person__role {
+  color: var(--play-rust) !important;
+}
+
+body.home-v3 .home-person__work,
+body.home-v3 .home-person__body > p:last-child {
+  color: rgba(32, 55, 45, .7) !important;
+}
+
+/* Explore — oversized lines with small moments of motion. */
+body.home-v3 .home-more {
+  padding: clamp(150px, 15vw, 210px) 0;
+  background: var(--play-snow);
+}
+
+body.home-v3 .home-more__list {
+  border-top: 1px solid var(--play-rule);
+}
+
+body.home-v3 .home-more__list a {
+  min-height: 116px;
+  grid-template-columns: 62px minmax(190px, .55fr) 1fr 44px;
+  border-bottom-color: var(--play-rule);
+  color: var(--play-ink) !important;
+  transition: padding .35s ease, border-radius .35s ease, background .35s ease;
+}
+
+body.home-v3 .home-more__list a:hover {
+  margin-right: -22px;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  border-radius: 24px;
+  background: var(--play-paper);
+}
+
+body.home-v3 .home-more__list strong {
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(20px, 2vw, 27px);
+}
+
+body.home-v3 .home-more__number {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff !important;
+  background: var(--play-ink);
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px var(--play-snow), 0 0 0 4px var(--play-ink);
+}
+
+body.home-v3 .home-more__list a:focus-visible {
+  outline: 3px solid var(--play-rust);
+  outline-offset: 5px;
+  border-radius: 12px;
+}
+
+/* Join — a gentle green common room. */
+body.home-v3 .home-join {
+  padding: clamp(150px, 15vw, 210px) 0;
+  color: var(--play-ink);
+  background: #dce8cd;
+}
+
+body.home-v2.home-v3.redesign .home-join .home-section-label,
+body.home-v2.home-v3.redesign .home-section-heading--dark h2,
+body.home-v2.home-v3.redesign .home-section-heading--dark .home-section-lead,
+body.home-v2.home-v3.redesign .home-join__legacy {
+  color: var(--play-ink) !important;
+}
+
+body.home-v2.home-v3.redesign .home-join .home-section-label {
+  border-color: currentColor;
+}
+
+body.home-v3 .home-join__grid {
+  gap: 18px;
+}
+
+body.home-v3 .home-join-card {
+  min-height: 330px;
+  border: 0;
+  border-radius: 34px;
+  color: var(--play-ink) !important;
+  background: var(--play-snow);
+}
+
+body.home-v3 .home-join-card--start {
+  border-radius: 50% 50% 34px 34px / 18% 18% 34px 34px;
+  color: var(--play-snow) !important;
+  background: var(--play-forest);
+}
+
+body.home-v3 .home-join-card:nth-child(3) {
+  transform: translateY(34px) rotate(1deg);
+}
+
+body.home-v3 .home-join-card:nth-child(4) {
+  background: var(--play-straw);
+}
+
+body.home-v2.home-v3.redesign .home-join-card:not(.home-join-card--start) .home-join-card__meta,
+body.home-v2.home-v3.redesign .home-join-card:not(.home-join-card--start) h3,
+body.home-v2.home-v3.redesign .home-join-card:not(.home-join-card--start) p,
+body.home-v2.home-v3.redesign .home-join-card:not(.home-join-card--start) li,
+body.home-v2.home-v3.redesign .home-join-card:not(.home-join-card--start) a {
+  color: var(--play-ink) !important;
+}
+
+body.home-v2.home-v3.redesign .home-join-card--start .home-join-card__meta,
+body.home-v2.home-v3.redesign .home-join-card--start h3,
+body.home-v2.home-v3.redesign .home-join-card--start p,
+body.home-v2.home-v3.redesign .home-join-card--start li,
+body.home-v2.home-v3.redesign .home-join-card--start a {
+  color: var(--play-snow) !important;
+}
+
+body.home-v2.home-v3.redesign .home-join-card--start .home-join-card__meta,
+body.home-v2.home-v3.redesign .home-join-card--start a {
+  color: #f7e796 !important;
+}
+
+body.home-v3 .home-join-card h3 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 27px !important;
+}
+
+/* Final vision — shade beneath the old tree. */
+body.home-v3 .home-vision {
+  min-height: 86vh;
+  background:
+    linear-gradient(90deg, rgba(13, 38, 24, .72), rgba(13, 38, 24, .15)),
+    url("home-kimio-kuri.jpg") center / cover no-repeat;
+}
+
+body.home-v3 .home-vision::after {
+  content: "1000 YEARS LATER";
+  position: absolute;
+  right: 30px;
+  bottom: 28px;
+  color: rgba(251, 250, 245, .64);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: .2em;
+}
+
+body.home-v3 .home-vision__inner {
+  width: min(100%, 1280px);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(90px, 10vw, 150px) clamp(24px, 7vw, 90px);
+  text-align: left;
+}
+
+body.home-v3 .home-vision h2 {
+  max-width: 10.5em;
+  color: var(--play-snow) !important;
+  font-family: "Zen Old Mincho", serif;
+  font-size: clamp(44px, 6.5vw, 88px) !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  letter-spacing: .04em !important;
+  text-shadow: 0 3px 30px rgba(0, 0, 0, .26);
+}
+
+/* Footer stays part of the same paper world. */
+body.home-v3 .site-footer {
+  border-top: 0 !important;
+  background: var(--play-paper) !important;
+}
+
+body.home-v3 .site-footer__inner {
+  padding-top: 86px !important;
+  padding-bottom: 84px !important;
+}
+
+body.home-v3 .site-footer a,
+body.home-v3 .site-footer p,
+body.home-v3 .site-footer div {
+  color: var(--play-ink) !important;
+  border-color: rgba(32, 55, 45, .2) !important;
+}
+
+@keyframes home-route {
+  to { stroke-dashoffset: -170; }
+}
+
+@media (max-width: 1180px) {
+  body.home-v3 .home-hero__season {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.home-v3 .home-hero__inner,
+  body.home-v3.redesign .home-hero__inner.is-page-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr) !important;
+    gap: 36px !important;
+    padding-right: 34px !important;
+    padding-left: 34px !important;
+  }
+
+  body.home-v3.redesign .home-hero h1 {
+    font-size: clamp(43px, 5.2vw, 58px) !important;
+  }
+
+  body.home-v3 .home-hero__collage {
+    min-height: 500px;
+  }
+
+  body.home-v3 .home-actions__grid,
+  body.home-v3 .home-people__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.home-v3 .home-action-card:nth-child(even),
+  body.home-v3 .home-person:nth-child(even) {
+    margin-top: 52px;
+  }
+}
+
+@media (max-width: 820px) {
+  body.home-v3 .site-header__inner {
+    min-height: 68px !important;
+    padding: 13px 20px !important;
+  }
+
+  body.home-v3 .home-hero {
+    background: linear-gradient(170deg, var(--play-paper) 0 62%, var(--play-sky) 62% 100%);
+  }
+
+  body.home-v3 .home-hero__season {
+    display: none;
+  }
+
+  body.home-v3 .home-hero__rice-grains {
+    right: 24px;
+    top: calc(var(--mobile-hero-motif-top, 420px) + 62px);
+    bottom: auto;
+    width: 52px;
+  }
+
+  body.home-v3 .home-hero__inner,
+  body.home-v3.redesign .home-hero__inner.is-page-hero {
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 52px !important;
+    padding: 64px 22px 110px !important;
+  }
+
+  body.home-v3 .home-hero__copy {
+    width: 100%;
+    max-width: 660px;
+  }
+
+  body.home-v3 .home-hero__collage {
+    width: min(100%, 620px);
+    min-height: 610px;
+    grid-template-rows: repeat(12, 47px);
+    align-self: center;
+  }
+
+  body.home-v3 .home-hero__note {
+    right: 0;
+  }
+
+  body.home-v3 .home-project-card:first-child {
+    display: block !important;
+    grid-template-columns: 1fr;
+  }
+
+  body.home-v3 .home-project-card:first-child img {
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+
+  body.home-v3 .home-why,
+  body.home-v3 .home-why__inner {
+    min-height: 0;
+  }
+
+  body.home-v3 .home-why {
+    padding: 90px 0;
+  }
+
+  body.home-v3 .home-why__inner {
+    display: block;
+  }
+
+  body.home-v3 .home-why__heading {
+    margin-bottom: 70px;
+  }
+
+  body.home-v3 .home-why__copy {
+    max-width: 620px;
+    margin-left: auto;
+  }
+
+  body.home-v3 .home-org-chart__root {
+    margin-bottom: 60px;
+  }
+
+  body.home-v3 .home-more__list a {
+    grid-template-columns: 52px 1fr 38px;
+  }
+
+  body.home-v3 .home-more__list a > span:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 620px) {
+  body.home-v3 .home-shell {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  body.home-v3 .home-section-heading {
+    margin-bottom: 48px;
+  }
+
+  body.home-v3 .home-section-heading h2,
+  body.home-v3 .home-movie-section h2 {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    line-height: 1.5 !important;
+  }
+
+  body.home-v3 .home-hero::after {
+    right: 10px;
+    bottom: 66px;
+  }
+
+  body.home-v3.redesign .home-hero h1 {
+    font-size: clamp(36px, 10.5vw, 50px) !important;
+    line-height: 1.48 !important;
+  }
+
+  body.home-v3.redesign .home-hero h1 > span {
+    white-space: normal;
+  }
+
+  body.home-v3 .home-hero__description p {
+    font-size: 16px !important;
+  }
+
+  body.home-v3 .home-hero__actions {
+    display: grid;
+  }
+
+  body.home-v3 .home-button {
+    width: 100%;
+  }
+
+  body.home-v3 .home-hero__collage {
+    min-height: 440px;
+    grid-template-rows: repeat(12, 34px);
+  }
+
+  body.home-v3 .home-hero__photo img {
+    border-width: 5px;
+  }
+
+  body.home-v3 .home-hero__note {
+    top: 9%;
+    padding: 11px 13px;
+    font-size: 10px;
+  }
+
+  body.home-v3 .home-actions,
+  body.home-v3 .home-projects,
+  body.home-v3 .home-organization,
+  body.home-v3 .home-metrics,
+  body.home-v3 .home-people,
+  body.home-v3 .home-more,
+  body.home-v3 .home-join {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  body.home-v3 .home-actions__grid,
+  body.home-v3 .home-projects__grid,
+  body.home-v3 .home-people__grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  body.home-v3 .home-action-card:nth-child(even),
+  body.home-v3 .home-person:nth-child(even),
+  body.home-v3 .home-project-card:nth-child(3),
+  body.home-v3 .home-project-card:nth-child(5),
+  body.home-v3 .home-metric:nth-child(even),
+  body.home-v3 .home-join-card:nth-child(3) {
+    margin-top: 0;
+    transform: none;
+  }
+
+  body.home-v3 .home-metrics__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.home-v3 .home-action-card img,
+  body.home-v3 .home-person img {
+    aspect-ratio: 4 / 3;
+  }
+
+  body.home-v3 .home-movie-section {
+    border-radius: 36px;
+  }
+
+  body.home-v3 .home-movie-section__header {
+    display: block;
+  }
+
+  body.home-v3 .home-movie-section__header > p {
+    margin-top: 24px !important;
+  }
+
+  body.home-v3 .home-movie-section__frame,
+  body.home-v3 .home-movie-section__credit {
+    width: 100%;
+  }
+
+  body.home-v3 .home-movie-section__frame {
+    border-width: 5px;
+    border-radius: 32px 10px 10px 10px;
+  }
+
+  body.home-v3 .home-movie-section__play {
+    width: 112px;
+    height: 112px;
+  }
+
+  body.home-v3 .home-project-card:first-child {
+    grid-column: auto;
+  }
+
+  body.home-v3 .home-project-card {
+    border-radius: 30px 30px 14px 14px;
+  }
+
+  body.home-v3 .home-why {
+    background-position: 42% center;
+  }
+
+  body.home-v3 .home-why__copy {
+    padding: 36px 24px;
+    border-radius: 32px;
+  }
+
+  body.home-v2.home-v3 .home-why__copy p,
+  body.home-v2.home-v3 .home-why__copy p:first-child {
+    font-size: 16px !important;
+  }
+
+  body.home-v3 .home-org-chart {
+    --org-rail-x: 0;
+    --org-content-x: 0;
+    padding: 28px 18px;
+  }
+
+  body.home-v3 .home-org-chart__root {
+    width: 210px;
+    min-height: 210px;
+    margin: 0 auto 42px;
+    padding: 30px 24px;
+    text-align: center;
+  }
+
+  body.home-v3 .home-org-chart__root::before,
+  body.home-v3 .home-org-chart__root::after,
+  body.home-v3 .home-org-chart__branches::before,
+  body.home-v3 .home-org-chart__branches::after,
+  body.home-v3 .home-org-chart__branches article::before,
+  body.home-v3 .home-org-chart__branches article::after {
+    display: none !important;
+  }
+
+  body.home-v3 .home-org-chart__branches {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 28px 0 0;
+    border-top: 2px dashed rgba(32, 55, 45, .24);
+  }
+
+  body.home-v3 .home-org-chart__branches article {
+    min-height: 0;
+    padding: 24px 22px;
+    border: 0;
+    border-radius: 24px;
+    box-shadow: none;
+    transform: none !important;
+  }
+
+  body.home-v3 .home-org-chart__branches article:nth-child(1) {
+    background: var(--play-snow);
+  }
+
+  body.home-v3 .home-org-chart__branches article:nth-child(2) {
+    background: var(--play-sky);
+  }
+
+  body.home-v3 .home-org-chart__branches article:nth-child(3) {
+    background: #e6edcf;
+  }
+
+  body.home-v2.home-v3 .home-metric {
+    min-height: 0;
+    display: flex;
+    padding: 28px 24px !important;
+    border-radius: 36px 14px 36px 14px;
+  }
+
+  body.home-v3 .home-metric__owner,
+  body.home-v3 .home-metric__value,
+  body.home-v3 .home-metric--timeline .home-metric__value,
+  body.home-v3 .home-metric h3,
+  body.home-v3 .home-metric > p:last-child,
+  body.home-v3 .home-metric ol {
+    width: 100% !important;
+    align-self: stretch !important;
+    text-align: left;
+  }
+
+  body.home-v3 .home-more__number {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.home-v3 .home-more__list a {
+    min-height: 126px;
+    grid-template-columns: 44px 1fr 30px;
+    gap: 6px 12px;
+  }
+
+  body.home-v3 .home-more__list a:hover {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  body.home-v3 .home-vision {
+    min-height: 74vh;
+    background-position: 58% center;
+  }
+
+  body.home-v3 .home-vision h2 {
+    font-size: clamp(36px, 11vw, 52px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-v3 .home-hero__orbit path {
+    animation: none;
+  }
+
+  body.home-v3 .home-action-card img,
+  body.home-v3 .home-project-card,
+  body.home-v3 .home-person img,
+  body.home-v3 .home-button {
+    transition: none;
+  }
+}
+
+@media print {
+  body.home-v3 .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body.home-v3 .home-hero__orbit,
+  body.home-v3 .home-hero__season {
+    display: none !important;
+  }
+}
