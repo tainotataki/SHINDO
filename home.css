@@ -1491,8 +1491,26 @@ body.home-v2 .home-vision__line {
 
   body.home-v2 .home-hero__inner,
   body.home-v2.redesign .home-hero__inner.is-page-hero {
+    --mobile-hero-motif-top: clamp(420px, calc(866px - 114vw), 500px);
     display: grid !important;
-    padding: 58px 20px 72px !important;
+    gap: 0 !important;
+    padding: 52px 20px 64px !important;
+  }
+
+  body.home-v2.redesign.page-index .home-hero__inner > .journey-motif--hero {
+    top: var(--mobile-hero-motif-top);
+    right: -28px;
+    bottom: auto;
+    width: 260px;
+    height: 260px;
+    opacity: .5;
+  }
+
+  body.home-v2.redesign.page-index .home-hero__inner.is-page-hero::after {
+    z-index: 1;
+    top: calc(var(--mobile-hero-motif-top) + 210px);
+    right: 24px;
+    bottom: auto;
   }
 
   body.home-v2 .home-hero__category {
@@ -1910,6 +1928,7 @@ body.home-v2 .home-vision__line {
   }
 
   body.home-v2 .home-action-card img {
+    height: auto;
     aspect-ratio: 16 / 9;
   }
 
