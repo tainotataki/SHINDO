@@ -1223,6 +1223,11 @@ body.home-v2.redesign .home-vision h2 {
   text-shadow: 0 2px 16px rgba(0, 0, 0, .18);
 }
 
+body.home-v2 .home-vision__line {
+  display: block;
+  white-space: nowrap;
+}
+
 @media (max-width: 1120px) {
   body.home-v2 .home-hero__inner,
   body.home-v2.redesign .home-hero__inner.is-page-hero {
