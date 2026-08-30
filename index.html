@@ -15,8 +15,9 @@ a:hover{color:#93293C}
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="design.css?v=27">
 <link rel="stylesheet" href="home.css?v=10">
+<link rel="stylesheet" href="home-playful.css?v=7">
 </head>
-<body class="home-v2">
+<body class="home-v2 home-v3">
 <div style="background:#F6EEB6;color:#1A1A16">
 
 <div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
@@ -33,6 +34,15 @@ a:hover{color:#93293C}
 </div>
 
 <section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__orbit" aria-hidden="true">
+    <svg viewBox="0 0 1000 720" preserveAspectRatio="none" focusable="false">
+      <path d="M-60 560C120 488 112 312 286 314c137 2 144 154 40 191-116 42-208-96-105-190 113-103 258 13 357-85 71-69 69-191 223-208 92-10 160 35 259 11" />
+      <circle cx="857" cy="126" r="48" />
+      <circle cx="98" cy="163" r="12" />
+      <circle cx="132" cy="132" r="5" />
+    </svg>
+  </div>
+  <p class="home-hero__season" aria-hidden="true">FOUR SEASONS, ONE VILLAGE — AIZU</p>
   <div class="home-hero__inner" style="max-width:1180px;margin:0 auto">
     <div class="home-hero__copy">
       <p class="home-hero__category">
@@ -64,7 +74,29 @@ a:hover{color:#93293C}
         <img src="proj-shukakusai.jpg" alt="世代を越えた人たちが食卓を囲む様子">
         <figcaption>03　共に暮らす</figcaption>
       </figure>
+      <span class="home-hero__note" aria-hidden="true">つくりながら、<br>暮らしてみる。</span>
     </div>
+    <svg class="home-hero__rice-grains" viewBox="0 0 92 124" aria-hidden="true" focusable="false">
+      <defs>
+        <path id="home-rice-grain" d="M9 1.5C14.3.5 18.4 4.6 18.1 10.2c-.4 7.1-5.4 13.8-11.3 15.6-4.3-.5-7-4.5-6.7-9.5C.5 9.3 4.1 2.5 9 1.5Z" />
+      </defs>
+      <g class="home-hero__rice-grain home-hero__rice-grain--rust" transform="translate(47 2) rotate(-18 9 14)">
+        <use href="#home-rice-grain" />
+        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
+      </g>
+      <g class="home-hero__rice-grain home-hero__rice-grain--straw" transform="translate(68 34) rotate(24 9 14)">
+        <use href="#home-rice-grain" />
+        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
+      </g>
+      <g class="home-hero__rice-grain home-hero__rice-grain--sky" transform="translate(10 70) rotate(-32 9 14)">
+        <use href="#home-rice-grain" />
+        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
+      </g>
+      <g class="home-hero__rice-grain home-hero__rice-grain--leaf" transform="translate(49 94) rotate(16 9 14)">
+        <use href="#home-rice-grain" />
+        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
+      </g>
+    </svg>
   </div>
 </section>
 
