@@ -1520,7 +1520,7 @@ body.redesign :where(.on-dark, .site-footer) :where(a, button, input, textarea, 
 
   .journey-motif--hero {
     top: auto;
-    right: -72px;
+    right: -16px;
     bottom: 0;
     width: 240px;
     height: 240px;
