@@ -1349,13 +1349,12 @@ body.home-v2.redesign .home-vision h2 {
     min-height: 0;
     padding: 22px 0 24px;
     border-top: 0;
-    border-bottom: 1px solid var(--home-rule);
+    border-bottom: 0;
     background: transparent;
     box-shadow: none;
   }
 
   body.home-v2 .home-org-chart__branches article:last-child {
-    border-bottom: 0;
     padding-bottom: 18px;
   }
 
