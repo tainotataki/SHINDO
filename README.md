@@ -12,6 +12,9 @@
 | `projects.html` | プロジェクト一覧 |
 | `partnership.html` | パートナーシップ |
 | `recruit.html` | 採用・募集 |
+| `privacy-policy.html` | プライバシーポリシー |
+| `design.css` | 全ページ共通のデザイン・レイアウト |
+| `design.js` | 共通UIと装飾の生成 |
 | `responsive.css` | レスポンシブ対応スタイル |
 | `zenbu-r7.pdf` | 令和7年度 活動報告書 |
 
