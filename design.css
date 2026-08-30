@@ -2749,13 +2749,18 @@ body.redesign.page-index #a-recruit .field-card:hover {
     margin-top: 16px !important;
   }
 
-  /* Keep people portraits circular; responsive.css otherwise flattens them into landscape tiles. */
+  /* Match the desktop organic portrait treatment instead of the mobile landscape tiles. */
+  body.redesign.page-index .people-section .person-card {
+    border: 0;
+  }
+
   body.redesign.page-index .people-section .person-card .portrait-photo {
     width: min(82%, 320px) !important;
-    aspect-ratio: 1 / 1 !important;
+    aspect-ratio: 4 / 5 !important;
     margin: 0 auto 24px !important;
     border: 8px solid var(--surface-raised) !important;
-    border-radius: 50% !important;
+    border-radius: 50% 50% 45% 45% / 38% 38% 62% 62% !important;
+    box-shadow: inset 0 0 0 1px var(--line-soft), 12px 16px 0 var(--ume-100);
   }
 
   body.redesign.page-index .toc-section .field-card,
