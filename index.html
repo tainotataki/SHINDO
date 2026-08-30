@@ -3,26 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SHINDO ── 新しい豊かさへとつづく道</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<title>SHINDO ── 有機農業からはじまる、会津・奥会津の村づくり</title>
+<meta name="description" content="SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地や古民家の再生、自然環境の整備、学びの場づくりを進める村づくりプロジェクトです。">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <style>
 body{margin:0;background:#F6EEB6;color:#1A1A16;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#4A1520;text-decoration:none}
 a:hover{color:#93293C}
 </style>
-<style>
-.hv1:hover{background:#3C1019 !important}
-.hv2:hover{border-color:#4A1520 !important}
-.hv3:hover{border-color:#4A1520 !important}
-.hv4:hover{border-color:#4A1520 !important}
-.hv5:hover{border-color:#4A1520 !important}
-.hv6:hover{border-color:#4A1520 !important}
-</style>
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="design.css?v=27">
+<link rel="stylesheet" href="home.css?v=8">
 </head>
-<body>
+<body class="home-v2">
 <div style="background:#F6EEB6;color:#1A1A16">
 
 <div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
@@ -38,244 +32,383 @@ a:hover{color:#93293C}
   </div>
 </div>
 
-
-<div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:60px;padding:96px 60px 76px;align-items:end">
-  <div>
-    <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:34px">WHAT WE CREATE / 私たちが創るもの</div>
-    <h1 style="font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #492D14; font-size: 58px; line-height: 1.45; letter-spacing: .055em; margin: 0 0 34px"><span style="color: rgb(147, 41, 60);">雪</span>国で共に生きる、<br>新しい豊かさの<span style="color: rgb(147, 41, 60);">カタチ</span></h1>
-    <div style="width:64px;height:1px;background:#B9A65A;margin-bottom:30px"></div>
-    <p style="font-size:16px;line-height:2.15;letter-spacing:.05em;margin:0;max-width:34em;color:#26261F;text-wrap:pretty">国内最大のブナ帯の山間地・会津地方を拠点に、<br>食・住<span style="letter-spacing: 0.8px;"></span>・<span style="letter-spacing: 0.8px;">エネルギー・</span>健康<span style="letter-spacing: 0.8px;">・共育</span>──生命の基盤を、<br>自分たちの手で創り直しています。</p>
-  </div><div class="hero-cta" style="display: flex; flex-direction: column; gap: 14px; padding-bottom: 0; width: 221px; position: relative">
-    
-    
-    <a href="recruit.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding: 0 22px; background: #4A1520; border: 1px solid #4A1520; color: #F6EEB6; text-align: center; width: 168px; min-height: 168px; height: 168px" class="hv1">
-      <span style="font-family: &quot;Zen Old Mincho&quot;, serif; font-size: 17px; letter-spacing: 0.1em; line-height: 28px; color: rgb(240, 220, 142);">パートナーと</span>
-      <span style="font-family: &quot;Zen Old Mincho&quot;, serif; font-size: 17px; letter-spacing: 0.1em; line-height: 28px; color: rgb(240, 220, 142);">現場メンバーを</span>
-      <span style="font-family: &quot;Zen Old Mincho&quot;, serif; font-size: 17px; letter-spacing: 0.1em; line-height: 28px; color: rgb(230, 217, 162);">募集しています</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-
-
-
-
-
-
-<div style="height:460px;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;background-image:url('home-onogawa.jpg');background-size:cover;background-position:center 62%"></div>
-
-<section class="home-movie-section" aria-labelledby="home-movie-title">
-  <div class="home-movie-section__inner" style="max-width:1180px;margin:0 auto">
-    <div class="home-movie-section__header">
-      <div class="home-movie-section__label">MOVIE ── 起ち上げ期ムービー</div>
-      <h2 id="home-movie-title">「SHINDO 2025」<span>（2024年に撮影）</span></h2>
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__inner" style="max-width:1180px;margin:0 auto">
+    <div class="home-hero__copy">
+      <p class="home-hero__category">
+        <span class="home-hero__category-origin">有機農業からはじまる、</span>
+        <span class="home-hero__category-place">会津・奥会津の村づくりプロジェクト</span>
+      </p>
+      <h1 id="home-hero-title"><span>土を耕し、家を直し、</span><span>みんなで暮らしを<br class="home-mobile-break">つくる。</span></h1>
+      <p class="home-hero__legacy">雪国で共に生きる、新しい豊かさのカタチ。</p>
+      <div class="home-hero__description">
+        <p>SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地の再生、古民家の再生、自然環境の整備、学びの場づくりを進めるプロジェクトです。</p>
+        <p>国内最大のブナ帯の山間地・会津地方を拠点に、食・住・エネルギー・健康・共育──生命の基盤を、自分たちの手で創り直しています。</p>
+      </div>
+      <div class="home-hero__actions" aria-label="トップページの主要な導線">
+        <a class="home-button home-button--primary" href="#a-projects">いま進んでいる活動を見る <span aria-hidden="true">↓</span></a>
+        <a class="home-button home-button--secondary" href="#home-movie-title">映像でSHINDOを知る <span aria-hidden="true">▶</span></a>
+      </div>
+      <p class="home-hero__recruit"><a href="recruit.html">パートナーと現場メンバーを募集しています <span aria-hidden="true">→</span></a></p>
     </div>
-    <div class="home-movie-section__frame">
-      <iframe src="https://player.vimeo.com/video/1116123465" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="SHINDO 2025 コンセプトムービー（2024年撮影）" loading="lazy"></iframe>
+
+    <div class="home-hero__collage" aria-label="SHINDOの農作業、拠点整備、人が集う風景">
+      <figure class="home-hero__photo home-hero__photo--field">
+        <img src="proj-65mei.jpg" alt="昭和村の田畑で大勢の人が農作業をする様子">
+        <figcaption>01　土を耕す</figcaption>
+      </figure>
+      <figure class="home-hero__photo home-hero__photo--house">
+        <img src="proj-shukuba.jpg" alt="共同宿場にする古民家を再生している室内">
+        <figcaption>02　家を直す</figcaption>
+      </figure>
+      <figure class="home-hero__photo home-hero__photo--gather">
+        <img src="proj-shukakusai.jpg" alt="世代を越えた人たちが食卓を囲む様子">
+        <figcaption>03　共に暮らす</figcaption>
+      </figure>
     </div>
-    <p id="home-movie-credit" class="home-movie-section__credit">映像：茂木綾子&amp;佐々木直也 <span>／</span> <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener">Vimeoで見る →</a></p>
   </div>
 </section>
 
-<div style="max-width:1180px;margin:0 auto;padding:76px 60px 20px">
-  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:26px">目次</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-    <a href="about.html" style="display:block;background:#EFE49B;border:1px solid #D9C97E;padding:28px 26px" class="hv2">
-      <span style="display:block;font-family:'Zen Old Mincho',serif;font-size:12px;letter-spacing:.24em;color:#93293C;margin-bottom:14px">About</span>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:21px;letter-spacing:.06em;margin:0 0 10px">SHINDOとは</h2>
-      <p style="font-size:13px;line-height:1.95;color:#45453C;margin:0">世界の流れをどう捉え、何を創り、遺すのか。</p>
-    </a>
-    <a href="people.html" style="display:block;background:#EFE49B;border:1px solid #D9C97E;padding:28px 26px" class="hv3">
-      <span style="display:block;font-family:'Zen Old Mincho',serif;font-size:12px;letter-spacing:.24em;color:#93293C;margin-bottom:14px">People</span>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:21px;letter-spacing:.06em;margin:0 0 10px">仲間たち</h2>
-      <p style="font-size:13px;line-height:1.95;color:#45453C;margin:0">起ち上げ仲間、活動の母体、パートナーの方々の紹介。</p>
-    </a>
-    <a href="projects.html" style="display:block;background:#EFE49B;border:1px solid #D9C97E;padding:28px 26px" class="hv4">
-      <span style="display:block;font-family:'Zen Old Mincho',serif;font-size:12px;letter-spacing:.24em;color:#93293C;margin-bottom:14px">Projects</span>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:21px;letter-spacing:.06em;margin:0 0 10px">活動紹介</h2>
-      <p style="font-size:13px;line-height:1.95;color:#45453C;margin:0">進行中・完了・これから。</p>
-    </a>
-    <a href="partnership.html" style="display:block;background:#EFE49B;border:1px solid #D9C97E;padding:28px 26px" class="hv5">
-      <span style="display:block;font-family:'Zen Old Mincho',serif;font-size:12px;letter-spacing:.24em;color:#93293C;margin-bottom:14px">Partnership</span>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:21px;letter-spacing:.06em;margin:0 0 10px">パートナー募集</h2>
-      <p style="font-size:13px;line-height:1.95;color:#45453C;margin:0">資金的支援を入り口に、SHINDOのパートナーになる。</p>
-    </a>
-    <a href="recruit.html" style="display:block;background:#EFE49B;border:1px solid #D9C97E;padding:28px 26px" class="hv6">
-      <span style="display:block;font-family:'Zen Old Mincho',serif;font-size:12px;letter-spacing:.24em;color:#93293C;margin-bottom:14px">Recruit</span>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:21px;letter-spacing:.06em;margin:0 0 10px">メンバー募集</h2>
-      <p style="font-size:13px;line-height:1.95;color:#45453C;margin:0">村に住む or 通いながら、共に働く仲間を募ります。</p>
-    </a>
-    
-  </div>
-</div><div style="height:460px;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;background-image:url('home-suiro-masu.jpg');background-size:cover;background-position:center 60%"></div>
-
-<div id="a-about" style="background:#EFE49B;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;scroll-margin-top:80px">
-  
-<div style="max-width:1180px;margin:0 auto;padding:70px 60px">
-    <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:18px">TRAJECTORY in NUMBERS</div>
-    <p style="font-size:13.5px;line-height:2.1;letter-spacing:.05em;color:#26261F;max-width:48em;margin:0 0 30px;text-wrap:pretty">ここで紹介する4つの数字は、SHINDOの<span style="letter-spacing: 0.675px;">運営母体である株式会社ZEN-BUと、</span>活動母体である「自然農法無の会」が共に歩んできた道すじの断片です。</p>
-    <div style="display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; align-items: stretch">
-      <div style="background: #F6EEB6; border: 1px solid #D9C97E; border-top: 3px solid #4A1520; padding: 30px 26px; display: flex; flex-direction: column; gap: 16px">
-        <b style="display: block; font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #4A1520; font-size: 25px; line-height: 1.5; letter-spacing: .03em; margin: 0; text-align: center">有機栽培<br>23ha<span style="display: block; font-size: 13px; letter-spacing: 0.1em; color: rgb(142, 42, 128); margin-top: 8px;">ORGANIC ／ <br>県内最大規模</span><span style="display: block; font-size: 11px; letter-spacing: 0.08em; color: rgb(106, 106, 93); margin-top: 6px;">自然農法無の会<br>＋ZEN-BU</span></b>
-        <span style="font-size:12.5px;color:#45453C;letter-spacing:.06em;line-height:2;border-top:1px solid #D9C97E;padding-top:16px">活動基盤である自然農法無の会は、有機稲作面積が福島県で最大級で、創業21年目の有機農場です。地域循環型の堆肥農法で最高の米や大豆を育てています。<br></span>
-      </div><div style="background: #F6EEB6; border: 1px solid #D9C97E; border-top: 3px solid #4A1520; padding: 30px 26px; display: flex; flex-direction: column; gap: 16px">
-        <b style="display: block; font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #4A1520; font-size: 25px; line-height: 1.5; letter-spacing: .03em; margin: 0; text-align: center">創業<br>3年目<span style="display: block; font-size: 13px; letter-spacing: 0.1em; color: rgb(142, 42, 128); margin-top: 8px;">SINCE 2021</span><span style="display: block; font-size: 11px; letter-spacing: 0.08em; color: rgb(106, 106, 93); margin-top: 6px;">ZEN-BU</span></b>
-        <span style="font-size: 12.5px; color: #45453C; letter-spacing: .06em; line-height: 2; border-top: 1px solid #D9C97E; padding-top: 16px">SHINDO発起人の宇野は、2021年より自然農法無の会にて有機農法を自学し、農業経営に携わって6年目になります。2023年にZEN-BUを創業して「会津百姓一揆」を始動。これが2025年に「SHINDO」になりました。</span>
-      </div><div style="background: #F6EEB6; border: 1px solid #D9C97E; border-top: 3px solid #4A1520; padding: 30px 26px; display: flex; flex-direction: column; gap: 16px">
-        <b style="display: block; font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #4A1520; font-size: 25px; line-height: 1.5; letter-spacing: .03em; margin: 0; text-align: center">継続<br>パートナー<br>30組超<span style="display: block; font-size: 13px; letter-spacing: 0.1em; color: rgb(142, 42, 128); margin-top: 8px;">PARTNERS ／ 全国</span><span style="display: block; font-size: 11px; letter-spacing: 0.08em; color: rgb(106, 106, 93); margin-top: 6px; font-family: &quot;Zen Old Mincho&quot;, serif;">ZEN-BU</span></b><span style="font-size: 12.5px; color: #45453C; letter-spacing: .06em; line-height: 2; border-top: 1px solid #D9C97E; padding-top: 16px">SHINDOの起ち上げ期、そのビジョンに共鳴し、資金的支援をいただいたパートナーさんが、37組生まれました。そして今、このパートナーさんとの共創が始まっています。</span>
-        
-      </div><div style="background: #F6EEB6; border: 1px solid #D9C97E; border-top: 3px solid #4A1520; padding: 30px 26px; display: flex; flex-direction: column; gap: 16px">
-        
-        <b style="display: block; font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #4A1520; font-size: 25px; line-height: 1.5; letter-spacing: .03em; margin: 0; text-align: center">滞在者数<br>400名〜<span style="display: block; font-size: 13px; letter-spacing: 0.1em; color: rgb(142, 42, 128); margin-top: 8px;">VISITORS ／ 2025年</span><span style="display: block; font-size: 11px; letter-spacing: .08em; color: #6A6A5D; margin-top: 6px; font-family: &quot;Zen Old Mincho&quot;, serif;">自然農法無の会<br>＋ZEN-BU</span></b><span style="font-size: 12.5px; color: #45453C; letter-spacing: .06em; line-height: 2; border-top: 1px solid #D9C97E; padding-top: 16px">援農、共創事業の起ち上げ、日中活動するメンバーのご飯づくりなど。それぞれの形でSHINDOを支えてくださる方々が、絶えず訪れています。</span>
-      </div>
-      
-      
-      
-    </div>
-  </div></div><div style="height:460px;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;background-image:url('home-kimio-tanbo.jpg');background-size:cover;background-position:center 55%"></div>
-<div id="a-people" style="background:#EFE49B;border-top:1px solid #D9C97E;scroll-margin-top:80px">
-  <div style="max-width:1180px;margin:0 auto;padding:80px 60px">
-    <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:34px">
-      <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C">PEOPLE</div>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;margin:0">この場を、つくっている人たち。</h2>
-      <a href="people.html" style="margin-left:auto;font-size:12.5px;border-bottom:1px solid #CBB96A;padding-bottom:3px">全員を見る →</a>
-    </div>
-    <div class="people-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:26px">
-      <div class="people-item person-card">
-        <div class="people-photo" style="aspect-ratio:1;border-radius:50%;background-image:url('people-uno-hiroyasu-v2.jpg');background-size:cover;background-position:center 40%;margin-bottom:18px"></div>
-        <div class="person-body">
-        <div class="person-role" style="font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">発起人</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:19px;margin:0 0 8px;letter-spacing:.06em">宇野宏泰</h3>
-        <p style="font-size:12.5px;line-height:1.95;color:#45453C;margin:0">全国30件以上の農家を巡り、2021年に会津へ移住。SHINDOの発案者。</p>
+<section class="home-actions" aria-labelledby="home-actions-title">
+  <div class="home-shell">
+    <header class="home-section-heading reveal">
+      <p class="home-section-label">SHINDO IN 30 SECONDS ／ 30秒でわかるSHINDO</p>
+      <h2 id="home-actions-title">私たちが、実際にしていること。</h2>
+      <p class="home-section-lead">SHINDOは、農業だけを行う団体ではありません。<br>有機農業を起点に、土地、家、道具、自然、人のつながりを、一つの地域の中で育てています。</p>
+    </header>
+    <div class="home-actions__grid">
+      <article class="home-action-card reveal">
+        <img src="proj-soy-hand.jpg" alt="仲間とともに畑で作物を育てる様子">
+        <div class="home-action-card__body">
+          <span class="home-action-card__number">01</span>
+          <h3>育てる</h3>
+          <p>省耕起・省資源型の有機稲作や大豆栽培に取り組み、地域で食べ続けられる生産と備蓄の基盤をつくる。</p>
         </div>
-      </div>
-      <div class="people-item person-card">
-        <div class="people-photo" style="aspect-ratio:1;border-radius:50%;background-image:url('people-ueno-takuya.jpg');background-size:cover;background-position:center 35%;margin-bottom:18px"></div>
-        <div class="person-body">
-        <div class="person-role" style="font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">起ち上げの仲間</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:19px;margin:0 0 8px;letter-spacing:.06em">上野拓也</h3>
-        <p style="font-size:12.5px;line-height:1.95;color:#45453C;margin:0">三年前に都内の企業を辞めて会津へ。新たな時代の食糧生産を探求。</p>
+      </article>
+      <article class="home-action-card reveal">
+        <img src="proj-kosaku-juki.jpg" alt="重機を使って耕作放棄地を再生する様子">
+        <div class="home-action-card__body">
+          <span class="home-action-card__number">02</span>
+          <h3>再生する</h3>
+          <p>耕作放棄地、水路、森、古民家、農業倉庫を、人が再び使える場所へ戻していく。</p>
         </div>
-      </div>
-      <div class="people-item person-card">
-        <div class="people-photo" style="aspect-ratio:1;border-radius:50%;background-image:url('people-oshima-takeo.jpg');background-size:cover;background-position:center 40%;margin-bottom:18px"></div>
-        <div class="person-body">
-        <div class="person-role" style="font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">運営仲間</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:19px;margin:0 0 8px;letter-spacing:.06em">大島武生</h3>
-        <p style="font-size:12.5px;line-height:1.95;color:#45453C;margin:0">大学四回生の冬に会津へ。教育と環境整備を担い、都市と農をつなぐ。</p>
+      </article>
+      <article class="home-action-card reveal">
+        <img src="proj-machine-taue.jpg" alt="中山間地に合う農業機械を整備する様子">
+        <div class="home-action-card__body">
+          <span class="home-action-card__number">03</span>
+          <h3>つくる・試す</h3>
+          <p>中山間地に合う農業機械をつくり、地域でまかなえるエネルギーや新しい暮らしの仕組みを検証する。</p>
         </div>
-      </div>
-      <div class="people-item org-card" style="border:1px solid #CBB96A;background:#EFE49B;display:flex;flex-direction:column">
-        <div class="people-photo" style="aspect-ratio: 1; background-image: url('muno-group.jpg'); background-size: cover; background-position: center 20%; border-bottom: 1px solid #CBB96A"></div>
-        <div style="padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
-          <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:19px;letter-spacing:.06em">自然農法 無の会</div>
-          <p style="font-size:12.5px;line-height:1.95;color:#45453C;margin:0">創業21年、県内最大規模の有機JAS農家。SHINDOの実践知の源。</p>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;border-top:1px solid #CBB96A;padding-top:12px;margin-top:auto">＋ 全国35組超のパートナー</span>
+      </article>
+      <article class="home-action-card reveal">
+        <img src="proj-highschool.jpg" alt="大人と学生が拠点に集まる学びの場">
+        <div class="home-action-card__body">
+          <span class="home-action-card__number">04</span>
+          <h3>集い、学ぶ</h3>
+          <p>援農、学生プログラム、共同生活、対話の場を通じて、子どもも大人も一緒に学び、育ち合う。</p>
         </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-movie-section" aria-labelledby="home-movie-title">
+  <div class="home-shell home-movie-section__inner">
+    <div class="home-movie-section__header reveal">
+      <div>
+        <p class="home-section-label home-section-label--light">MOVIE ／ 映像で見るSHINDO</p>
+        <h2 id="home-movie-title">農業から始まった取り組みが、<br>なぜ村づくりへと広がったのか。</h2>
+      </div>
+      <p>会津の風景と、立ち上げに関わる人たちの言葉から紹介します。</p>
+    </div>
+    <div class="home-movie-section__frame reveal" data-video-shell>
+      <img src="proj-film.jpg" alt="霧が立ちこめる会津の山々とSHINDO 2025のタイトル">
+      <button type="button" class="home-movie-section__play" data-video-trigger data-video-src="https://player.vimeo.com/video/1116123465?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" aria-label="SHINDO 2025 コンセプトムービーを再生する">
+        <span class="home-movie-section__play-icon" aria-hidden="true">▶</span>
+        <span>「SHINDO 2025」を再生</span>
+        <small>2024年撮影</small>
+      </button>
+    </div>
+    <p class="home-movie-section__credit">映像：茂木綾子&amp;佐々木直也 <span>／</span> <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener">Vimeoで見る →</a></p>
+  </div>
+</section>
+
+<section id="a-projects" class="home-projects" aria-labelledby="home-projects-title">
+  <div class="home-shell">
+    <header class="home-section-heading home-section-heading--split reveal">
+      <div>
+        <p class="home-section-label">PROJECTS ／ 活動</p>
+        <h2 id="home-projects-title">いま、会津で進めていること。</h2>
+        <p class="home-projects__legacy">やっていること、やったこと、やること。</p>
+      </div>
+      <a class="home-text-link" href="projects.html">すべての活動を見る <span aria-hidden="true">→</span></a>
+    </header>
+
+    <div class="home-projects__grid">
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-noen.jpg" alt="会津の田んぼで稲を植える農作業の様子">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">福島県昭和村・小野川</p>
+          <h3>省資源型の有機稲作</h3>
+          <p>標高800mの豪雪地で、大型トラクターに頼りきらない稲作に取り組んでいます。</p>
+          <div class="home-project-card__footer"><span class="home-status">実証中</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-shukuba.jpg" alt="共同宿場として再生中の古民家">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">福島県昭和村・小野川</p>
+          <h3>新しい共同宿場づくり</h3>
+          <p>子連れ家族や現場を訪れる人が滞在できるよう、古民家を再生しています。</p>
+          <div class="home-project-card__footer"><span class="home-status">整備中</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-shizen-kassei.jpg" alt="森と水の循環を整える自然環境の活動風景">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">福島県会津美里町・伊佐須美神社</p>
+          <h3>自然環境の活性化</h3>
+          <p>水源・沢・山と土を整え、伊佐須美神社の社叢の再生を含む活動を進めています。</p>
+          <div class="home-project-card__footer"><span class="home-status">通年</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-kosaku-juki.jpg" alt="数年放置されていた田を重機で開墾する様子">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">福島県昭和村・小野川</p>
+          <h3>耕作放棄地の再生</h3>
+          <p>数年放置されていた田を開墾し、水の循環の最上流にある水源の郷で稲作を再開します。</p>
+          <div class="home-project-card__footer"><span class="home-status">開墾中</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-machine-taue.jpg" alt="田植え機を中山間地向けに整備する様子">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">福島県会津美里町</p>
+          <h3>農業機械の開発</h3>
+          <p>中山間地に合う、小型・低予算の農業機械を整備し、不耕起栽培に向けた検証を重ねています。</p>
+          <div class="home-project-card__footer"><span class="home-status">検証中</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+      <a class="home-project-card reveal" href="projects.html">
+        <img src="proj-tradeon.jpg" alt="地域で使う設備や機械を扱う現場">
+        <div class="home-project-card__body">
+          <p class="home-project-card__place">会津・奥会津</p>
+          <h3>代替エネルギーの模索</h3>
+          <p>地域でまかなえるエネルギーの候補を、安全性・再現性・法的適合性を重視して検証します。</p>
+          <div class="home-project-card__footer"><span class="home-status home-status--quiet">予備検証</span><span>詳しく見る →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="a-about" class="home-why" aria-labelledby="home-why-title">
+  <div class="home-shell home-why__inner">
+    <div class="home-why__heading reveal">
+      <p class="home-section-label">WHY VILLAGE-MAKING? ／ なぜ村づくりへ</p>
+      <h2 id="home-why-title">農業から、<br>なぜ村づくりへ？</h2>
+    </div>
+    <div class="home-why__copy reveal">
+      <p>食べるもの、住む場所、使うエネルギー、健康を支える習慣、子どもと大人が学ぶ環境。</p>
+      <p>私たちは、暮らしを支えるものの多くを、いつの間にか遠くの仕組みに委ねるようになりました。</p>
+      <p>SHINDOが目指しているのは、単に農業を大きくすることではありません。毎年実る土、住み継げる家、生き抜く知恵、そして共に創る仲間を、次の世代に残る「暮らしの基盤」として育てることです。</p>
+      <a class="home-button home-button--secondary" href="about.html">SHINDOの考え方を読む <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="home-organization" aria-labelledby="home-organization-title">
+  <div class="home-shell">
+    <header class="home-section-heading reveal">
+      <p class="home-section-label">ORGANIZATION ／ 体制</p>
+      <h2 id="home-organization-title">SHINDOをつくる体制</h2>
+      <p class="home-section-lead">構想を動かす法人、農業の実践基盤、現場と全国の仲間が、それぞれの役割で一つのプロジェクトをつくっています。</p>
+    </header>
+    <div class="home-org-chart reveal">
+      <div class="home-org-chart__root">
+        <span>PROJECT</span>
+        <strong>SHINDO</strong>
+        <p>暮らしの基盤をつくるプロジェクト</p>
+      </div>
+      <div class="home-org-chart__branches">
+        <article>
+          <span>OPERATE</span>
+          <h3>株式会社ZEN-BU</h3>
+          <p>構想、運営、プロジェクト推進を担当</p>
+        </article>
+        <article>
+          <span>FARM</span>
+          <h3>自然農法 無の会</h3>
+          <p>有機農業の実践と生産を担う活動基盤</p>
+        </article>
+        <article>
+          <span>CO-CREATE</span>
+          <h3>現場メンバー・全国のパートナー</h3>
+          <p>資金、技術、労働、事業づくりで共創</p>
+        </article>
       </div>
     </div>
-    
   </div>
-</div>
+</section>
 
-
-
-<div style="height:460px;border-top:1px solid #D9C97E;background-image:url('home-kimio-kuri.jpg');background-size:cover;background-position:center 50%"></div>
-<div id="a-projects" style="max-width:1180px;margin:0 auto;padding:88px 60px 20px;scroll-margin-top:80px">
-  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C">PROJECTS</div><div style="display:flex;align-items:baseline;gap:18px;margin-bottom:8px">
-    
-    <h2 style="font-family: 'Zen Old Mincho',serif; font-weight: 500; color: #4A1520; font-size: 29px; letter-spacing: .06em; margin: 0">やっていること、やったこと、やること。</h2>
-    <a href="projects.html" style="margin-left:auto;font-size:12.5px;border-bottom:1px solid #CBB96A;padding-bottom:3px">すべての活動を見る →</a>
-  </div>
-  <p style="font-size:14px;line-height:1.05;color:#45453C;margin:0 0 17px"><br></p>
-
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#6A6A5D;padding:0 0 12px;border-bottom:1px solid #B9A65A">
-    <span>PERIOD / SITE</span><span>PROJECT ── ONGOING</span><span>NOTE</span><span style="text-align:right">STATUS</span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2026〜<br>昭和村・小野川</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">省資源型の有機稲作</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">反収6俵が当面の目標</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4A1520;border:1px solid #4A1520;padding:4px 9px">実証中</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2026〜<br>昭和村・小野川</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">新しい共同宿場づくり</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">現場を訪れる人が滞在する古民家の再生</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4A1520;border:1px solid #4A1520;padding:4px 9px">整備中</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2026〜<br>会津美里町</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">自然環境の活性化</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">伊佐須美神社の社叢再生を含む</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4A1520;border:1px solid #4A1520;padding:4px 9px">通年</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2026〜<br>昭和村・小野川</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">耕作放棄地の再生</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">水の循環の最上流、水源の郷で</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4A1520;border:1px solid #4A1520;padding:4px 9px">開墾中</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2025〜<br>検証段階</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">不耕起栽培用の機械開発</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">小型・低予算の播種機を独自に開発</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6A6A5D;border:1px solid #CBB96A;padding:4px 9px">検証</span></span>
-  </div>
-  <div style="display:grid;grid-template-columns:170px 1fr 220px 88px;align-items:center;padding:22px 0;border-bottom:1px solid #D9C97E">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6A6A5D;line-height:1.7">2026〜<br>予備検証</span>
-    <span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;letter-spacing:.05em">代替エネルギーの模索</span>
-    <span style="font-size:12px;color:#45453C;line-height:1.85">安全性、再現性、法的適合性を重視して</span>
-    <span style="text-align:right"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6A6A5D;border:1px solid #CBB96A;padding:4px 9px">予備</span></span>
-  </div>
-</div>
-
-
-<div id="a-recruit" style="background:#3C1019;color:#F6EEB6;scroll-margin-top:80px">
-  <div style="max-width:1180px;margin:0 auto;padding:88px 60px">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#F0DC8E;letter-spacing:.16em;margin-bottom:18px">MEMBER ＆　PARTNERSHIP ── 仲間を募集しています</div>
-    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:34px;line-height:1.6;letter-spacing:.05em;margin:0 0 12px;color:#fff">共にSHINDOをつくる仲間を募っています<br></h2>
-    <p style="font-size:14px;line-height:2;color:#C79EA0;margin:0 0 40px">それぞれの力に支えられて、現場は動いています。</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <div style="border:1px solid #61262E;padding:34px 30px;background:#42101A">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E;letter-spacing:.14em;margin-bottom:22px">01 ／ 新たに2〜3名</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#fff;letter-spacing:.05em">移住メンバー</h3>
-        <p style="font-size:13px;line-height:1.95;color:#C79EA0;margin:0 0 18px">この村に住み、担う。5〜10年をかけて、暮らしと社会を一緒につくっていく「始まりの仲間」を2〜3名ほど募っています。</p>
-        <a class="card-link" href="recruit.html#r-migrate" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E">条件を見る →</a>
-      </div>
-      <div style="border:1px solid #61262E;padding:34px 30px;background:#42101A">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E;letter-spacing:.14em;margin-bottom:22px">02 ／ あと5組</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#fff;letter-spacing:.05em">通いメンバー</h3>
-        <p style="font-size:13px;line-height:1.95;color:#C79EA0;margin:0 0 18px">月に一度から隔月ほど村に還り、現場と資金の両面で支える。現在4組がこの形で関わっています。</p>
-        <a class="card-link" href="recruit.html#r-commute" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E">関わり方を見る →</a>
-      </div>
-      <div style="border:1px solid #7D3941;padding:34px 30px;background:#4B1520">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E;letter-spacing:.14em;margin-bottom:22px">03 ／ 新たに10組</div>
-        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:22px;margin:0 0 14px;color:#fff;letter-spacing:.05em">パートナー</h3>
-        <p style="font-size:13px;line-height:1.95;color:#C79EA0;margin:0 0 18px">余剰を、消えていく数字ではなく未来に残る構造へ。立ち上げ初期フェーズ 総額 約5,500万円。</p>
-        <a class="card-link" href="partnership.html" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0DC8E">詳細を見る →</a>
-      </div>
+<section class="home-metrics" aria-labelledby="home-metrics-title">
+  <div class="home-shell">
+    <header class="home-section-heading reveal">
+      <p class="home-section-label home-metrics__label"><span>TRAJECTORY IN NUMBERS</span> <span aria-hidden="true">／</span> <span>数字で見る歩み</span></p>
+      <h2 id="home-metrics-title">ここまでに、積み上がったもの。</h2>
+      <p class="home-section-lead">SHINDOの運営母体である株式会社ZEN-BUと、活動基盤である「自然農法 無の会」が共に歩んできた道すじの断片です。</p>
+    </header>
+    <div class="home-metrics__grid">
+      <article class="home-metric reveal">
+        <p class="home-metric__owner">活動基盤「自然農法 無の会」＋ZEN-BU</p>
+        <p class="home-metric__value"><strong>23</strong><span>ha</span></p>
+        <h3>有機栽培</h3>
+        <p>自然農法 無の会は、福島県内で最大級の有機稲作面積を担う、創業21年目の有機農場です。</p>
+      </article>
+      <article class="home-metric home-metric--timeline reveal">
+        <p class="home-metric__owner">会津での実践開始から現在まで</p>
+        <p class="home-metric__value"><strong>2021</strong><span>→</span><strong>2025</strong></p>
+        <h3>農業からSHINDOへ</h3>
+        <ol>
+          <li><b>2021</b> 宇野が有機農業の実践を開始</li>
+          <li><b>2023</b> ZEN-BUを創業</li>
+          <li><b>2025</b> SHINDOへ名称変更</li>
+        </ol>
+      </article>
+      <article class="home-metric reveal">
+        <p class="home-metric__owner">株式会社ZEN-BU ／ 全国から参加</p>
+        <p class="home-metric__value"><strong>37</strong><span>組</span></p>
+        <h3>継続パートナー</h3>
+        <p>SHINDOの起ち上げ期、そのビジョンに共鳴し、資金的支援をいただいた仲間との共創が始まっています。</p>
+      </article>
+      <article class="home-metric reveal">
+        <p class="home-metric__owner">自然農法 無の会＋ZEN-BU ／ 2025年</p>
+        <p class="home-metric__value"><strong>400</strong><span>名以上</span></p>
+        <h3>年間滞在者</h3>
+        <p>援農、事業づくり、食事づくりなど、それぞれの形で現場を支える人が絶えず訪れています。</p>
+      </article>
     </div>
-    
-    
   </div>
-</div>
+</section>
 
+<section id="a-people" class="home-people" aria-labelledby="home-people-title">
+  <div class="home-shell">
+    <header class="home-section-heading home-section-heading--split reveal">
+      <div>
+        <p class="home-section-label">PEOPLE ／ 仲間</p>
+        <h2 id="home-people-title">この活動を、誰とつくっているのか。</h2>
+      </div>
+      <a class="home-text-link" href="people.html">全員を見る <span aria-hidden="true">→</span></a>
+    </header>
+    <div class="home-people__grid">
+      <article class="home-person reveal">
+        <img src="people-uno-hiroyasu-v2.jpg" alt="SHINDO発起人の宇野宏泰">
+        <div class="home-person__body">
+          <p class="home-person__role">発起人</p>
+          <h3>宇野宏泰</h3>
+          <p class="home-person__work">構想と事業全体をつくる</p>
+          <p>全国30件以上の農家を巡り、2021年に会津へ移住。SHINDOの発案者。</p>
+        </div>
+      </article>
+      <article class="home-person reveal">
+        <img src="people-ueno-takuya.jpg" alt="SHINDO起ち上げの仲間である上野拓也">
+        <div class="home-person__body">
+          <p class="home-person__role">起ち上げの仲間</p>
+          <h3>上野拓也</h3>
+          <p class="home-person__work">これからの食料生産を探究する</p>
+          <p>都内企業を辞めて会津へ。農業の現場から、新しい生産のあり方を考える。</p>
+        </div>
+      </article>
+      <article class="home-person reveal">
+        <img src="people-oshima-takeo.jpg" alt="SHINDO運営メンバーの大島武生">
+        <div class="home-person__body">
+          <p class="home-person__role">運営仲間</p>
+          <h3>大島武生</h3>
+          <p class="home-person__work">都市と農をつなぎ、学びの場をつくる</p>
+          <p>大学四回生の冬に会津へ。教育と環境整備を担い、都市と農をつなぐ。</p>
+        </div>
+      </article>
+      <article class="home-person reveal">
+        <img src="muno-group.jpg" alt="自然農法 無の会の皆さん">
+        <div class="home-person__body">
+          <p class="home-person__role">活動基盤</p>
+          <h3>自然農法 無の会</h3>
+          <p class="home-person__work">有機農業の実践と生産を担う</p>
+          <p>創業21年、県内最大規模の有機JAS農家。SHINDOの実践知の源。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
+<section class="home-more" aria-labelledby="home-more-title">
+  <div class="home-shell">
+    <header class="home-section-heading reveal">
+      <p class="home-section-label">EXPLORE ／ もっと詳しく</p>
+      <h2 id="home-more-title">SHINDOを、もっと詳しく知る。</h2>
+    </header>
+    <nav class="home-more__list" aria-label="SHINDOを詳しく知るためのページ">
+      <a class="reveal" href="about.html"><span class="home-more__number">01</span><strong>SHINDOとは</strong><span>なぜ始め、何を残そうとしているのか。</span><i aria-hidden="true">→</i></a>
+      <a class="reveal" href="projects.html"><span class="home-more__number">02</span><strong>活動を見る</strong><span>進行中、完了、これからのプロジェクト。</span><i aria-hidden="true">→</i></a>
+      <a class="reveal" href="people.html"><span class="home-more__number">03</span><strong>仲間を知る</strong><span>現場、農業、職人、全国のパートナー。</span><i aria-hidden="true">→</i></a>
+      <a class="reveal" href="recruit.html"><span class="home-more__number">04</span><strong>現場に関わる</strong><span>移住する、通う、援農・視察に参加する。</span><i aria-hidden="true">→</i></a>
+      <a class="reveal" href="partnership.html"><span class="home-more__number">05</span><strong>資金で支える</strong><span>パートナーとして未来の基盤を支える。</span><i aria-hidden="true">→</i></a>
+    </nav>
+  </div>
+</section>
 
+<section id="a-recruit" class="home-join" aria-labelledby="home-join-title">
+  <div class="home-shell">
+    <header class="home-section-heading home-section-heading--dark reveal">
+      <p class="home-section-label home-section-label--light">MEMBER &amp; PARTNERSHIP ／ 仲間を募集しています</p>
+      <h2 id="home-join-title">関わり方は、ひとつではありません。</h2>
+      <p class="home-section-lead">まず現場を訪れてみる。定期的に通う。村に住んで担う。資金や仕事で支える。<br>それぞれの暮らしに合った入口があります。</p>
+      <p class="home-join__legacy">共にSHINDOをつくる仲間を募っています。それぞれの力に支えられて、現場は動いています。</p>
+    </header>
+    <div class="home-join__grid">
+      <article class="home-join-card home-join-card--start reveal">
+        <p class="home-join-card__meta">START ／ はじめの一歩</p>
+        <h3>まず現場を訪れる</h3>
+        <p>援農や視察を通して、土地、人、活動を知る。</p>
+        <a href="recruit.html#r-contact">援農・視察について相談する →</a>
+      </article>
+      <article class="home-join-card reveal">
+        <p class="home-join-card__meta">01 ／ 新たに2〜3名</p>
+        <h3>移住メンバー</h3>
+        <p>この村に住み、5〜10年かけて、暮らしと社会を一緒につくる。</p>
+        <ul>
+          <li>家族での移住も歓迎</li>
+          <li>保育園・小中学校あり</li>
+          <li>3歳以上はスクールバスあり</li>
+        </ul>
+        <a href="recruit.html#r-migrate">条件を見る →</a>
+      </article>
+      <article class="home-join-card reveal">
+        <p class="home-join-card__meta">02 ／ あと5組</p>
+        <h3>通いメンバー</h3>
+        <p>今の仕事や生活を続けながら、月1回から隔月程度、会津へ通う。</p>
+        <a href="recruit.html#r-commute">関わり方を見る →</a>
+      </article>
+      <article class="home-join-card reveal">
+        <p class="home-join-card__meta">03 ／ 新たに10組</p>
+        <h3>パートナー</h3>
+        <p>資金、技術、仕事を通して、未来に残る基盤を支える。</p>
+        <a href="partnership.html">詳細を見る →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-<div style="background:#4A1520;color:#F6EEB6;padding:96px 60px;text-align:center">
-  <div style="font-size:10.5px;letter-spacing:.32em;color:#F0DC8E;margin-bottom:32px">GRAND VISION</div>
-  <p style="font-family:'Zen Old Mincho',serif;font-size:32px;line-height:2;letter-spacing:.14em;margin:0 0 40px">1000年先に大樹の森を育む、<br>新しい文明の創造。</p>
-  
-</div>
+<section class="home-vision" aria-labelledby="home-vision-title">
+  <div class="home-vision__inner reveal">
+    <p class="home-section-label home-section-label--light">GRAND VISION</p>
+    <h2 id="home-vision-title"><span class="home-vision__line">1000年先に</span><span class="home-vision__line">大樹の森を育む、</span><span class="home-vision__line">新しい文明の創造。</span></h2>
+  </div>
+</section>
 
-
-
-<div style="border-top:1px solid #D9C97E;background:#EFE49B">
+<footer style="border-top:1px solid #D9C97E;background:#EFE49B">
   <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
     <div>
       <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>
@@ -291,10 +424,10 @@ a:hover{color:#93293C}
       <a href="privacy-policy.html" style="border-top:1px solid #CBB96A;padding-top:10px">Privacy ／ プライバシーポリシー</a>
     </div>
   </div>
-</div>
+</footer>
 
 </div>
 
-<script src="design.js?v=26"></script>
+<script src="design.js?v=27"></script>
 </body>
 </html>

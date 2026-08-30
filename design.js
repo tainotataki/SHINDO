@@ -294,6 +294,22 @@
     }
   });
 
+  document.querySelectorAll('[data-video-trigger]').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var shell = trigger.closest('[data-video-shell]');
+      var source = trigger.getAttribute('data-video-src');
+      if (!shell || !source) return;
+
+      var iframe = document.createElement('iframe');
+      iframe.src = source;
+      iframe.title = 'SHINDO 2025 コンセプトムービー（2024年撮影）';
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+      iframe.allowFullscreen = true;
+      shell.classList.add('is-playing');
+      shell.replaceChildren(iframe);
+    });
+  });
+
   document.querySelectorAll('.site-shell, .field-card, .project-row, figure').forEach(function (item, index) {
     item.classList.add('reveal');
     item.style.setProperty('--reveal-delay', String(Math.min(index % 6, 4) * 55) + 'ms');
@@ -346,6 +362,19 @@
   if (footer) frame.insertBefore(main, footer);
   else frame.appendChild(main);
   mainChildren.forEach(function (child) { main.appendChild(child); });
+
+  if (location.hash) {
+    var hashTarget = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (hashTarget) {
+      var alignHashTarget = function () {
+        hashTarget.scrollIntoView({ block: 'start', behavior: 'instant' });
+      };
+      requestAnimationFrame(alignHashTarget);
+      addEventListener('load', function () {
+        setTimeout(alignHashTarget, 0);
+      }, { once: true });
+    }
+  }
 
   var skipLink = document.createElement('a');
   skipLink.className = 'skip-link';
