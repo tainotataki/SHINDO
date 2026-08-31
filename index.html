@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="design.js?v=28" as="script">
 <title>SHINDO ── 有機農業からはじまる、会津・奥会津の村づくり</title>
 <meta name="description" content="SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地や古民家の再生、自然環境の整備、学びの場づくりを進める村づくりプロジェクトです。">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +15,9 @@ a{color:#4A1520;text-decoration:none}
 a:hover{color:#93293C}
 </style>
 <link rel="stylesheet" href="responsive.css">
-<link rel="stylesheet" href="design.css?v=27">
+<link rel="stylesheet" href="design.css?v=28">
 <link rel="stylesheet" href="home.css?v=10">
-<link rel="stylesheet" href="home-playful.css?v=7">
+<link rel="stylesheet" href="home-playful.css?v=8">
 </head>
 <body class="home-v2 home-v3">
 <div style="background:#F6EEB6;color:#1A1A16">
@@ -155,11 +157,11 @@ a:hover{color:#93293C}
     </div>
     <div class="home-movie-section__frame reveal" data-video-shell>
       <img src="proj-film.jpg" alt="霧が立ちこめる会津の山々とSHINDO 2025のタイトル">
-      <button type="button" class="home-movie-section__play" data-video-trigger data-video-src="https://player.vimeo.com/video/1116123465?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" aria-label="SHINDO 2025 コンセプトムービーを再生する">
+      <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener" class="home-movie-section__play" data-video-trigger data-video-src="https://player.vimeo.com/video/1116123465?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" aria-label="SHINDO 2025 コンセプトムービーを再生する">
         <span class="home-movie-section__play-icon" aria-hidden="true">▶</span>
         <span>「SHINDO 2025」を再生</span>
         <small>2024年撮影</small>
-      </button>
+      </a>
     </div>
     <p class="home-movie-section__credit">映像：茂木綾子&amp;佐々木直也 <span>／</span> <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener">Vimeoで見る →</a></p>
   </div>
@@ -456,6 +458,6 @@ a:hover{color:#93293C}
 
 </div>
 
-<script src="design.js?v=27"></script>
+<script src="design.js?v=28" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
 </body>
 </html>

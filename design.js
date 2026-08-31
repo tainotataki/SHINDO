@@ -3,8 +3,9 @@
 
   var pageName = location.pathname.split('/').pop() || 'index.html';
   pageName = pageName.replace('.html', '') || 'index';
-  document.body.classList.add('redesign', 'page-' + pageName);
+  document.body.classList.add('page-' + pageName);
 
+  try {
   var frame = document.body.firstElementChild;
   if (!frame || frame.tagName !== 'DIV') return;
   frame.classList.add('site-frame');
@@ -295,10 +296,11 @@
   });
 
   document.querySelectorAll('[data-video-trigger]').forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
+    trigger.addEventListener('click', function (event) {
       var shell = trigger.closest('[data-video-shell]');
       var source = trigger.getAttribute('data-video-src');
       if (!shell || !source) return;
+      event.preventDefault();
 
       var iframe = document.createElement('iframe');
       iframe.src = source;
@@ -364,7 +366,13 @@
   mainChildren.forEach(function (child) { main.appendChild(child); });
 
   if (location.hash) {
-    var hashTarget = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    var hashId = location.hash.slice(1);
+    try {
+      hashId = decodeURIComponent(hashId);
+    } catch {
+      // Keep the raw hash when it contains malformed escape sequences.
+    }
+    var hashTarget = document.getElementById(hashId);
     if (hashTarget) {
       var alignHashTarget = function () {
         hashTarget.scrollIntoView({ block: 'start', behavior: 'instant' });
@@ -402,4 +410,10 @@
       navButton.focus();
     }
   });
+
+  updateWayline();
+  } finally {
+    document.body.classList.add('redesign');
+    document.documentElement.classList.remove('js');
+  }
 }());
