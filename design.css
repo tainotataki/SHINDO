@@ -115,6 +115,11 @@ html {
   background: var(--paper);
 }
 
+/* Hide legacy markup only while JavaScript is actively loading the redesign. */
+html.js body:not(.redesign) {
+  visibility: hidden;
+}
+
 body.redesign {
   margin: 0;
   overflow-x: hidden;
@@ -1864,6 +1869,7 @@ body.redesign.page-partnership .small-support-section {
   .wayline {
     display: none;
   }
+
 }
 
 /* =========================================================
