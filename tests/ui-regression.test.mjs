@@ -73,3 +73,13 @@ test('movie control falls back to Vimeo when JavaScript is unavailable', () => {
   assert.match(indexHtml, /<a href="https:\/\/vimeo\.com\/1116123465"[^>]*data-video-trigger/);
   assert.match(designJs, /if \(!shell \|\| !source\) return;\s*event\.preventDefault\(\);/);
 });
+
+test('homepage action grid has no surrounding frame', () => {
+  const declarations = ruleFor(homePlayfulCss, 'body.home-v3 .home-actions__grid');
+  assert.match(declarations, /border:\s*0\s*;/);
+  assert.match(declarations, /background:\s*transparent\s*;/);
+});
+
+test('homepage action grid cache version matches the updated stylesheet', () => {
+  assert.match(indexHtml, /<link rel="stylesheet" href="home-playful\.css\?v=9">/);
+});

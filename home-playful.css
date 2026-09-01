@@ -502,6 +502,8 @@ body.home-v3 .home-actions__grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(20px, 3vw, 42px);
   align-items: start;
+  border: 0;
+  background: transparent;
 }
 
 body.home-v3 .home-action-card {
