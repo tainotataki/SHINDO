@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preload" href="design.js?v=28" as="script">
+<link rel="preload" href="design.js?v=31" as="script">
 <title>People ／ 仲間 ── SHINDO</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
@@ -17,7 +17,8 @@ a:hover{color:#93293C}
 
 </style>
 <link rel="stylesheet" href="responsive.css">
-<link rel="stylesheet" href="design.css?v=28">
+<link rel="stylesheet" href="design.css?v=29">
+<link rel="stylesheet" href="report.css?v=3">
 </head>
 <body>
 <div style="background:#F6EEB6;color:#1A1A16">
@@ -77,42 +78,42 @@ a:hover{color:#93293C}
   </div>
 </div>
 
-<div style="background:#EFE49B;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;margin-top:70px">
-  <div style="max-width:1180px;margin:0 auto;padding:76px 60px">
-    <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">BASE ── 実践の土台</div>
-    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 18px">活動基盤：自然農法 無の会</h2>
-    <p style="font-size:13.5px;line-height:2.15;color:#26261F;max-width:46em;margin:0 0 34px;text-wrap:pretty">創業21年。福島県内で最大規模の有機JAS農家であり、SHINDOの実践知の源です。発起人の宇野も、上野も大島も、ここで農業を始めるところからスタートしました。</p>
-    <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:start">
+<div class="base-section" style="background:#EFE49B;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;margin-top:70px">
+  <div class="base-section__inner" style="max-width:1180px;margin:0 auto;padding:76px 60px">
+    <div class="base-section__label" style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">BASE ── 実践の土台</div>
+    <h2 class="base-section__title" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 18px">活動基盤：自然農法 無の会</h2>
+    <p class="base-section__lead" style="font-size:13.5px;line-height:2.15;color:#26261F;max-width:46em;margin:0 0 34px;text-wrap:pretty">創業21年。福島県内で最大規模の有機JAS農家であり、SHINDOの実践知の源です。発起人の宇野も、上野も大島も、ここで農業を始めるところからスタートしました。</p>
+    <div class="base-section__layout" style="display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:start">
       <div style="border:1px solid #CBB96A;background:#F6EEB6;padding:10px">
         <div style="aspect-ratio:3/2;background-image:url('muno-group.jpg');background-size:cover;background-position:center 38%"></div>
         <p style="font-size:11.5px;line-height:1.8;color:#6A6A5D;margin:12px 4px 4px;letter-spacing:.06em">自然農法 無の会・SHINDOのメンバー ／ 拠点「理空」にて</p>
       </div>
-      <div>
-        <div style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
-          <div>
-            <span style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">野菜部門</span>
-            <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">佐藤菜衣</h3>
+      <div class="base-member-list">
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">野菜部門</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">佐藤菜衣</h3>
           </div>
           <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">2025年に札幌から移住。無の会の野菜栽培を担う。</p>
         </div>
-        <div style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
-          <div>
-            <span style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">稲作・苗づくり</span>
-            <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">岡本照正</h3>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">稲作・苗づくり</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">岡本照正</h3>
           </div>
           <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">農業生活12年目。苗づくりの安定と面積拡大を実現。</p>
         </div>
-        <div style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
-          <div>
-            <span style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">機械・不耕起</span>
-            <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">齋藤政孝</h3>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">機械・不耕起</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">齋藤政孝</h3>
           </div>
           <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">自動車ディーラーから転身。不耕起栽培と機械開発を担当。</p>
         </div>
-        <div style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A;border-bottom:1px solid #CBB96A">
-          <div>
-            <span style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">卒業メンバー</span>
-            <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">小池志穂</h3>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A;border-bottom:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">卒業メンバー</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">小池志穂</h3>
           </div>
           <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">野菜づくり歴12年。不耕起栽培の実験を続けている。</p>
         </div>
@@ -210,6 +211,6 @@ a:hover{color:#93293C}
 
 </div>
 
-<script src="design.js?v=28" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
+<script src="design.js?v=31" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
 </body>
 </html>

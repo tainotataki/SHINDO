@@ -4,23 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preload" href="design.js?v=28" as="script">
+<link rel="preload" href="design.js?v=31" as="script">
 <title>SHINDO ── 有機農業からはじまる、会津・奥会津の村づくり</title>
 <meta name="description" content="SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地や古民家の再生、自然環境の整備、学びの場づくりを進める村づくりプロジェクトです。">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <style>
-body{margin:0;background:#F6EEB6;color:#1A1A16;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:#4A1520;text-decoration:none}
-a:hover{color:#93293C}
+body{margin:0;background:#f7f5ee;color:#08082f;font-family:"Zen Old Mincho",serif;-webkit-font-smoothing:antialiased}
+a{color:#08082f;text-decoration:none}
 </style>
 <link rel="stylesheet" href="responsive.css">
-<link rel="stylesheet" href="design.css?v=28">
-<link rel="stylesheet" href="home.css?v=10">
-<link rel="stylesheet" href="home-playful.css?v=9">
+<link rel="stylesheet" href="design.css?v=29">
+<link rel="stylesheet" href="report.css?v=3">
+<link rel="stylesheet" href="home-report.css?v=3">
 </head>
-<body class="home-v2 home-v3">
-<div style="background:#F6EEB6;color:#1A1A16">
+<body>
+<div style="background:#f7f5ee;color:#08082f">
 
 <div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
   <div style="display:flex;align-items:center;gap:28px;padding:20px 60px;max-width:1180px;margin:0 auto">
@@ -29,435 +28,219 @@ a:hover{color:#93293C}
     <a class="site-logo" href="/" aria-label="SHINDO ホームへ"><span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:22px;letter-spacing:.42em;line-height:1">SHINDO</span><span style="font-size:10px;letter-spacing:.2em;color:#6A6A5D;padding-left:2px;line-height:1.7">新しい豊かさへと<br>つづく道</span></a>
     <div class="site-nav" style="margin-left:auto;display:flex;gap:30px;font-size:12.5px;letter-spacing:.12em;color:#45453C">
       <a href="about.html">About</a><a href="people.html">People</a><a href="projects.html">Projects</a>
-      <a href="partnership.html">Partnership</a>
-      <a href="recruit.html">Recruit</a>
+      <a href="partnership.html">Partnership</a><a href="recruit.html">Recruit</a>
     </div>
   </div>
 </div>
 
-<section class="home-hero" aria-labelledby="home-hero-title">
-  <div class="home-hero__orbit" aria-hidden="true">
-    <svg viewBox="0 0 1000 720" preserveAspectRatio="none" focusable="false">
-      <path d="M-60 560C120 488 112 312 286 314c137 2 144 154 40 191-116 42-208-96-105-190 113-103 258 13 357-85 71-69 69-191 223-208 92-10 160 35 259 11" />
-      <circle cx="857" cy="126" r="48" />
-      <circle cx="98" cy="163" r="12" />
-      <circle cx="132" cy="132" r="5" />
-    </svg>
-  </div>
-  <p class="home-hero__season" aria-hidden="true">FOUR SEASONS, ONE VILLAGE — AIZU</p>
-  <div class="home-hero__inner" style="max-width:1180px;margin:0 auto">
-    <div class="home-hero__copy">
-      <p class="home-hero__category">
-        <span class="home-hero__category-origin">有機農業からはじまる、</span>
-        <span class="home-hero__category-place">会津・奥会津の村づくりプロジェクト</span>
-      </p>
-      <h1 id="home-hero-title"><span>雪国で共に生きる、</span><span>新しい豊かさのカタチ。</span></h1>
-      <div class="home-hero__description">
-        <p>SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地の再生、古民家の再生、自然環境の整備、学びの場づくりを進めるプロジェクトです。</p>
-        <p>国内最大のブナ帯の山間地・会津地方を拠点に、食・住・エネルギー・健康・共育──生命の基盤を、自分たちの手で創り直しています。</p>
-      </div>
-      <div class="home-hero__actions" aria-label="トップページの主要な導線">
-        <a class="home-button home-button--primary" href="#a-projects">いま進んでいる活動を見る <span aria-hidden="true">↓</span></a>
-        <a class="home-button home-button--secondary" href="#home-movie-title">映像でSHINDOを知る <span aria-hidden="true">▶</span></a>
-      </div>
-      <p class="home-hero__recruit"><a href="recruit.html">パートナーと現場メンバーを募集しています <span aria-hidden="true">→</span></a></p>
+<section class="report-hero" aria-labelledby="report-hero-title">
+  <div class="report-shell report-hero__grid">
+    <div class="report-hero__mark" aria-label="SHINDO">
+      <svg class="report-grains" viewBox="0 0 520 620" aria-hidden="true" focusable="false">
+        <ellipse cx="54" cy="76" rx="5" ry="11" transform="rotate(26 54 76)"/><ellipse cx="126" cy="42" rx="5" ry="11" transform="rotate(18 126 42)"/>
+        <ellipse cx="204" cy="91" rx="5" ry="11" transform="rotate(-18 204 91)"/><ellipse cx="312" cy="53" rx="5" ry="11" transform="rotate(25 312 53)"/>
+        <ellipse cx="448" cy="91" rx="5" ry="11" transform="rotate(-28 448 91)"/><ellipse cx="87" cy="189" rx="5" ry="11" transform="rotate(-15 87 189)"/>
+        <ellipse cx="454" cy="218" rx="5" ry="11" transform="rotate(18 454 218)"/><ellipse cx="51" cy="302" rx="5" ry="11" transform="rotate(32 51 302)"/>
+        <ellipse cx="470" cy="341" rx="5" ry="11" transform="rotate(-21 470 341)"/><ellipse cx="91" cy="428" rx="5" ry="11" transform="rotate(20 91 428)"/>
+        <ellipse cx="427" cy="449" rx="5" ry="11" transform="rotate(29 427 449)"/><ellipse cx="53" cy="548" rx="5" ry="11" transform="rotate(-24 53 548)"/>
+        <ellipse cx="161" cy="575" rx="5" ry="11" transform="rotate(16 161 575)"/><ellipse cx="284" cy="542" rx="5" ry="11" transform="rotate(-17 284 542)"/>
+        <ellipse cx="452" cy="570" rx="5" ry="11" transform="rotate(23 452 570)"/>
+      </svg>
+      <p class="report-wordmark">SHINDO<small>AIZU / OKU-AIZU</small></p>
     </div>
-
-    <div class="home-hero__collage" aria-label="SHINDOの農作業、拠点整備、人が集う風景">
-      <figure class="home-hero__photo home-hero__photo--field">
-        <img src="proj-65mei.jpg" alt="昭和村の田畑で大勢の人が農作業をする様子">
-        <figcaption>01　土を耕す</figcaption>
-      </figure>
-      <figure class="home-hero__photo home-hero__photo--house">
-        <img src="proj-shukuba.jpg" alt="共同宿場にする古民家を再生している室内">
-        <figcaption>02　家を直す</figcaption>
-      </figure>
-      <figure class="home-hero__photo home-hero__photo--gather">
-        <img src="proj-shukakusai.jpg" alt="世代を越えた人たちが食卓を囲む様子">
-        <figcaption>03　共に暮らす</figcaption>
-      </figure>
-      <span class="home-hero__note" aria-hidden="true">つくりながら、<br>暮らしてみる。</span>
-    </div>
-    <svg class="home-hero__rice-grains" viewBox="0 0 92 124" aria-hidden="true" focusable="false">
-      <defs>
-        <path id="home-rice-grain" d="M9 1.5C14.3.5 18.4 4.6 18.1 10.2c-.4 7.1-5.4 13.8-11.3 15.6-4.3-.5-7-4.5-6.7-9.5C.5 9.3 4.1 2.5 9 1.5Z" />
-      </defs>
-      <g class="home-hero__rice-grain home-hero__rice-grain--rust" transform="translate(47 2) rotate(-18 9 14)">
-        <use href="#home-rice-grain" />
-        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
-      </g>
-      <g class="home-hero__rice-grain home-hero__rice-grain--straw" transform="translate(68 34) rotate(24 9 14)">
-        <use href="#home-rice-grain" />
-        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
-      </g>
-      <g class="home-hero__rice-grain home-hero__rice-grain--sky" transform="translate(10 70) rotate(-32 9 14)">
-        <use href="#home-rice-grain" />
-        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
-      </g>
-      <g class="home-hero__rice-grain home-hero__rice-grain--leaf" transform="translate(49 94) rotate(16 9 14)">
-        <use href="#home-rice-grain" />
-        <path d="M5.7 20.9c3.5-4.8 6.2-10 8.1-15.7" />
-      </g>
-    </svg>
-  </div>
-</section>
-
-<section class="home-actions" aria-labelledby="home-actions-title">
-  <div class="home-shell">
-    <header class="home-section-heading reveal">
-      <p class="home-section-label">SHINDO IN 30 SECONDS</p>
-      <h2 id="home-actions-title">私たちが、実際にしていること。</h2>
-      <p class="home-section-lead">SHINDOは、農業だけを行う団体ではありません。<br>有機農業を起点に、土地、家、道具、自然、人のつながりを、一つの地域の中で育てています。</p>
-    </header>
-    <div class="home-actions__grid">
-      <article class="home-action-card reveal">
-        <img src="proj-soy-hand.jpg" alt="仲間とともに畑で作物を育てる様子">
-        <div class="home-action-card__body">
-          <span class="home-action-card__number">01</span>
-          <h3>育てる</h3>
-          <p>省耕起・省資源型の有機稲作や大豆栽培に取り組み、地域で食べ続けられる生産と備蓄の基盤をつくる。</p>
-        </div>
-      </article>
-      <article class="home-action-card reveal">
-        <img src="proj-kosaku-juki.jpg" alt="重機を使って耕作放棄地を再生する様子">
-        <div class="home-action-card__body">
-          <span class="home-action-card__number">02</span>
-          <h3>再生する</h3>
-          <p>耕作放棄地、水路、森、古民家、農業倉庫を、人が再び使える場所へ戻していく。</p>
-        </div>
-      </article>
-      <article class="home-action-card reveal">
-        <img src="proj-machine-taue.jpg" alt="中山間地に合う農業機械を整備する様子">
-        <div class="home-action-card__body">
-          <span class="home-action-card__number">03</span>
-          <h3>つくる・試す</h3>
-          <p>中山間地に合う農業機械をつくり、地域でまかなえるエネルギーや新しい暮らしの仕組みを検証する。</p>
-        </div>
-      </article>
-      <article class="home-action-card reveal">
-        <img src="proj-highschool.jpg" alt="大人と学生が拠点に集まる学びの場">
-        <div class="home-action-card__body">
-          <span class="home-action-card__number">04</span>
-          <h3>集い、学ぶ</h3>
-          <p>援農、学生プログラム、共同生活、対話の場を通じて、子どもも大人も一緒に学び、育ち合う。</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="home-movie-section" aria-labelledby="home-movie-title">
-  <div class="home-shell home-movie-section__inner">
-    <div class="home-movie-section__header reveal">
-      <div>
-        <p class="home-section-label home-section-label--light">MOVIE</p>
-        <h2 id="home-movie-title">農業から始まった取り組みが、<br>なぜ村づくりへと広がったのか。</h2>
-      </div>
-      <p>会津の風景と、立ち上げに関わる人たちの言葉から紹介します。</p>
-    </div>
-    <div class="home-movie-section__frame reveal" data-video-shell>
-      <img src="proj-film.jpg" alt="霧が立ちこめる会津の山々とSHINDO 2025のタイトル">
-      <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener" class="home-movie-section__play" data-video-trigger data-video-src="https://player.vimeo.com/video/1116123465?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" aria-label="SHINDO 2025 コンセプトムービーを再生する">
-        <span class="home-movie-section__play-icon" aria-hidden="true">▶</span>
-        <span>「SHINDO 2025」を再生</span>
-        <small>2024年撮影</small>
-      </a>
-    </div>
-    <p class="home-movie-section__credit">映像：茂木綾子&amp;佐々木直也 <span>／</span> <a href="https://vimeo.com/1116123465" target="_blank" rel="noopener">Vimeoで見る →</a></p>
-  </div>
-</section>
-
-<section id="a-projects" class="home-projects" aria-labelledby="home-projects-title">
-  <div class="home-shell">
-    <header class="home-section-heading home-section-heading--split reveal">
-      <div>
-        <p class="home-section-label">PROJECTS</p>
-        <h2 id="home-projects-title">いま、会津で進めていること。</h2>
-        <p class="home-projects__legacy">やっていること、やったこと、やること。</p>
-      </div>
-      <a class="home-text-link" href="projects.html">すべての活動を見る <span aria-hidden="true">→</span></a>
-    </header>
-
-    <div class="home-projects__grid">
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-noen.jpg" alt="会津の田んぼで稲を植える農作業の様子">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">福島県昭和村・小野川</p>
-          <h3>不耕起・省資源型の有機稲作</h3>
-          <p>標高800mの豪雪地で、大型トラクターに頼りきらない稲作を実証中。反収6俵が当面の目標です。</p>
-          <div class="home-project-card__footer"><span class="home-status">実証中</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-shukuba.jpg" alt="共同宿場として再生中の古民家">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">福島県昭和村・小野川</p>
-          <h3>新たな共同宿場づくり</h3>
-          <p>子連れ家族を迎えるための古民家再生。皆が寝泊まりできる拠点として整備を進めています。</p>
-          <div class="home-project-card__footer"><span class="home-status">整備中</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-shizen-kassei.jpg" alt="森と水の循環を整える自然環境の活動風景">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">福島県会津美里町・伊佐須美神社</p>
-          <h3>自然環境の活性化</h3>
-          <p>水源・沢・山と土を整える。伊佐須美神社の社叢（杜）の再生を含め、岩代国風結びと通年で活動。</p>
-          <div class="home-project-card__footer"><span class="home-status">通年</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-kosaku-juki.jpg" alt="数年放置されていた田を重機で開墾する様子">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">福島県昭和村・小野川</p>
-          <h3>耕作放棄地の再生</h3>
-          <p>数年放置されていた田を開墾し、稲作を再開。水の循環のいちばん上流にあたる水源の郷です。</p>
-          <div class="home-project-card__footer"><span class="home-status">開墾中</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-machine-taue.jpg" alt="田植え機を中山間地向けに整備する様子">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">福島県会津美里町</p>
-          <h3>農業機械の開発と整備</h3>
-          <p>中古農機・設備の入手から修理、施工まで。中山間地に合う小型・低予算の機械という前提を支えています。</p>
-          <div class="home-project-card__footer"><span class="home-status">検証中</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-      <a class="home-project-card reveal" href="projects.html">
-        <img src="proj-tradeon.jpg" alt="地域で使う設備や機械を扱う現場">
-        <div class="home-project-card__body">
-          <p class="home-project-card__place">会津・奥会津</p>
-          <h3>代替エネルギー候補の検証</h3>
-          <p>安全性・再現性・法的適合性を確かめる、慎重な第一歩の段階です。</p>
-          <div class="home-project-card__footer"><span class="home-status home-status--quiet">予備検証</span><span>詳しく見る →</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="a-about" class="home-why" aria-labelledby="home-why-title">
-  <div class="home-shell home-why__inner">
-    <div class="home-why__heading reveal">
-      <p class="home-section-label">WHY VILLAGE-MAKING?</p>
-      <h2 id="home-why-title">農業から、<br>なぜ村づくりへ？</h2>
-    </div>
-    <div class="home-why__copy reveal">
-      <p>食べるもの、住む場所、使うエネルギー、健康を支える習慣、子どもと大人が学ぶ環境。</p>
-      <p>私たちは、暮らしを支えるものの多くを、いつの間にか遠くの仕組みに委ねるようになりました。</p>
-      <p>SHINDOが目指しているのは、単に農業を大きくすることではありません。毎年実る土、住み継げる家、生き抜く知恵、そして共に創る仲間を、次の世代に残る「暮らしの基盤」として育てることです。</p>
-      <a class="home-button home-button--secondary" href="about.html">SHINDOの考え方を読む <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="home-organization" aria-labelledby="home-organization-title">
-  <div class="home-shell">
-    <header class="home-section-heading reveal">
-      <p class="home-section-label">ORGANIZATION</p>
-      <h2 id="home-organization-title">SHINDOをつくる体制</h2>
-      <p class="home-section-lead">構想を動かす法人、農業の実践基盤、現場と全国の仲間が、それぞれの役割で一つのプロジェクトをつくっています。</p>
-    </header>
-    <div class="home-org-chart reveal">
-      <div class="home-org-chart__root">
-        <span>PROJECT</span>
-        <strong>SHINDO</strong>
-        <p>暮らしの基盤をつくるプロジェクト</p>
-      </div>
-      <div class="home-org-chart__branches">
-        <article>
-          <span>OPERATE</span>
-          <h3>株式会社ZEN-BU</h3>
-          <p>構想、運営、プロジェクト推進を担当</p>
-        </article>
-        <article>
-          <span>FARM</span>
-          <h3>自然農法 無の会</h3>
-          <p>有機農業の実践と生産を担う活動基盤</p>
-        </article>
-        <article>
-          <span>CO-CREATE</span>
-          <h3>現場メンバー・全国のパートナー</h3>
-          <p>資金、技術、労働、事業づくりで共創</p>
-        </article>
+    <div class="report-hero__copy">
+      <p class="report-hero__eyebrow">ORGANIC FARMING / VILLAGE-MAKING PROJECT</p>
+      <h1 id="report-hero-title">雪国で共に生きる、<br>新しい豊かさのカタチ。</h1>
+      <p class="report-hero__vertical-meta">有機農業からはじまる、<br>会津・奥会津の村づくりプロジェクト</p>
+      <p class="report-hero__summary">SHINDOは、福島県・会津／奥会津を拠点に、有機農業、耕作放棄地の再生、古民家の再生、自然環境の整備、学びの場づくりを進めるプロジェクトです。食・住・エネルギー・健康・共育──生命の基盤を、自分たちの手で創り直しています。</p>
+      <div class="report-hero__actions" aria-label="主要な導線">
+        <a class="report-link" href="about.html">SHINDOについて <span aria-hidden="true">→</span></a>
+        <a class="report-link" href="#projects">各地の活動を見る <span aria-hidden="true">↓</span></a>
       </div>
     </div>
+    <div class="report-hero__folio" aria-hidden="true"><span>FIELD REPORT / SHINDO</span><span>FUKUSHIMA, JAPAN</span></div>
   </div>
 </section>
 
-<section class="home-metrics" aria-labelledby="home-metrics-title">
-  <div class="home-shell">
-    <header class="home-section-heading reveal">
-      <p class="home-section-label">TRAJECTORY IN NUMBERS</p>
-      <h2 id="home-metrics-title">ここまでに、積み上がったもの。</h2>
-      <p class="home-section-lead">SHINDOの運営母体である株式会社ZEN-BUと、活動基盤である「自然農法 無の会」が共に歩んできた道すじの断片です。</p>
-    </header>
-    <div class="home-metrics__grid">
-      <article class="home-metric reveal">
-        <p class="home-metric__owner">活動基盤「自然農法 無の会」＋ZEN-BU</p>
-        <p class="home-metric__value"><strong>23</strong><span>ha</span></p>
-        <h3>有機栽培</h3>
-        <p>自然農法 無の会は、福島県内で最大級の有機稲作面積を担う、創業21年目の有機農場です。</p>
-      </article>
-      <article class="home-metric home-metric--timeline reveal">
-        <p class="home-metric__owner">会津での実践開始から現在まで</p>
-        <p class="home-metric__value"><strong>2021</strong><span>→</span><strong>2025</strong></p>
-        <h3>農業からSHINDOへ</h3>
-        <ol>
-          <li><b>2021</b> 宇野が有機農業の実践を開始</li>
-          <li><b>2023</b> ZEN-BUを創業</li>
-          <li><b>2025</b> SHINDOへ名称変更</li>
-        </ol>
-      </article>
-      <article class="home-metric reveal">
-        <p class="home-metric__owner">株式会社ZEN-BU ／ 全国から参加</p>
-        <p class="home-metric__value"><strong>37</strong><span>組</span></p>
-        <h3>継続パートナー</h3>
-        <p>SHINDOの起ち上げ期、そのビジョンに共鳴し、資金的支援をいただいた仲間との共創が始まっています。</p>
-      </article>
-      <article class="home-metric reveal">
-        <p class="home-metric__owner">自然農法 無の会＋ZEN-BU ／ 2025年</p>
-        <p class="home-metric__value"><strong>400</strong><span>名以上</span></p>
-        <h3>年間滞在者</h3>
-        <p>援農、事業づくり、食事づくりなど、それぞれの形で現場を支える人が絶えず訪れています。</p>
-      </article>
+<figure class="report-opening">
+  <div class="report-shell">
+    <div class="report-opening__frame">
+      <img src="home-onogawa.jpg" alt="福島県昭和村・小野川の山々と田畑が広がる夏の風景" fetchpriority="high" decoding="async">
     </div>
+    <figcaption>
+      <span>FIELD 01</span>
+      <span>福島県大沼郡昭和村・小野川</span>
+      <span>SHŌWA, FUKUSHIMA</span>
+    </figcaption>
   </div>
-</section>
+</figure>
 
-<section id="a-people" class="home-people" aria-labelledby="home-people-title">
-  <div class="home-shell">
-    <header class="home-section-heading home-section-heading--split reveal">
-      <div>
-        <p class="home-section-label">PEOPLE</p>
-        <h2 id="home-people-title">この活動を、誰とつくっているのか。</h2>
+<nav class="report-index" aria-labelledby="report-index-title">
+  <div class="report-shell">
+    <p class="report-chapter__label">INDEX</p>
+    <h2 class="report-index__title" id="report-index-title">目次</h2>
+    <ol class="report-index__list">
+      <li><a href="#why"><span class="report-index__number">一</span><span class="report-index__name">なぜ村をつくるのか</span><span class="report-index__dots"></span><span class="report-index__folio">01</span></a></li>
+      <li><a href="#field-notes"><span class="report-index__number">二</span><span class="report-index__name">現場の風景</span><span class="report-index__dots"></span><span class="report-index__folio">02</span></a></li>
+      <li><a href="#practice"><span class="report-index__number">三</span><span class="report-index__name">SHINDOの実践</span><span class="report-index__dots"></span><span class="report-index__folio">03</span></a></li>
+      <li><a href="#projects"><span class="report-index__number">四</span><span class="report-index__name">各地で進めていること</span><span class="report-index__dots"></span><span class="report-index__folio">04</span></a></li>
+      <li><a href="#people-network"><span class="report-index__number">五</span><span class="report-index__name">この活動をつくる人々</span><span class="report-index__dots"></span><span class="report-index__folio">05</span></a></li>
+      <li><a href="#trajectory"><span class="report-index__number">六</span><span class="report-index__name">ここまでの積み重ね</span><span class="report-index__dots"></span><span class="report-index__folio">06</span></a></li>
+      <li><a href="#join"><span class="report-index__number">七</span><span class="report-index__name">関わり方</span><span class="report-index__dots"></span><span class="report-index__folio">07</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<section id="why" class="report-chapter report-why" aria-labelledby="report-why-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">一 / 01</p>
+      <div><p class="report-chapter__label">WHY SHINDO</p><h2 class="report-chapter__title" id="report-why-title">農業から、<br>なぜ村づくりへ？</h2></div>
+    </header>
+    <div class="report-why__layout">
+      <div class="report-why__copy">
+        <p>農業を入口に、暮らしの基盤をつくり直す。</p>
+        <p>食べるもの、住む場所、使うエネルギー、健康を支える習慣、子どもと大人が学ぶ環境。</p>
+        <p>私たちは、暮らしを支えるものの多くを、いつの間にか遠くの仕組みに委ねるようになりました。</p>
+        <p>SHINDOが目指しているのは、単に農業を大きくすることではありません。毎年実る土、住み継げる家、生き抜く知恵、そして共に創る仲間を、次の世代に残る「暮らしの基盤」として育てることです。</p>
       </div>
-      <a class="home-text-link" href="people.html">全員を見る <span aria-hidden="true">→</span></a>
-    </header>
-    <div class="home-people__grid">
-      <article class="home-person reveal">
-        <img src="people-uno-hiroyasu-v2.jpg" alt="SHINDO発起人の宇野宏泰">
-        <div class="home-person__body">
-          <p class="home-person__role">発起人・ZEN−BU代表</p>
-          <h3>宇野宏泰</h3>
-          <p>学者を志し、権威への執着に気づいて現場へ。全国30件以上の農家を巡り、2021年に会津へ移住。SHINDOの言い出しっぺです。</p>
-        </div>
-      </article>
-      <article class="home-person reveal">
-        <img src="people-ueno-takuya.jpg" alt="SHINDO起ち上げの仲間である上野拓也">
-        <div class="home-person__body">
-          <p class="home-person__role">起ち上げ仲間・無の会</p>
-          <h3>上野拓也</h3>
-          <p>三年前、都内の企業を辞めて会津へ。土と時代の両方を見つめ、新たな時代の食糧生産を探求しています。</p>
-        </div>
-      </article>
-      <article class="home-person reveal">
-        <img src="people-oshima-takeo.jpg" alt="SHINDO起ち上げの仲間である大島武生">
-        <div class="home-person__body">
-          <p class="home-person__role">起ち上げの仲間・ZEN-BU</p>
-          <h3>大島武生</h3>
-          <p>大学四回生の冬に会津へ。教育と環境整備を担い、都市の学生と田舎の農業をつなぐ橋渡し役です。</p>
-        </div>
-      </article>
-      <article class="home-person reveal">
-        <img src="muno-group.jpg" alt="自然農法 無の会の皆さん">
-        <div class="home-person__body">
-          <p class="home-person__role">活動基盤</p>
-          <h3>自然農法 無の会</h3>
-          <p class="home-person__work">有機農業の実践と生産を担う</p>
-          <p>創業21年、県内最大規模の有機JAS農家。SHINDOの実践知の源。</p>
-        </div>
-      </article>
+      <aside class="report-why__aside"><p>国内最大のブナ帯の山間地・会津地方を拠点に、生命の基盤を、自分たちの手で創り直しています。</p><a class="report-link" href="about.html">考え方を読む <span aria-hidden="true">→</span></a></aside>
     </div>
   </div>
 </section>
 
-<section class="home-more" aria-labelledby="home-more-title">
-  <div class="home-shell">
-    <header class="home-section-heading reveal">
-      <p class="home-section-label">EXPLORE</p>
-      <h2 id="home-more-title">SHINDOを、もっと詳しく知る。</h2>
+<section id="field-notes" class="report-chapter report-notes" aria-labelledby="report-notes-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">二 / 02</p>
+      <div><p class="report-chapter__label">FIELD NOTES</p><h2 class="report-chapter__title" id="report-notes-title">つくりながら、<br>暮らしてみる。</h2></div>
     </header>
-    <nav class="home-more__list" aria-label="SHINDOを詳しく知るためのページ">
-      <a class="reveal" href="about.html"><span class="home-more__number">01</span><strong>SHINDOとは</strong><span>なぜ始め、何を残そうとしているのか。</span><i aria-hidden="true">→</i></a>
-      <a class="reveal" href="projects.html"><span class="home-more__number">02</span><strong>活動を見る</strong><span>進行中、完了、これからのプロジェクト。</span><i aria-hidden="true">→</i></a>
-      <a class="reveal" href="people.html"><span class="home-more__number">03</span><strong>仲間を知る</strong><span>現場、農業、職人、全国のパートナー。</span><i aria-hidden="true">→</i></a>
-      <a class="reveal" href="recruit.html"><span class="home-more__number">04</span><strong>現場に関わる</strong><span>移住する、通う、援農・視察に参加する。</span><i aria-hidden="true">→</i></a>
-      <a class="reveal" href="partnership.html"><span class="home-more__number">05</span><strong>資金で支える</strong><span>パートナーとして未来の基盤を支える。</span><i aria-hidden="true">→</i></a>
-    </nav>
-  </div>
-</section>
-
-<section id="a-recruit" class="home-join" aria-labelledby="home-join-title">
-  <div class="home-shell">
-    <header class="home-section-heading home-section-heading--dark reveal">
-      <p class="home-section-label home-section-label--light">MEMBER &amp; PARTNERSHIP</p>
-      <h2 id="home-join-title">関わり方は、ひとつではありません。</h2>
-      <p class="home-section-lead">まず現場を訪れてみる。定期的に通う。村に住んで担う。資金や仕事で支える。<br>それぞれの暮らしに合った入口があります。</p>
-      <p class="home-join__legacy">共にSHINDOをつくる仲間を募っています。それぞれの力に支えられて、現場は動いています。</p>
-    </header>
-    <div class="home-join__grid">
-      <article class="home-join-card home-join-card--start reveal">
-        <p class="home-join-card__meta">START ／ はじめの一歩</p>
-        <h3>まず現場を訪れる</h3>
-        <p>援農や視察を通して、土地、人、活動を知る。</p>
-        <a href="recruit.html#r-contact">援農・視察について相談する →</a>
-      </article>
-      <article class="home-join-card reveal">
-        <p class="home-join-card__meta">01 ／ 新たに2〜3名</p>
-        <h3>移住メンバー</h3>
-        <p>この村に住み、5〜10年かけて、暮らしと社会を一緒につくる。</p>
-        <ul>
-          <li>家族での移住も歓迎</li>
-          <li>保育園・小中学校あり</li>
-          <li>3歳以上はスクールバスあり</li>
-        </ul>
-        <a href="recruit.html#r-migrate">条件を見る →</a>
-      </article>
-      <article class="home-join-card reveal">
-        <p class="home-join-card__meta">02 ／ あと5組</p>
-        <h3>通いメンバー</h3>
-        <p>今の仕事や生活を続けながら、月1回から隔月程度、会津へ通う。</p>
-        <a href="recruit.html#r-commute">関わり方を見る →</a>
-      </article>
-      <article class="home-join-card reveal">
-        <p class="home-join-card__meta">03 ／ 新たに10組</p>
-        <h3>パートナー</h3>
-        <p>資金、技術、仕事を通して、未来に残る基盤を支える。</p>
-        <a href="partnership.html">詳細を見る →</a>
-      </article>
+    <div class="report-notes__grid">
+      <figure class="report-note"><img src="proj-65mei.jpg" alt="昭和村の田畑で大勢の人が農作業をする様子"><figcaption><span>01</span><span>土を耕す</span></figcaption></figure>
+      <figure class="report-note"><img src="proj-shukuba.jpg" alt="共同宿場にする古民家を再生している室内"><figcaption><span>02</span><span>家を直す</span></figcaption></figure>
+      <figure class="report-note"><img src="proj-shukakusai.jpg" alt="世代を越えた人たちが食卓を囲む様子"><figcaption><span>03</span><span>共に暮らす</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="home-vision" aria-labelledby="home-vision-title">
-  <div class="home-vision__inner reveal">
-    <p class="home-section-label home-section-label--light">GRAND VISION</p>
-    <h2 id="home-vision-title"><span class="home-vision__line">1000年先に</span><span class="home-vision__line">大樹の森を育む、</span><span class="home-vision__line">新しい文明の創造。</span></h2>
+<section id="practice" class="report-chapter" aria-labelledby="report-practice-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">三 / 03</p>
+      <div><p class="report-chapter__label">WHAT WE DO</p><h2 class="report-chapter__title" id="report-practice-title">暮らしの基盤を、<br>現場からつくる。</h2></div>
+    </header>
+    <div class="report-practice__list">
+      <article class="report-practice"><span class="report-practice__number">01</span><h3>育てる</h3><p>省耕起・省資源型の有機稲作や大豆栽培に取り組み、地域で食べ続けられる生産と備蓄の基盤をつくる。</p></article>
+      <article class="report-practice"><span class="report-practice__number">02</span><h3>再生する</h3><p>耕作放棄地、水路、森、古民家、農業倉庫を、人が再び使える場所へ戻していく。</p></article>
+      <article class="report-practice"><span class="report-practice__number">03</span><h3>つくる・試す</h3><p>中山間地に合う農業機械をつくり、地域でまかなえるエネルギーや新しい暮らしの仕組みを検証する。</p></article>
+      <article class="report-practice"><span class="report-practice__number">04</span><h3>集い、学ぶ</h3><p>援農、学生プログラム、共同生活、対話の場を通じて、子どもも大人も一緒に学び、育ち合う。</p></article>
+    </div>
   </div>
 </section>
 
-<footer style="border-top:1px solid #D9C97E;background:#EFE49B">
-  <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
+<section id="projects" class="report-chapter" aria-labelledby="report-projects-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">四 / 04</p>
+      <div><p class="report-chapter__label">PROJECTS</p><h2 class="report-chapter__title" id="report-projects-title">会津から、各地へ。<br>いま進めていること。</h2></div>
+    </header>
+    <div class="report-projects__list">
+      <article class="report-project"><img src="proj-noen.jpg" alt="会津の田んぼで稲を植える農作業の様子"><div><p class="report-project__meta">福島県昭和村・小野川 ／ 実証中</p><h3>不耕起・省資源型の有機稲作</h3><p>標高800mの豪雪地で、大型トラクターに頼りきらない稲作を実証中。反収6俵が当面の目標です。</p></div></article>
+      <article class="report-project"><img src="proj-cfb-walk.jpg" alt="Circulating Future Beingの活動風景"><div><p class="report-project__meta">with YouBeYou株式会社 ／ 会津美里町</p><h3>Circulating Future Being／CFB</h3><p>都市と農をつなぐ、循環する暮らしの実践共同体。関わる人が生産の現場に立ち続けられる関係を、共に設計しています。</p></div></article>
+      <article class="report-project"><img src="proj-mango.jpg" alt="沖縄県本部町の有機マンゴー農園"><div><p class="report-project__meta">with 株式会社G-with ／ 沖縄県本部町</p><h3>有機マンゴー農園の承継支援</h3><p>「死ぬまで幸せに暮らせる社会（IKIGAI）」を掲げ、移住者が経営を引き継ぐ。2026年、新たな農園としてスタートを切りました。</p></div></article>
+    </div>
+    <p style="margin:52px 0 0"><a class="report-link" href="projects.html">すべての活動を見る <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<section id="people-network" class="report-chapter" aria-labelledby="report-network-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">五 / 05</p>
+      <div><p class="report-chapter__label">PEOPLE &amp; NETWORK</p><h2 class="report-chapter__title" id="report-network-title">一つの組織ではなく、<br>それぞれの持ち場から。</h2></div>
+    </header>
+    <p class="report-network__lead">SHINDOの起ち上げメンバー、活動基盤となる自然農法無の会、現場を支える技術者さん、全国から集まるパートナーさん、昭和村にて共に活動をしている村の住民の方々が、この活動をつくっています。</p>
+    <div class="report-network__grid">
+      <article class="report-network__item"><span>01 / FOUNDERS</span><h3>はじめた人たち</h3></article>
+      <article class="report-network__item"><span>02 / BASE</span><h3>自然農法<br>無の会</h3></article>
+      <article class="report-network__item"><span>03 / LOCAL PROS</span><h3>地元のプロ</h3></article>
+      <article class="report-network__item"><span>04 / PARTNERS</span><h3>全国の<br>パートナー</h3></article>
+      <article class="report-network__item"><span>05 / VILLAGE</span><h3>村の人たち</h3></article>
+    </div>
+    <p style="margin:52px 0 0"><a class="report-link" href="people.html">関わる人々を見る <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<section id="trajectory" class="report-chapter" aria-labelledby="report-metrics-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">六 / 06</p>
+      <div><p class="report-chapter__label">TRAJECTORY IN NUMBERS</p><h2 class="report-chapter__title" id="report-metrics-title">ここまでに、<br>積み上がったもの。</h2></div>
+    </header>
+    <div class="report-metrics__grid">
+      <article class="report-metric"><p class="report-metric__owner">活動基盤「自然農法 無の会」＋ZEN-BU</p><p class="report-metric__value">23<small> ha</small></p><div class="report-metric__body"><h3>有機栽培</h3><p>自然農法 無の会は、福島県内で最大級の有機稲作面積を担う、創業21年目の有機農場です。</p></div></article>
+      <article class="report-metric"><p class="report-metric__owner">会津での実践開始から現在まで</p><p class="report-metric__value">2021<small> → 2025</small></p><div class="report-metric__body"><h3>農業からSHINDOへ</h3><p>2021年に有機農業の実践を開始し、2023年にZEN-BUを創業。2025年にSHINDOへ名称変更。</p></div></article>
+      <article class="report-metric"><p class="report-metric__owner">株式会社ZEN-BU ／ 全国から参加</p><p class="report-metric__value">30<small> 組</small></p><div class="report-metric__body"><h3>資金パートナー</h3><p>プレゼンと対話を通じて、全国の企業・個人との共創が始まっています。</p></div></article>
+      <article class="report-metric"><p class="report-metric__owner">自然農法 無の会＋ZEN-BU ／ 2025年</p><p class="report-metric__value">400<small> 名以上</small></p><div class="report-metric__body"><h3>年間滞在者</h3><p>援農、事業づくり、食事づくりなど、それぞれの形で現場を支える人が絶えず訪れています。</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="report-chapter" aria-labelledby="report-people-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">人物索引</p>
+      <div><p class="report-chapter__label">PEOPLE</p><h2 class="report-chapter__title" id="report-people-title">この活動を、<br>誰とつくっているのか。</h2></div>
+    </header>
+    <div class="report-people__grid">
+      <article class="report-person"><img src="people-uno-hiroyasu-v2.jpg" alt="SHINDO発起人の宇野宏泰"><p class="report-person__role">発起人・ZEN−BU代表</p><h3>宇野宏泰</h3><p>学者を志し、権威への執着に気づいて現場へ。全国30件以上の農家を巡り、2021年に会津へ移住。</p></article>
+      <article class="report-person"><img src="people-ueno-takuya.jpg" alt="SHINDO起ち上げの仲間である上野拓也"><p class="report-person__role">起ち上げ仲間・無の会</p><h3>上野拓也</h3><p>三年前、都内の企業を辞めて会津へ。土と時代の両方を見つめ、新たな時代の食糧生産を探求しています。</p></article>
+      <article class="report-person"><img src="people-oshima-takeo.jpg" alt="SHINDO起ち上げの仲間である大島武生"><p class="report-person__role">起ち上げの仲間・ZEN-BU</p><h3>大島武生</h3><p>大学四回生の冬に会津へ。教育と環境整備を担い、都市の学生と田舎の農業をつなぐ橋渡し役です。</p></article>
+      <article class="report-person"><img src="muno-group.jpg" alt="自然農法 無の会の皆さん"><p class="report-person__role">活動基盤</p><h3>自然農法 無の会</h3><p>創業21年、県内最大規模の有機JAS農家。SHINDOの実践知の源。</p></article>
+    </div>
+    <p style="margin:52px 0 0"><a class="report-link" href="people.html">全員を見る <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<section id="join" class="report-chapter report-join" aria-labelledby="report-join-title">
+  <div class="report-shell">
+    <header class="report-chapter__head">
+      <p class="report-chapter__number">七 / 07</p>
+      <div><p class="report-chapter__label">MEMBER &amp; PARTNERSHIP</p><h2 class="report-chapter__title" id="report-join-title">関わり方は、<br>ひとつではありません。</h2></div>
+    </header>
+    <div class="report-join__grid">
+      <article class="report-join__item"><span>START / はじめの一歩</span><h3>まず現場を訪れる</h3><p>援農や視察を通して、土地、人、活動を知る。</p><a href="recruit.html#r-contact">援農・視察について相談する →</a></article>
+      <article class="report-join__item"><span>01 / 新たに2〜3名</span><h3>村に住む</h3><p>この村に住み、5〜10年かけて、暮らしと社会を一緒につくる。家族での移住も歓迎。</p><a href="recruit.html#r-migrate">条件を見る →</a></article>
+      <article class="report-join__item"><span>02 / あと5組</span><h3>通う</h3><p>今の仕事や生活を続けながら、月1回から隔月程度、会津へ通う。</p><a href="recruit.html#r-commute">関わり方を見る →</a></article>
+      <article class="report-join__item"><span>03 / 新たに10組</span><h3>資金や仕事で支える</h3><p>資金、技術、仕事を通して、未来に残る基盤を支える。</p><a href="partnership.html">詳細を見る →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="report-vision" aria-labelledby="report-vision-title">
+  <div class="report-vision__inner"><p class="report-vision__label">GRAND VISION / 最終章</p><h2 id="report-vision-title">1000年先に<br>大樹の森を育む、<br>新しい文明の創造。</h2></div>
+</section>
+
+<footer style="border-top:1px solid #08082f;background:#f7f5ee">
+  <div style="max-width:1320px;margin:0 auto;padding:72px 80px 64px;display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:end">
     <div>
-      <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>
-      <p style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;line-height:2;letter-spacing:.09em;margin:0 0 26px">会津・奥会津に築く、生命の基盤。<br>新しい豊かさへとつづく道。</p>
-      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0;line-height:2">連絡先：official@zen-bu.co　／　発行：株式会社ZEN-BU</p>
+      <div style="font-family:'Zen Old Mincho',serif;color:#08082f;font-size:32px;letter-spacing:.3em;line-height:1;margin-bottom:22px">SHINDO</div>
+      <p style="font-family:'Zen Old Mincho',serif;color:#08082f;font-size:20px;line-height:2;letter-spacing:.06em;margin:0 0 28px">会津・奥会津に築く、生命の基盤。<br>新しい豊かさへとつづく道。</p>
+      <p style="font-size:12px;color:rgba(8,8,47,.7);letter-spacing:.08em;margin:0 0 8px;line-height:2">Follow ── <a href="https://www.youtube.com/@shindoproject" target="_blank" rel="noopener">YouTube</a> ／ <a href="https://www.instagram.com/shindo_newpath/" target="_blank" rel="noopener">Instagram</a></p>
+      <p style="font-size:12px;color:rgba(8,8,47,.7);letter-spacing:.08em;margin:0;line-height:2">連絡先：official@zen-bu.co　／　発行：株式会社ZEN-BU</p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px;letter-spacing:.1em;color:#45453C">
-      <a href="about.html" style="border-top:1px solid #CBB96A;padding-top:10px">About ／ SHINDOとは</a>
-      <a href="people.html" style="border-top:1px solid #CBB96A;padding-top:10px">People ／ 仲間</a>
-      <a href="projects.html" style="border-top:1px solid #CBB96A;padding-top:10px">Projects ／ 活動</a>
-      <a href="partnership.html" style="border-top:1px solid #CBB96A;padding-top:10px">Partnership ／ 資金で支える</a>
-      <a href="recruit.html" style="border-top:1px solid #CBB96A;padding-top:10px">Recruit ／ 募集</a>
-      <a href="privacy-policy.html" style="border-top:1px solid #CBB96A;padding-top:10px">Privacy ／ プライバシーポリシー</a>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;letter-spacing:.06em;color:#08082f">
+      <a href="about.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">About ／ SHINDOとは</a>
+      <a href="people.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">People ／ 仲間</a>
+      <a href="projects.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">Projects ／ 活動</a>
+      <a href="partnership.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">Partnership ／ 資金で支える</a>
+      <a href="recruit.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">Recruit ／ 募集</a>
+      <a href="privacy-policy.html" style="border-top:1px solid rgba(8,8,47,.35);padding-top:10px">Privacy ／ プライバシーポリシー</a>
     </div>
   </div>
 </footer>
 
 </div>
-
-<script src="design.js?v=28" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
+<script src="design.js?v=31" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
 </body>
 </html>
