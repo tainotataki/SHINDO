@@ -312,6 +312,48 @@
     });
   });
 
+  /* Keep the project tab's visual, ARIA and panel states in one code path. */
+  var projectTabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+  var projectPanels = Array.prototype.slice.call(document.querySelectorAll('[data-panel]'));
+  function activateProjectTab(tab, moveFocus) {
+    if (!tab) return;
+    var selectedPanel = tab.getAttribute('data-tab');
+    projectTabs.forEach(function (item) {
+      var isSelected = item === tab;
+      item.setAttribute('aria-selected', String(isSelected));
+      item.tabIndex = isSelected ? 0 : -1;
+    });
+    projectPanels.forEach(function (panel) {
+      var isSelected = panel.getAttribute('data-panel') === selectedPanel;
+      panel.hidden = !isSelected;
+      panel.style.display = isSelected ? '' : 'none';
+    });
+    if (moveFocus) {
+      tab.focus();
+      tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    }
+  }
+  projectTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      activateProjectTab(tab, false);
+    });
+    tab.addEventListener('keydown', function (event) {
+      var nextIndex = index;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % projectTabs.length;
+      else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + projectTabs.length) % projectTabs.length;
+      else if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = projectTabs.length - 1;
+      else return;
+      event.preventDefault();
+      activateProjectTab(projectTabs[nextIndex], true);
+    });
+  });
+  if (projectTabs.length) {
+    activateProjectTab(projectTabs.find(function (tab) {
+      return tab.getAttribute('aria-selected') === 'true';
+    }) || projectTabs[0], false);
+  }
+
   document.querySelectorAll('.site-shell, .field-card, .project-row, figure').forEach(function (item, index) {
     item.classList.add('reveal');
     item.style.setProperty('--reveal-delay', String(Math.min(index % 6, 4) * 55) + 'ms');
