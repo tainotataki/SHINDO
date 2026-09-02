@@ -16,9 +16,11 @@
 | `design.css` | 全ページ共通のデザイン・レイアウト |
 | `home.css` | トップページ専用のレイアウト・レスポンシブ対応 |
 | `home-playful.css` | トップページの追加ビジュアル・インタラクション |
+| `report.css` | 全ページ共通の報告書調エディトリアルデザイン |
+| `home-report.css` | トップページの報告書調レイアウトとファーストビュー直後の写真表示 |
 | `design.js` | 共通UIと装飾の生成 |
 | `responsive.css` | レスポンシブ対応スタイル |
-| `tests/ui-regression.test.mjs` | 初期表示と映像再生UIの回帰テスト |
+| `tests/ui-regression.test.mjs` | 初期表示、プロジェクトタブ、報告書調レイアウトの回帰テスト |
 | `zenbu-r7.pdf` | 令和7年度 活動報告書 |
 
 画像はすべてリポジトリ直下にフラットに配置。各HTMLからは相対パスで参照している。
