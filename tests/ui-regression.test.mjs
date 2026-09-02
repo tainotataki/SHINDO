@@ -92,6 +92,12 @@ test('homepage uses the corrected partner count', () => {
   assert.doesNotMatch(indexHtml, /class="report-metric__value">37<small> 組<\/small>/);
 });
 
+test('homepage footer uses the shared SHINDO wordmark', () => {
+  const sharedWordmark = `<div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>`;
+  assert.ok(indexHtml.indexOf(sharedWordmark, indexHtml.indexOf('<footer')) > -1);
+  assert.ok(aboutHtml.indexOf(sharedWordmark, aboutHtml.lastIndexOf('<div style="border-top:')) > -1);
+});
+
 test('shared report layer replaces colored hero dots with ink rice grains', () => {
   const declarations = ruleFor(reportCss, 'body.redesign:not(.page-index) .is-page-hero::after');
   assert.match(declarations, /background-image:\s*url\("data:image\/svg\+xml/);
