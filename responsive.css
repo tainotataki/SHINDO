@@ -655,3 +655,28 @@ img, video, iframe { max-width: 100%; height: auto; }
   body .report-hero__grid{min-height:0}
   body .report-hero__mark{min-height:min(500px,38vh)}
 }
+
+/* =========================================================
+   本文2段組の段落間隔
+
+   design.js が inline grid に一律で .field-grid を付け、
+   report.css の `gap:1px !important` が効く。カードを1pxの罫線で
+   見せるための指定だが、罫線を持たない本文グリッドに当たると
+   段落同士が密着して一続きの文章に見えてしまう。
+   該当箇所にだけ本来の間隔を戻す。
+   （responsive.css が先に読まれるため body を前置して詳細度で上回る）
+   ========================================================= */
+body .text-pair{gap:56px !important}
+@media (max-width: 700px){
+  body .text-pair{gap:34px !important}
+}
+
+/* =========================================================
+   スマートフォンでの表紙パネルの高さ
+
+   420px固定では画面の半分近くを占め、続く見出しや募集の告知が
+   押し下げられる。幅に対する比率で決め、狭い画面ほど低くする。
+   ========================================================= */
+@media (max-width: 700px){
+  body .report-hero__mark{min-height:min(420px,52vw)}
+}
