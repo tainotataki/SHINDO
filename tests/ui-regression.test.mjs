@@ -71,7 +71,7 @@ test('project tabs synchronize visual, ARIA and panel states', () => {
 test('homepage removes the movie and legacy playful layer', () => {
   assert.doesNotMatch(indexHtml, /home-movie-section|data-video-trigger|vimeo\.com\/1116123465/);
   assert.doesNotMatch(indexHtml, /home-playful\.css/);
-  assert.match(indexHtml, /<link rel="stylesheet" href="home-report\.css\?v=3">/);
+  assert.match(indexHtml, /<link rel="stylesheet" href="home-report\.css\?v=4">/);
 });
 
 test('homepage opens from the report cover into a real field photograph', () => {
@@ -101,8 +101,22 @@ test('homepage footer uses the shared SHINDO wordmark', () => {
 test('shared report layer replaces colored hero dots with ink rice grains', () => {
   const declarations = ruleFor(reportCss, 'body.redesign:not(.page-index) .is-page-hero::after');
   assert.match(declarations, /background-image:\s*url\("data:image\/svg\+xml/);
+  assert.match(declarations, /C-1\.3 -7\.1 -3\.2 -5\.7 -3\.8 -3/);
+  assert.doesNotMatch(declarations, /%3Cellipse/);
   assert.match(declarations, /box-shadow:\s*none\s*!important/);
   assert.match(declarations, /border-radius:\s*0\s*!important/);
+});
+
+test('homepage rice grains use the asymmetric indented contour instead of ellipses', () => {
+  assert.match(indexHtml, /id="report-grain-shape"[^>]+d="M1\.2 -10\.5 C-2 -11\.1 -5 -9 -6 -4\.7/);
+  assert.match(indexHtml, /<use class="report-grain" href="#report-grain-shape"/);
+  assert.doesNotMatch(indexHtml, /<ellipse /);
+  assert.match(homeReportCss, /\.report-grains \.report-grain\s*\{/);
+});
+
+test('partnership calls to action open the supplied Google Forms', () => {
+  assert.match(partnershipHtml, /href="https:\/\/forms\.gle\/UQMwm3vtGG7D6zAL7" target="_blank" rel="noopener noreferrer"[^>]*>オンライン対話を申し込む/);
+  assert.match(partnershipHtml, /href="https:\/\/forms\.gle\/h8i3G6ESgqPrENk76" target="_blank" rel="noopener noreferrer"[^>]*>小口支援をする/);
 });
 
 test('dark participation section keeps all text on the paper color', () => {

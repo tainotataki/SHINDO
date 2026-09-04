@@ -117,7 +117,7 @@
   pointer-events: none;
 }
 
-.report-grains ellipse {
+.report-grains .report-grain {
   fill: none;
   stroke: currentColor;
   stroke-width: 1;
