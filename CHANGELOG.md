@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.2.9] - 2026-09-04
+
+### Changed
+
+- トップページの英語表記を NATURAL FARMING → LIFE-BASE BUILDING へ変更しました。
+
 ## [0.0.2.8] - 2026-09-04
 
 ### Changed
