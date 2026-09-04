@@ -680,3 +680,39 @@ body .text-pair{gap:56px !important}
 @media (max-width: 700px){
   body .report-hero__mark{min-height:min(420px,52vw)}
 }
+
+/* =========================================================
+   表紙パネルの米粒（スマートフォン）
+
+   元のSVGは 520×620 の縦長。横長になったスマホの枠に入れると
+   縦に合わせて中央へ letterbox され、左右が空いて米粒が中央に寄る。
+   枠とほぼ同じ比率（330×178）の横長SVGを別に用意し、
+   幅ごとに出し分ける。粒も枠に対して大きくなる。
+   ========================================================= */
+.report-grains--sp{display:none}
+
+@media (max-width: 700px){
+  body .report-hero__mark{min-height:min(420px,47vw)}
+  .report-grains--sp{display:block}
+  .report-hero__mark > .report-grains:not(.report-grains--sp){display:none}
+
+  /* 枠が小さくなったぶん、中の文字は大きく */
+  body .report-wordmark{font-size:clamp(52px,17vw,76px) !important}
+  body .report-wordmark small{margin-top:14px;font-size:12px;letter-spacing:.3em}
+}
+
+/* =========================================================
+   デスクトップのヒーローの配置
+
+   募集枠をグリッドに足したことで自動配置がずれ、本文列が2行目へ
+   送られて表紙パネルと縦位置が食い違っていた。
+   左列＝表紙パネル→募集枠、右列＝本文（2行にまたがる）と明示し、
+   左右の頭を揃える。
+   ========================================================= */
+.report-hero__left{display:flex;flex-direction:column}
+@media (min-width: 701px){
+  /* 左右の頭を揃える。募集枠が入って左列が縦に伸びたため、
+     中央揃えでは表紙パネルと本文の高さが食い違う */
+  body .report-hero__grid{align-items:start}
+  body .hero-notice--box{margin-top:22px}
+}
