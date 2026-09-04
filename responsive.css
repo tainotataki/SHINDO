@@ -653,7 +653,6 @@ img, video, iframe { max-width: 100%; height: auto; }
   /* home-report.css が後から読み込まれるため、body を前置して詳細度で上回る */
   body .report-hero{padding-top:clamp(32px,3.4vw,56px)}
   body .report-hero__grid{min-height:0}
-  body .report-hero__mark{min-height:min(500px,38vh)}
 }
 
 /* =========================================================
@@ -711,8 +710,47 @@ body .text-pair{gap:56px !important}
    ========================================================= */
 .report-hero__left{display:flex;flex-direction:column}
 @media (min-width: 701px){
-  /* 左右の頭を揃える。募集枠が入って左列が縦に伸びたため、
-     中央揃えでは表紙パネルと本文の高さが食い違う */
-  body .report-hero__grid{align-items:start}
-  body .hero-notice--box{margin-top:22px}
+  /* 左右の列を同じ高さに伸ばし、表紙パネルが余った分を吸う。
+     頭が揃ううえ、枠が縦長になるので米粒のSVG（520×620）が
+     letterbox されずに枠全体へ散る。 */
+  body .report-hero__grid{align-items:stretch}
+  body .report-hero__left{height:100%}
+  body .report-hero__mark{flex:1;min-height:280px}
+  body .hero-notice--box{flex:0 0 auto;margin-top:22px}
+
+  /* 縦書きの見出しが高すぎると左列が追いつかず、募集枠も
+     初期表示から外れる。少し詰めて釣り合う高さにする。 */
+  body .report-hero h1{font-size:clamp(44px,5vw,72px)}
+}
+
+/* =========================================================
+   表紙パネルの米粒（デスクトップ）
+
+   元は 520×620 の単一SVG。枠の縦横比は画面サイズで変わるため、
+   viewBox 方式ではどこかの比率で必ず letterbox され、粒が偏る。
+   1粒ずつ％座標で置き、比率に依存しない散らし方にする。
+   ========================================================= */
+.report-grains--pc{display:none}
+
+@media (min-width: 701px){
+  .report-hero__mark > .report-grains:not(.report-grains--sp){display:none}
+  .report-grains--pc{
+    display:block;
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    color:var(--report-ink,#08082f);
+  }
+  .report-grains--pc svg{
+    position:absolute;
+    width:26px;height:26px;
+    transform:translate(-50%,-50%) rotate(var(--r,0deg));
+    overflow:visible;
+  }
+  .report-grains--pc use{
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1;
+    opacity:.55;
+  }
 }
