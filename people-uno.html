@@ -21,6 +21,19 @@ a:hover{color:#93293C}
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="design.css?v=29">
 <link rel="stylesheet" href="report.css?v=4">
+<style>
+/* 長文の入り口なので、見出しは「ページ表題」ではなく
+   本文に対する見出しの大きさにする。
+   report.css の `.is-page-hero h1` と同じ詳細度で、
+   読み込み順が後になる位置に置くことで上書きする。 */
+body.redesign.page-people-uno .is-page-hero h1{
+  font-size:clamp(24px,2.4vw,34px) !important;
+  line-height:1.75 !important;
+  letter-spacing:.06em !important;
+  max-width:30em !important;
+  margin-bottom:clamp(16px,2vw,26px) !important;
+}
+</style>
 </head>
 <body>
 <div style="background:#F6EEB6;color:#1A1A16">
