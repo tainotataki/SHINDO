@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.2.3] - 2026-09-04
+
+### Changed
+
+- トップページの英語表記を NATURAL FARMING / FOUNDATION-BUILDING PROJECT へ変更しました。
+
 ## [0.0.2.2] - 2026-09-04
 
 ### Changed
