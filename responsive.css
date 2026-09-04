@@ -559,3 +559,99 @@ img, video, iframe { max-width: 100%; height: auto; }
   color:var(--report-ink-70,#6A6A5D);
   margin-top:7px;
 }
+
+/* =========================================================
+   ファーストビューの募集告知
+
+   ・700px以下（1列に畳まれる幅）＝ 見出し直前の「告知ライン」
+   ・701px以上                    ＝ 表紙パネル下の「罫線で囲んだ募集枠」
+   同じ内容を幅ごとに別の形で見せるため、両方をHTMLに置き、
+   使わない方は display:none で描画からも読み上げからも外す。
+
+   色・書体はサイトのトークン（--report-ink 系）をそのまま使う。
+   ========================================================= */
+
+/* ---------- 共通 ---------- */
+.hero-notice a{
+  color:var(--report-ink,#08082f);
+  border-bottom:1px solid currentColor;
+  padding-bottom:1px;
+}
+.hero-notice a:hover{color:var(--report-ink-70,rgba(8,8,47,.7))}
+
+/* ---------- 案1：告知ライン（スマホ） ---------- */
+.hero-notice--line{
+  display:none;
+  align-items:flex-start;
+  gap:12px;
+  margin:0 0 16px;
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  font-size:13.5px;
+  line-height:1.85;
+  letter-spacing:.06em;
+  color:var(--report-ink,#08082f);
+}
+.hero-notice__rule{
+  flex:0 0 auto;
+  width:26px;height:1px;
+  margin-top:.85em;
+  background:var(--report-ink,#08082f);
+}
+/* 1列目に「現在、新しい」を置き、2行目は空にすることで、
+   「パートナー」と「現場仲間」の頭を字幅に依存せず正確に揃える */
+.hero-notice__cols{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  row-gap:2px;
+}
+
+/* ---------- 案2：罫線で囲んだ募集枠（デスクトップ） ---------- */
+.hero-notice--box{
+  grid-column:1;
+  align-self:start;
+  margin:22px 0 0;
+  padding:16px 0 18px;
+  border-top:3px double var(--report-ink,#08082f);
+  border-bottom:1px solid var(--report-line,rgba(8,8,47,.35));
+}
+.hero-notice__label{
+  margin:0 0 10px;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:9.5px;
+  letter-spacing:.2em;
+  color:var(--report-ink-45,rgba(8,8,47,.45));
+}
+.hero-notice__msg{
+  margin:0 0 14px;
+  font-family:"Zen Old Mincho","Hiragino Mincho ProN",serif;
+  font-size:19px;
+  line-height:1.65;
+  letter-spacing:.05em;
+  color:var(--report-ink,#08082f);
+}
+.hero-notice__links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 24px;
+  margin:0;
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* ---------- 幅による出し分け ---------- */
+@media (max-width: 700px){
+  .hero-notice--line{display:flex;grid-column:1}
+  .hero-notice--box{display:none}
+}
+
+/* ---------- 画面の低いデスクトップでの収まり ----------
+   募集枠は「スクロールせずに読めること」が目的なので、
+   縦が足りない画面でのみ、上余白と表紙パネルを詰めて
+   初期表示に収める。縦に余裕のある画面は元の比率のまま。 */
+@media (min-width: 701px) and (max-height: 900px){
+  /* home-report.css が後から読み込まれるため、body を前置して詳細度で上回る */
+  body .report-hero{padding-top:clamp(32px,3.4vw,56px)}
+  body .report-hero__grid{min-height:0}
+  body .report-hero__mark{min-height:min(500px,38vh)}
+}
