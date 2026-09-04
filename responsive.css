@@ -543,3 +543,19 @@ img, video, iframe { max-width: 100%; height: auto; }
 @media (max-width: 640px){
   .site-logo{gap:10px}
 }
+
+/* =========================================================
+   人物名に添えるローマ字読み
+
+   見出しの中に置いているため、書体・級数・太さを明示的に戻す。
+   色はデザイン側の変数を使い、無い場合に備えて既定値も持たせる。
+   ========================================================= */
+.name-roman{
+  display:block;
+  font-family:"JetBrains Mono",monospace;
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:.12em;
+  color:var(--report-ink-70,#6A6A5D);
+  margin-top:7px;
+}
