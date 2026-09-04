@@ -754,3 +754,27 @@ body .text-pair{gap:56px !important}
     opacity:.55;
   }
 }
+
+/* =========================================================
+   TRAJECTORY IN NUMBERS の行
+
+   数字を最も左に置き、続いて見出しと説明、いちばん右に出典。
+   数字はこの節の主役なので、単位も含めて大きくする。
+   （home-report.css が後に読み込まれるため body を前置して上回る）
+   ========================================================= */
+@media (min-width: 701px){
+  body .report-metric{
+    grid-template-columns:minmax(210px,.6fr) minmax(300px,1fr) minmax(170px,.5fr);
+  }
+}
+/* design.css の `body.redesign .content-block p`（本文16px）が
+   詳細度(0,2,2)で効くため、クラスを3つ重ねて上回る */
+body.redesign .content-block .report-metric__value{
+  font-size:clamp(50px,5.8vw,80px) !important;
+  line-height:1.1 !important;
+  letter-spacing:.01em;
+}
+body.redesign .content-block .report-metric__value small{
+  font-size:24px !important;
+  letter-spacing:.04em;
+}
