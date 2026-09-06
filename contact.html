@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="design.js?v=31" as="script">
+<title>Contact ／ お問い合わせ ── SHINDO</title>
+<meta name="description" content="SHINDO・株式会社ZEN-BUへのお問い合わせフォームです。取材・視察・協業のご相談、活動についてのご質問などをお送りいただけます。">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6EEB6;color:#1A1A16;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4A1520;text-decoration:none}
+a:hover{color:#93293C}
+</style>
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="design.css?v=29">
+<link rel="stylesheet" href="report.css?v=4">
+</head>
+<body>
+<div style="background:#F6EEB6;color:#1A1A16">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
+  <div style="display:flex;align-items:center;gap:28px;padding:20px 60px;max-width:1180px;margin:0 auto">
+    <input type="checkbox" id="navtoggle" class="nav-toggle" aria-label="メニューを開閉">
+    <label for="navtoggle" class="nav-burger"><span></span><span></span><span></span></label>
+    <a class="site-logo" href="/" aria-label="SHINDO ホームへ"><span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:22px;letter-spacing:.42em;line-height:1">SHINDO</span><span style="font-size:10px;letter-spacing:.2em;color:#6A6A5D;padding-left:2px;line-height:1.7">新しい豊かさへと<br>つづく道</span></a>
+    <div class="site-nav" style="margin-left:auto;display:flex;gap:30px;font-size:12.5px;letter-spacing:.12em;color:#45453C">
+      <a href="about.html">About</a>
+      <a href="people.html">People</a>
+      <a href="projects.html">Projects</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="recruit.html">Recruit</a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:76px 60px 48px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:26px">CONTACT ── お問い合わせ</div>
+  <h1 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:40px;line-height:1.55;letter-spacing:.04em;margin:0 0 28px">お問い合わせ</h1>
+  <div style="width:64px;height:1px;background:#B9A65A;margin-bottom:28px"></div>
+  <p style="font-size:16px;line-height:2.15;letter-spacing:.05em;color:#26261F;max-width:38em;margin:0;text-wrap:pretty">取材・視察のご相談、協業のお声がけ、活動についてのご質問など、お気軽にお送りください。担当者が内容を確認のうえ、追ってご返信します。</p>
+</div>
+
+<div style="border-top:1px solid #D9C97E;background:#F6EEB6">
+  <div style="max-width:1180px;margin:0 auto;padding:64px 60px 88px">
+
+    <form class="entry-form" novalidate>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+        <label class="ef-field">
+          <span class="ef-label">お名前<i class="ef-req">必須</i></span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="ef-field">
+          <span class="ef-label">メールアドレス<i class="ef-req">必須</i></span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+      </div>
+
+      <label class="ef-field">
+        <span class="ef-label">簡単な自己紹介<i class="ef-any">任意</i></span>
+        <input type="text" name="intro" autocomplete="off" placeholder="ご所属やお立場、SHINDOを知ったきっかけなど">
+      </label>
+
+      <label class="ef-field">
+        <span class="ef-label">件名<i class="ef-req">必須</i></span>
+        <input type="text" name="subject" required autocomplete="off" placeholder="例：取材のご相談">
+      </label>
+
+      <label class="ef-field">
+        <span class="ef-label">お問い合わせ内容<i class="ef-req">必須</i></span>
+        <textarea name="message" rows="7" required placeholder="ご相談・ご質問の内容をお書きください。"></textarea>
+      </label>
+
+      <input type="text" name="website" class="ef-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="ef-submit">
+        <button type="submit">送信する</button>
+        <p class="ef-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="ef-note">送信いただいた情報は、お問い合わせへの回答のために利用します。取り扱いは<a href="privacy-policy.html">プライバシーポリシー</a>をご確認ください。移住メンバー・通いメンバーへのご応募は、<a href="recruit.html#r-contact">Recruit ページのフォーム</a>からお願いします。</p>
+    </form>
+  </div>
+</div>
+
+<div style="border-top:1px solid #D9C97E;background:#EFE49B">
+  <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
+    <div>
+      <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>
+      <p style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;line-height:2;letter-spacing:.09em;margin:0 0 26px">会津・奥会津に築く、生命の基盤。<br>新しい豊かさへとつづく道。</p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0 0 8px;line-height:2">Follow ── <a href="https://www.youtube.com/@shindoproject" target="_blank" rel="noopener">YouTube</a> ／ <a href="https://www.instagram.com/shindo_newpath/" target="_blank" rel="noopener">Instagram</a></p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0;line-height:2">発行：株式会社ZEN-BU</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px;letter-spacing:.1em">
+      <a href="index.html" style="border-top:1px solid #CBB96A;padding-top:10px">トップ</a>
+      <a href="about.html" style="border-top:1px solid #CBB96A;padding-top:10px">About ／ SHINDOとは</a>
+      <a href="people.html" style="border-top:1px solid #CBB96A;padding-top:10px">People ／ 仲間</a>
+      <a href="projects.html" style="border-top:1px solid #CBB96A;padding-top:10px">Projects ／ 活動</a>
+      <a href="partnership.html" style="border-top:1px solid #CBB96A;padding-top:10px">Partnership ／ 資金で支える</a>
+      <a href="recruit.html" style="border-top:1px solid #CBB96A;padding-top:10px">Recruit ／ 募集</a>
+      <a href="contact.html" style="border-top:1px solid #CBB96A;padding-top:10px">Contact ／ お問い合わせ</a>
+      <a href="privacy-policy.html" style="border-top:1px solid #CBB96A;padding-top:10px">Privacy ／ プライバシーポリシー</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var form = document.querySelector('.entry-form');
+  if (!form) return;
+  var status = form.querySelector('.ef-status');
+  var button = form.querySelector('button[type="submit"]');
+  var fields = [].slice.call(form.querySelectorAll('input[required], textarea[required], select[required]'));
+  status.id = 'entry-form-status';
+
+  function say(kind, html) {
+    status.className = 'ef-status' + (kind ? ' is-' + kind : '');
+    status.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+    status.innerHTML = html;
+  }
+
+  function markInvalid(field, invalid) {
+    if (invalid) {
+      field.setAttribute('aria-invalid', 'true');
+      field.setAttribute('aria-describedby', status.id);
+    } else {
+      field.removeAttribute('aria-invalid');
+      if (field.getAttribute('aria-describedby') === status.id) field.removeAttribute('aria-describedby');
+    }
+  }
+
+  fields.forEach(function (field) {
+    field.addEventListener('input', function () { if (field.checkValidity()) markInvalid(field, false); });
+    field.addEventListener('change', function () { if (field.checkValidity()) markInvalid(field, false); });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.classList.add('ef-tried');
+
+    if (!form.checkValidity()) {
+      say('error', '未入力の項目があります。ご確認ください。');
+      fields.forEach(function (field) { markInvalid(field, !field.checkValidity()); });
+      var bad = form.querySelector(':invalid');
+      if (bad) bad.focus();
+      return;
+    }
+
+    fields.forEach(function (field) { markInvalid(field, false); });
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+    button.disabled = true;
+    say('', '送信しています…');
+
+    fetch('/api/inquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; })
+              .then(function (j) { return { ok: r.ok && j.ok === true }; });
+    }).then(function (res) {
+      button.disabled = false;
+      if (!res.ok) throw new Error('failed');
+      form.reset();
+      form.classList.remove('ef-tried');
+      say('ok', '送信しました。担当者が確認のうえ、追ってご返信します。');
+    }).catch(function () {
+      button.disabled = false;
+      say('error', '送信できませんでした。お手数ですが <a href="mailto:official@zen-bu.co">official@zen-bu.co</a> まで直接ご連絡ください。');
+    });
+  });
+})();
+</script>
+<script src="design.js?v=31" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
+</body>
+</html>
