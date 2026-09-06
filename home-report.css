@@ -444,3 +444,11 @@ body.redesign .report-person img {
 @media (max-width: 640px) {
   .report-person img { width: min(64%, 200px); }
 }
+
+/* 無の会は集合写真なので、円形に切り抜くと人が欠ける。元の全幅のままにする。 */
+body.redesign .report-person img[src*="muno-group"] {
+  width: calc(100% + 48px);
+  margin: 0 0 0 -24px;
+  aspect-ratio: 4 / 5;
+  border-radius: 0 !important;
+}
