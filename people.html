@@ -19,6 +19,30 @@ a:hover{color:#93293C}
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="design.css?v=29">
 <link rel="stylesheet" href="report.css?v=4">
+<style>
+/* 運営している人たちは2名。3列組みのままだと右端が空くので2列に詰め、
+   写真は円形に切り抜く。report.css が .portrait-photo の角丸を
+   打ち消しているため、読み込み順の最後にあたるここで指定している。 */
+body.page-people .founders-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  max-width: 800px;
+  margin-inline: auto;
+}
+body.page-people .founders-grid .portrait-photo {
+  aspect-ratio: 1 / 1 !important;
+  width: min(66%, 230px) !important;
+  margin: 30px auto 4px !important;
+  border-radius: 50% !important;
+  border-width: 6px !important;
+}
+@media (max-width: 700px) {
+  body.page-people .founders-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 380px;
+  }
+  body.page-people .founders-grid .portrait-photo { width: min(62%, 200px) !important; }
+}
+</style>
 </head>
 <body>
 <div style="background:#F6EEB6;color:#1A1A16">
@@ -46,8 +70,8 @@ a:hover{color:#93293C}
 </div>
 
 <div style="max-width:1180px;margin:0 auto;padding:0 60px 20px">
-  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:30px">FOUNDERS ── はじめた人たち</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:30px">ORGANIZERS ── 運営している人たち</div>
+  <div class="founders-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
     <div style="border:1px solid #D9C97E;background:#EFE49B">
       <div style="aspect-ratio:4/3;border-bottom:1px solid #D9C97E;background-image:url('people-uno-hiroyasu-v2.jpg');background-size:cover;background-position:center 40%"></div>
       <div style="padding:24px 24px 26px">
@@ -82,10 +106,10 @@ a:hover{color:#93293C}
       <div class="base-member-list">
         <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
           <div class="base-member__identity">
-            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">起ち上げ仲間</span>
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">生産・経営</span>
             <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">上野拓也</h3>
           </div>
-          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">三年前、都内の企業を辞めて会津へ。無の会のお米の栽培と農園経営を担当。SHINDO一年目の起ち上げメンバー。</p>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">三年前、都内の企業を辞めて会津へ。無の会のお米の栽培と農園経営を担当。</p>
         </div>
         <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
           <div class="base-member__identity">
