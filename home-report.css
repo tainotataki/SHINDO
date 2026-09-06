@@ -445,10 +445,16 @@ body.redesign .report-person img {
   .report-person img { width: min(64%, 200px); }
 }
 
-/* 無の会は集合写真なので、円形に切り抜くと人が欠ける。元の全幅のままにする。 */
+/* 無の会は集合写真なので、円形に切り抜くと人が欠ける。
+   横長のまま載せつつ、高さだけ隣の丸い写真に合わせて行を揃える。 */
 body.redesign .report-person img[src*="muno-group"] {
   width: calc(100% + 48px);
-  margin: 0 0 0 -24px;
-  aspect-ratio: 4 / 5;
+  margin: 4px 0 0 -24px;
+  aspect-ratio: auto;
+  height: 230px;
+  object-fit: cover;
   border-radius: 0 !important;
+}
+@media (max-width: 640px) {
+  body.redesign .report-person img[src*="muno-group"] { height: 200px; }
 }
