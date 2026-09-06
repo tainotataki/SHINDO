@@ -605,3 +605,8 @@ body.redesign .content-block .photo-caption {
 @media (max-width: 700px) {
   body .photo-figures { row-gap: 34px !important; }
 }
+
+/* 途中で折り返したくない語のかたまり。
+   インラインの white-space:nowrap はモバイルで
+   responsive.css が打ち消すため、クラスで指定する。 */
+body .keep-together { white-space: nowrap; }
