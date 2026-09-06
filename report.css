@@ -610,3 +610,14 @@ body.redesign .content-block .photo-caption {
    インラインの white-space:nowrap はモバイルで
    responsive.css が打ち消すため、クラスで指定する。 */
 body .keep-together { white-space: nowrap; }
+
+/* 写真そのものをリンクにするときの体裁。
+   ブロック要素として振る舞わせ、周りの余白や大きさを変えない。 */
+body a.photo-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .2s ease;
+}
+body a.photo-link:hover { opacity: .88; }
+body a.photo-link:focus-visible { outline: 2px solid #93293C; outline-offset: 3px; }
