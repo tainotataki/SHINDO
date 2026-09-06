@@ -430,3 +430,17 @@ body.redesign .report-join span { color: var(--report-paper) !important; }
   .report-join__item { min-height: 0; }
   .report-vision h2 { font-size: clamp(38px, 11vw, 54px); }
 }
+
+/* トップページの人物写真も People ページに合わせて円形に切り抜く。 */
+body.redesign .report-person img {
+  width: min(72%, 230px);
+  margin: 4px auto 0;
+  display: block;
+  aspect-ratio: 1 / 1;
+  /* report.css が .portrait-photo / .community-photo の角丸を
+     打ち消しているので、ここで明示的に上書きする。 */
+  border-radius: 50% !important;
+}
+@media (max-width: 640px) {
+  .report-person img { width: min(64%, 200px); }
+}

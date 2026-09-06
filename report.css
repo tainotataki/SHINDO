@@ -579,3 +579,29 @@ body.redesign.page-about .pillar-section.site-shell {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* ------------------------------------------------------------------
+   写真のキャプション
+
+   ページごとに明朝・等幅・ゴシックが混在していたので、
+   People の「地元のプロ」の見え方（Zen Kaku Gothic New／12px）に統一する。
+   .type-meta や .field-label より後ろに置いて上書きしている。
+
+   モバイルでは .field-grid の gap が 1px になるため、
+   キャプションが次の写真にくっついて見えていた。行間だけ空ける。
+   ------------------------------------------------------------------ */
+/* design.css の body.redesign .field-label に勝てるよう
+   同じ強さの指定を後ろに置く。 */
+body .photo-caption,
+body.redesign .photo-caption,
+body.redesign .content-block .photo-caption {
+  font-family: "Zen Kaku Gothic New", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+  letter-spacing: .05em !important;
+  color: var(--report-ink-70) !important;
+}
+
+@media (max-width: 700px) {
+  body .photo-figures { row-gap: 34px !important; }
+}
