@@ -343,7 +343,7 @@
 
 .report-people__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--report-ink);
   border-left: 1px solid var(--report-line);
 }

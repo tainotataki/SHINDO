@@ -205,7 +205,7 @@
 
   document.querySelectorAll('.field-photo').forEach(function (photo) {
     var source = ((photo.getAttribute('style') || '') + ' ' + (photo.getAttribute('src') || '')).toLowerCase();
-    if (/people-(uno-hiroyasu-v2|oshima-takeo|ueno-takuya)/.test(source)) {
+    if (/people-(uno-hiroyasu-v2|oshima-takeo)/.test(source)) {
       photo.classList.add('portrait-photo');
       photo.removeAttribute('aria-hidden');
       photo.setAttribute('role', 'img');
