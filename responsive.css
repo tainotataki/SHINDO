@@ -783,14 +783,23 @@ body.redesign .content-block .report-metric__value small{
    説明文の行数がカードごとに違うため、写真の始まる位置がずれていた。
    subgrid でカード内の4段（見出し・説明文・写真・キャプション）を
    親グリッドの行に揃え、どのカードでも同じ高さから写真が始まるようにする。
-   行間の隙間は親の gap を引き継いでしまうので row-gap は 0 に戻す。 */
-body .fund-grid { column-gap: 20px; row-gap: 0; }
-@supports (grid-template-rows: subgrid) {
-  body .fund-card {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-    align-content: start;
+   行間の隙間は親の gap を引き継いでしまうので row-gap は 0 に戻す。
+
+   subgrid をかけるのは、3枚が本当に横に並ぶ 901px 以上のときだけ。
+   2列・1列に折り返す幅では揃える意味がないうえ、
+   iOS Safari で行の高さが正しく計算されず、
+   カードが次の見出しに重なる不具合が出たため。
+   行も暗黙のままにせず 4 段を明示している。 */
+@media (min-width: 901px) {
+  body .fund-grid { column-gap: 20px; row-gap: 0; }
+  @supports (grid-template-rows: subgrid) {
+    body .fund-grid { grid-template-rows: repeat(4, auto); }
+    body .fund-card {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+      align-content: start;
+    }
   }
 }
 
