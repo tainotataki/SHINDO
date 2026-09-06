@@ -455,6 +455,12 @@ body.redesign .report-person img[src*="muno-group"] {
   object-fit: cover;
   border-radius: 0 !important;
 }
+/* モバイルでは幅いっぱいに広げるぶんの余白が取れず、
+   左に寄ってしまうので、はみ出させずに中央へ置く。 */
 @media (max-width: 640px) {
-  body.redesign .report-person img[src*="muno-group"] { height: 200px; }
+  body.redesign .report-person img[src*="muno-group"] {
+    width: 100%;
+    margin: 4px auto 0;
+    height: 200px;
+  }
 }
