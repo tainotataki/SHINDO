@@ -464,3 +464,13 @@ body.redesign .report-person img[src*="muno-group"] {
     height: 200px;
   }
 }
+
+/* 肩書きラベルの体裁。
+   写真を <a> で包んだ無の会のカードだけ「写真の直後の p」に当たらなくなり、
+   本文と同じ大きさで表示されていた。カード構造に依存しない形で指定し直す。 */
+body.redesign .report-person .report-person__role {
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+  letter-spacing: .05em !important;
+  color: var(--report-ink-70) !important;
+}
