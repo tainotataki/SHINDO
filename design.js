@@ -74,24 +74,24 @@
     }
 
     var copy = (block.textContent || '').replace(/\s+/g, ' ').trim();
-    if (copy.indexOf('目次') !== -1) block.classList.add('toc-section');
+    if (copy.indexOf('目次') !== -1 || copy.indexOf('Contents') !== -1) block.classList.add('toc-section');
     if (copy.indexOf('TRAJECTORY in NUMBERS') !== -1) block.classList.add('metrics-section');
-    if (copy.indexOf('PEOPLE') !== -1 && copy.indexOf('この場を、つくっている人たち。') !== -1) {
+    if (copy.indexOf('PEOPLE') !== -1 && (copy.indexOf('この場を、つくっている人たち。') !== -1 || copy.indexOf('who make this place.') !== -1)) {
       block.classList.add('people-section');
     }
-    if (copy.indexOf('PROJECTS') !== -1 && copy.indexOf('やっていること') !== -1) {
+    if (copy.indexOf('PROJECTS') !== -1 && (copy.indexOf('やっていること') !== -1 || copy.indexOf('What we are doing') !== -1)) {
       block.classList.add('projects-section');
     }
     if (copy.indexOf('LOCAL PROS') !== -1) block.classList.add('local-pros-section');
-    if (copy.indexOf('PARTNERS ── 全国の仲間') !== -1) block.classList.add('partners-directory-section');
-    if (copy.indexOf('TERMS ── 契約と条件') !== -1) block.classList.add('terms-section');
-    if (copy.indexOf('BENEFITS ── 契約特典') !== -1) block.classList.add('benefits-section');
-    if (copy.indexOf('SMALL SUPPORT ── 小口支援・寄付') !== -1) block.classList.add('small-support-section');
+    if (copy.indexOf('PARTNERS ── 全国の仲間') !== -1 || copy.indexOf('PARTNERS ── Companions across Japan') !== -1) block.classList.add('partners-directory-section');
+    if (copy.indexOf('TERMS ── 契約と条件') !== -1 || copy.indexOf('TERMS ── Agreement and conditions') !== -1) block.classList.add('terms-section');
+    if (copy.indexOf('BENEFITS ── 契約特典') !== -1 || copy.indexOf('BENEFITS ── What partners receive') !== -1) block.classList.add('benefits-section');
+    if (copy.indexOf('SMALL SUPPORT ── 小口支援・寄付') !== -1 || copy.indexOf('SMALL SUPPORT ── Smaller contributions') !== -1) block.classList.add('small-support-section');
     if (copy.indexOf('WHAT YOU FINANCE FOR') !== -1) block.classList.add('finance-uses-section');
-    if (copy.indexOf('WORLDVIEW ── SHINDOに至る歴史観') !== -1) block.classList.add('worldview-section');
-    if (copy.indexOf('ORGANIZATION ── 体制') !== -1) block.classList.add('organization-section');
+    if (copy.indexOf('WORLDVIEW ── SHINDOに至る歴史観') !== -1 || copy.indexOf('WORLDVIEW ── The view of history') !== -1) block.classList.add('worldview-section');
+    if (copy.indexOf('ORGANIZATION ── 体制') !== -1 || copy.indexOf('ORGANIZATION ── How we are organized') !== -1) block.classList.add('organization-section');
     if (block.id === 'r-migrate' || block.id === 'r-commute') block.classList.add('role-section');
-    if (copy.indexOf('住んで支える') !== -1 && copy.indexOf('応募フォームへ') !== -1) {
+    if ((copy.indexOf('住んで支える') !== -1 && copy.indexOf('応募フォームへ') !== -1) || (copy.indexOf('Living here to support') !== -1 && copy.indexOf('Go to the application form') !== -1)) {
       block.classList.add('resident-entry-section');
     }
   });

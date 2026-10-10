@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="../design.js?v=31" as="script">
+<title>People ／ Who we are ── SHINDO</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6EEB6;color:#1A1A16;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4A1520;text-decoration:none}
+a:hover{color:#93293C}
+</style>
+<style>
+
+</style>
+<link rel="stylesheet" href="../responsive.css">
+<link rel="stylesheet" href="../design.css?v=29">
+<link rel="stylesheet" href="../report.css?v=4">
+<style>
+/* 運営している人たちは2名。3列組みのままだと右端が空くので2列に詰め、
+   写真は円形に切り抜く。report.css が .portrait-photo の角丸を
+   打ち消しているため、読み込み順の最後にあたるここで指定している。 */
+body.page-people .founders-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  max-width: 800px;
+  margin-inline: auto;
+}
+body.page-people .founders-grid .portrait-photo {
+  aspect-ratio: 1 / 1 !important;
+  width: min(66%, 230px) !important;
+  margin: 30px auto 4px !important;
+  border-radius: 50% !important;
+  border-width: 6px !important;
+}
+@media (max-width: 700px) {
+  body.page-people .founders-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 380px;
+  }
+  body.page-people .founders-grid .portrait-photo { width: min(62%, 200px) !important; }
+}
+</style>
+<link rel="alternate" hreflang="ja" href="https://shindoproject.com/people">
+<link rel="alternate" hreflang="en" href="https://shindoproject.com/en/people">
+<link rel="alternate" hreflang="x-default" href="https://shindoproject.com/people">
+<link rel="stylesheet" href="../en.css?v=2">
+</head>
+<body>
+<div style="background:#F6EEB6;color:#1A1A16">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
+  <div style="display:flex;align-items:center;gap:28px;padding:20px 60px;max-width:1180px;margin:0 auto">
+    <input type="checkbox" id="navtoggle" class="nav-toggle" aria-label="Open or close the menu">
+    <label for="navtoggle" class="nav-burger"><span></span><span></span><span></span></label>
+    <a class="site-logo" href="/en/" aria-label="SHINDO home"><span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:22px;letter-spacing:.42em;line-height:1">SHINDO</span><span style="font-size:10px;letter-spacing:.2em;color:#6A6A5D;padding-left:2px;line-height:1.7">A path toward<br>a new kind of abundance</span></a>
+    <div class="site-nav" style="margin-left:auto;display:flex;gap:30px;font-size:12.5px;letter-spacing:.12em;color:#45453C">
+      <a href="about.html">About</a>
+      <a href="people.html" style="color:#4A1520;border-bottom:1px solid #4A1520;padding-bottom:2px">People</a>
+      <a href="projects.html">Projects</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="recruit.html">Recruit</a>
+      <a class="lang-switch" href="/people" hreflang="ja" lang="ja" aria-label="日本語">JA</a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:76px 60px 48px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:26px">PEOPLE</div>
+  <h1 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:48px;line-height:1.55;letter-spacing:.055em;margin:0 0 28px">The people<br>who make this place.</h1>
+  <div style="width:64px;height:1px;background:#B9A65A;margin-bottom:28px"></div>
+  <p style="font-size:16px;line-height:2.15;letter-spacing:.05em;color:#26261F;max-width:38em;margin:0;text-wrap:pretty">Meet SHINDO's founding members, Munokai Natural Farm as our base, the craftspeople who support the field, partners from across Japan, and the villagers who work alongside us in Showa Village.</p>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 60px 20px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">ORGANIZERS ── The people who run it</div>
+  <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 16px"><a href="zen-bu.html" style="color:inherit;border-bottom:1px solid #CBB96A;padding-bottom:4px"><span class="keep-together">ZEN-BU Inc.</span></a></h2>
+  <p style="font-size:13.5px;line-height:2.15;color:#26261F;max-width:46em;margin:0 0 34px;text-wrap:pretty">The company that runs SHINDO, which builds the foundations of life from natural farming in Aizu and Oku-Aizu, Fukushima. We bring people active in fields other than farming from across Japan to Aizu, and through dialogue on the ground, turn ideas into projects one by one. By putting people, resources, and money to good use, we create a place for co-creation where both our companions and the region grow richer.</p>
+  <div class="founders-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+    <div style="border:1px solid #D9C97E;background:#EFE49B">
+      <div style="aspect-ratio:4/3;border-bottom:1px solid #D9C97E;background-image:url('people-uno-hiroyasu-v2.jpg');background-size:cover;background-position:center 40%"></div>
+      <div style="padding:24px 24px 26px">
+        <span style="display:block;font-size:11.5px;letter-spacing:.14em;color:#93293C;margin-bottom:8px">Founder, CEO of ZEN-BU</span>
+        <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:22px;letter-spacing:.06em;margin:0 0 12px">Kōta Uno<span class="name-roman">宇野宏泰</span></h2>
+        <p style="font-size:13px;line-height:1.95;color:#26261F;margin:0 0 16px">After aspiring to be a scholar, he turned to natural farming in search of a livelihood closer to the essentials. He visited more than 30 farms across Japan before moving to Aizu in 2021. The founder of SHINDO.</p>
+        <a href="people-uno.html" style="font-size:12.5px;color:#4A1520;border-bottom:1px solid #CBB96A;padding-bottom:3px">The founder's note →</a>
+      </div>
+    </div>
+    <div style="border:1px solid #D9C97E;background:#EFE49B">
+      <div style="aspect-ratio:4/3;border-bottom:1px solid #D9C97E;background-image:url('people-oshima-takeo.jpg');background-size:cover;background-position:center 40%"></div>
+      <div style="padding:24px 24px 26px">
+        <span style="display:block;font-size:11.5px;letter-spacing:.14em;color:#93293C;margin-bottom:8px">Co-founder, <span style="letter-spacing: 1.61px;">ZEN-BU</span></span>
+        <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:22px;letter-spacing:.06em;margin:0 0 12px">Takeo Ōshima<span class="name-roman">大島武生</span></h2>
+        <p style="font-size:13px;line-height:1.95;color:#26261F;margin:0 0 16px">Moved to Aizu in the winter of his senior year of university. He leads education and site development, bridging city students and rural farming.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="border:1px solid #D9C97E;background:#EFE49B;padding:26px 28px;margin-top:40px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;color:#93293C;margin-bottom:12px">ZEN-BU ＆ SHINDO</div>
+    <p style="font-size:13.5px;line-height:2.15;color:#26261F;margin:0;max-width:46em;text-wrap:pretty">SHINDO is a project run by ZEN-BU Inc. Co-creation partner agreements with partners and service contracts with field members are both concluded with ZEN-BU, and the financial statements for the project are published under ZEN-BU's name.</p>
+  </div>
+  <p style="margin:26px 0 0"><a class="card-link" href="zen-bu.html" style="font-size:13px;letter-spacing:.06em;color:#4A1520;border-bottom:1px solid #CBB96A;padding-bottom:3px">About ZEN-BU <span aria-hidden="true">→</span></a></p>
+</div>
+
+
+<div style="max-width:1180px;margin:0 auto;padding:76px 60px 20px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">LOCAL PROS ── Local professionals</div>
+  <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 16px">The people whose skills support the field.</h2>
+  <p style="font-size:13.5px;line-height:2.15;color:#26261F;margin:0 0 30px">In these snowy highlands, it is local skill that makes both life and business possible.</p>
+  <div class="photo-figures" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:34px">
+    <figure style="margin:0">
+      <div style="aspect-ratio:4/3;background-image:url('pro-shiki.jpg');background-size:cover;background-position:center;border:1px solid #D9C97E"></div>
+      <figcaption class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;letter-spacing:.06em;margin-top:10px">Shiki Co., Ltd. ── Raising a traditional timber frame</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div style="aspect-ratio:4/3;background-image:url('pro-tradeon.jpg');background-size:cover;background-position:center;border:1px solid #D9C97E"></div>
+      <figcaption class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;letter-spacing:.06em;margin-top:10px">Trade-On Co., Ltd. ── Building a roller crimper</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div style="aspect-ratio:4/3;background-image:url('pro-daiku80.jpg');background-size:cover;background-position:center;border:1px solid #D9C97E"></div>
+      <figcaption class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;letter-spacing:.06em;margin-top:10px">Daiku Hachimaru ── Fitting out the shared lodge in Onogawa</figcaption>
+    </figure>
+  </div>
+  <div style="display:grid;grid-template-columns:280px 1fr;gap:0">
+    <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:17px;letter-spacing:.05em;padding:20px 0;border-top:1px solid #B9A65A">Shiki Co., Ltd. and<br>some of Aizu's finest craftsmen<span style="font-family: &quot;Zen Kaku Gothic New&quot;, sans-serif; font-size: 11.5px; color: rgb(106, 106, 93); letter-spacing: 0.1em; display: block; margin-top: 5px;">Aizumisato</span></div>
+    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:20px 0;border-top:1px solid #B9A65A">A builder that uses Aizu's traditional construction methods and naturally dried timber to create houses that keep their residents healthy. Shiki designed and built Rikū. The site is led by a rare team of craftsmen, including master carpenter Masakuni Hoshi, who has built more than 700 houses since his mid-teens.</div>
+    <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:17px;letter-spacing:.05em;padding:20px 0;border-top:1px solid #CBB96A">Trade-On Co., Ltd.<span style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:11.5px;color:#6A6A5D;letter-spacing:.1em;display:block;margin-top:5px">Aizumisato</span></div>
+    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:20px 0;border-top:1px solid #CBB96A">From developing farm machinery to sourcing, repairing, and installing used equipment.</div>
+    <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:17px;letter-spacing:.05em;padding:20px 0;border-top:1px solid #CBB96A">Daiku Hachimaru and<br>the craftsmen of Oku-Aizu<span style="font-family: &quot;Zen Kaku Gothic New&quot;, sans-serif; font-size: 11.5px; color: rgb(106, 106, 93); letter-spacing: 0.1em; display: block; margin-top: 5px;">Kaneyama (Oku-Aizu)</span></div>
+    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:20px 0;border-top:1px solid #CBB96A">The young carpenters from Kaneyama who are building the shared lodge in Onogawa, Showa Village.</div>
+    <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:17px;letter-spacing:.05em;padding:20px 0;border-top:1px solid #CBB96A;border-bottom:1px solid #CBB96A">Veteran natural and organic farmers,<br>civil engineering professionals<span style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:11.5px;color:#6A6A5D;letter-spacing:.1em;display:block;margin-top:5px">Across Japan</span></div>
+    <div style="font-size:13.5px;line-height:2;color:#26261F;padding:20px 0;border-top:1px solid #CBB96A;border-bottom:1px solid #CBB96A">They help us clear overgrown, abandoned farmland, and share their experience and wisdom in natural farming.</div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:70px 60px 20px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">PARTNERS ── Companions across Japan</div>
+  <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 16px">From all over Japan, each from their own place.</h2>
+  <p style="font-size:13.5px;line-height:2.15;color:#26261F;margin:0 0 30px">More than 35 partners from across Japan are involved.</p>
+  <figure style="margin:0 0 34px">
+    <img src="../partners-nomadics.jpg" alt="Members of Nomadics Inc. restoring farmland in Showa Village" style="display:block;width:100%;height:auto;border:1px solid #D9C97E">
+    <figcaption class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;letter-spacing:.06em;margin-top:10px">With the team from Nomadics Inc. ── Restoring farmland in Onogawa, Showa Village (clearing stones)</figcaption>
+  </figure>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D9C97E;border:1px solid #D9C97E">
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">Ayako Mogi & Naoya Sasaki</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">Produced our short film. Mogi moved to Aizu in 2026.</p></div>
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">Hikaru Kawabata</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">Supports our web and podcast communications, and works in the field too.</p></div>
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">Katsuko Toyoshima</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">Plans and runs our social media.</p></div>
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">Lemon House</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">Comes to help on the farm a few times a year, in groups of about ten.</p></div>
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">Nomadics Inc.</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">The whole company takes part on the ground. In spring 2026, 65 people came together.</p></div>
+    <div style="background:#F6EEB6;padding:26px 24px"><h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0 0 10px;letter-spacing:.05em">And many others</h3><p style="font-size:12.5px;line-height:1.9;color:#45453C;margin:0">Natural and organic farmers, doctors, inventors, and small business owners from across Japan.</p></div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:70px 60px 88px">
+  <div style="border:1px solid #D9C97E;padding:44px 48px">
+    <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">VILLAGE ── The villagers</div>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:26px;letter-spacing:.06em;line-height:1.7;margin:0 0 18px">Creating the village's next chapter together.</h2>
+    <p style="font-size:13.5px;line-height:2.15;color:#26261F;margin:0 0 24px;max-width:48em">Together with the villagers who have sustained this community, we are building a future that continues from the life, water, land, and shared labor that already exist here.</p>
+    <div style="margin-bottom:26px">
+      <img src="../village-onogawa.jpg" alt="Kōta Uno with residents of Onogawa" style="display:block;width:100%;height:auto;border:1px solid #D9C97E">
+      <p class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;letter-spacing:.06em;margin:12px 0 0">With the residents of Onogawa ／ Onogawa, Showa Village</p>
+    </div>
+    <a href="recruit.html" style="font-size:13px;border-bottom:1px solid #CBB96A;padding-bottom:3px">Join us (Recruit) →</a>
+  </div>
+</div>
+
+<div class="base-section" style="background:#EFE49B;border-top:1px solid #D9C97E;border-bottom:1px solid #D9C97E;margin-top:70px">
+  <div class="base-section__inner" style="max-width:1180px;margin:0 auto;padding:76px 60px">
+    <div class="base-section__label" style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:22px">BASE ── The ground we practice on</div>
+    <h2 class="base-section__title" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:28px;letter-spacing:.06em;line-height:1.7;margin:0 0 18px">Where ZEN-BU was born: <span class="keep-together">Munokai Natural Farm</span></h2>
+    <p class="base-section__lead" style="font-size:13.5px;line-height:2.15;color:#26261F;max-width:46em;margin:0 0 34px;text-wrap:pretty">Founded 21 years ago, the largest JAS-certified organic farm in Fukushima, and the source of SHINDO's practical knowledge. Both founders, Uno and Ōshima, started out by learning to farm here.</p>
+    <div class="base-section__layout" style="display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:start">
+      <div style="border:1px solid #CBB96A;background:#F6EEB6;padding:10px">
+        <a class="photo-link" href="https://munokai.com/" target="_blank" rel="noopener" aria-label="Visit the Munokai Natural Farm website"><div style="aspect-ratio:3/2;background-image:url('muno-group.jpg');background-size:cover;background-position:center 38%"></div></a>
+        <p class="photo-caption" style="font-size:11.5px;line-height:1.8;color:#6A6A5D;margin:12px 4px 4px;letter-spacing:.06em">Members of Munokai Natural Farm and SHINDO ／ at our base, Rikū</p>
+      </div>
+      <div class="base-member-list">
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">Rice and seedlings</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">Terumasa Okamoto</h3>
+          </div>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">In his twelfth year of farming. Stabilized seedling production and expanded the cultivated area.</p>
+        </div>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">Production and management</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">Takuya Ueno</h3>
+          </div>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">Left a company in Tokyo three years ago for Aizu. Responsible for rice cultivation and farm management at Munokai.</p>
+        </div>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">Vegetables</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">Nae Satō</h3>
+          </div>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">Moved from Sapporo in 2025. Runs vegetable growing at Munokai.</p>
+        </div>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">Machinery and no-till</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">Masataka Saitō</h3>
+          </div>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">Formerly at a car dealership. Responsible for no-till cultivation and machinery development.</p>
+        </div>
+        <div class="base-member" style="display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid #CBB96A;border-bottom:1px solid #CBB96A">
+          <div class="base-member__identity">
+            <span class="base-member__role" style="display:block;font-size:11px;letter-spacing:.14em;color:#93293C;margin-bottom:6px">Meals for the team</span>
+            <h3 class="base-member__name" style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:18px;margin:0;letter-spacing:.06em">Shiho Koike</h3>
+          </div>
+          <p style="font-size:12.5px;line-height:2;color:#45453C;margin:0">Twelve years of growing vegetables. Continues to experiment with no-till cultivation.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div style="background:#4A1520;color:#F6EEB6;padding:88px 60px;text-align:center">
+  <p style="font-family:'Zen Old Mincho',serif;font-size:28px;line-height:1.95;letter-spacing:.12em;margin:0 0 36px">We are looking for people to walk the next stretch with us.</p>
+  <a href="recruit.html" style="display:inline-block;padding:15px 34px;border:1px solid #8E5450;color:#F6EEB6;font-size:13px;letter-spacing:.16em">See the three ways to take part</a>
+</div>
+
+<div style="border-top:1px solid #D9C97E;background:#EFE49B">
+  <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
+    <div>
+      <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>
+      <p style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;line-height:2;letter-spacing:.09em;margin:0 0 26px">Building the foundations of life in Aizu and Oku-Aizu.<br>A path toward a new kind of abundance.</p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0 0 8px;line-height:2">Follow ── <a href="https://www.youtube.com/@shindoproject" target="_blank" rel="noopener">YouTube</a> ／ <a href="https://www.instagram.com/shindo_newpath/" target="_blank" rel="noopener">Instagram</a></p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0;line-height:2">Published by ZEN-BU Inc.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px;letter-spacing:.1em">
+      <a href="index.html" style="border-top:1px solid #CBB96A;padding-top:10px">Home</a>
+      <a href="about.html" style="border-top:1px solid #CBB96A;padding-top:10px">About ／ What is SHINDO</a>
+      <a href="zen-bu.html" style="border-top:1px solid #CBB96A;padding-top:10px">ZEN-BU ／ The company behind SHINDO</a>
+      <a href="people.html" style="border-top:1px solid #CBB96A;padding-top:10px">People ／ Who we are</a>
+      <a href="projects.html" style="border-top:1px solid #CBB96A;padding-top:10px">Projects ／ What we do</a>
+      <a href="partnership.html" style="border-top:1px solid #CBB96A;padding-top:10px">Partnership ／ Support with funding</a>
+      <a href="recruit.html" style="border-top:1px solid #CBB96A;padding-top:10px">Recruit ／ Join us</a>
+      <a href="contact.html" style="border-top:1px solid #CBB96A;padding-top:10px">Contact ／ Get in touch</a>
+      <a href="privacy-policy.html" style="border-top:1px solid #CBB96A;padding-top:10px">Privacy ／ Privacy policy</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="../design.js?v=31" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
+</body>
+</html>

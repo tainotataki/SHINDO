@@ -1,0 +1,48 @@
+/* =========================================================
+   SHINDO ── 英語ページ専用の調整
+
+   en/*.html だけが読み込む。日本語前提のレイアウトのうち、
+   英語の文字組みに合わない箇所だけを上書きする。
+   ========================================================= */
+
+/* トップの見出しは日本語では縦書きだが、英語は横書きに */
+html[lang="en"] .report-hero h1,
+html[lang="en"] .report-hero__vertical-meta {
+  writing-mode: horizontal-tb !important;
+}
+html[lang="en"] .report-hero h1 {
+  font-size: clamp(38px, 4.4vw, 64px) !important;
+  line-height: 1.25 !important;
+  letter-spacing: .01em !important;
+  max-width: 11em;
+}
+html[lang="en"] .report-hero__vertical-meta {
+  margin: 18px 0 0 !important;
+  max-width: 34em;
+  letter-spacing: .06em !important;
+}
+/* 日本語では見出し（縦書き）と副題（縦書き）が左右に並ぶ2列組み。
+   英語は横書きなので、どちらも全幅にして上下に置く。 */
+html[lang="en"] .report-hero h1,
+html[lang="en"] .report-hero__vertical-meta {
+  grid-column: 1 / -1;
+}
+
+/* 英語は字間を詰めたほうが読みやすい */
+html[lang="en"] body { letter-spacing: 0; }
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3 { letter-spacing: .01em !important; }
+
+/* 5つの柱の丸印。英単語は漢字一字より長いので小さめに */
+html[lang="en"] body.redesign.page-about .pillar-circle > span {
+  font-size: 11px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.1 !important;
+}
+@media (max-width: 640px) {
+  html[lang="en"] body.redesign.page-about .pillar-circle > span { font-size: 10px !important; }
+}
+
+/* 日本語の「一文字ずつ均等に割り付け」は英語では崩れるので解除 */
+html[lang="en"] [style*="text-align-last"] { text-align-last: auto !important; }

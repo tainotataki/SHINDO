@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="../design.js?v=31" as="script">
+<title>Contact ／ Get in touch ── SHINDO</title>
+<meta name="description" content="Contact form for SHINDO and ZEN-BU Inc. Use it for media inquiries, site visits, collaboration proposals, and questions about our work.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F6EEB6;color:#1A1A16;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4A1520;text-decoration:none}
+a:hover{color:#93293C}
+</style>
+<link rel="stylesheet" href="../responsive.css">
+<link rel="stylesheet" href="../design.css?v=29">
+<link rel="stylesheet" href="../report.css?v=4">
+<link rel="alternate" hreflang="ja" href="https://shindoproject.com/contact">
+<link rel="alternate" hreflang="en" href="https://shindoproject.com/en/contact">
+<link rel="alternate" hreflang="x-default" href="https://shindoproject.com/contact">
+<link rel="stylesheet" href="../en.css?v=2">
+</head>
+<body>
+<div style="background:#F6EEB6;color:#1A1A16">
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(246,238,182,.96);backdrop-filter:blur(6px);border-bottom:1px solid #D9C97E">
+  <div style="display:flex;align-items:center;gap:28px;padding:20px 60px;max-width:1180px;margin:0 auto">
+    <input type="checkbox" id="navtoggle" class="nav-toggle" aria-label="Open or close the menu">
+    <label for="navtoggle" class="nav-burger"><span></span><span></span><span></span></label>
+    <a class="site-logo" href="/en/" aria-label="SHINDO home"><span style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:22px;letter-spacing:.42em;line-height:1">SHINDO</span><span style="font-size:10px;letter-spacing:.2em;color:#6A6A5D;padding-left:2px;line-height:1.7">A path toward<br>a new kind of abundance</span></a>
+    <div class="site-nav" style="margin-left:auto;display:flex;gap:30px;font-size:12.5px;letter-spacing:.12em;color:#45453C">
+      <a href="about.html">About</a>
+      <a href="people.html">People</a>
+      <a href="projects.html">Projects</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="recruit.html">Recruit</a>
+      <a class="lang-switch" href="/contact" hreflang="ja" lang="ja" aria-label="日本語">JA</a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:76px 60px 48px">
+  <div style="font-size:10.5px;letter-spacing:.3em;color:#93293C;margin-bottom:26px">CONTACT ── Get in touch</div>
+  <h1 style="font-family:'Zen Old Mincho',serif;font-weight:500;color:#4A1520;font-size:40px;line-height:1.55;letter-spacing:.04em;margin:0 0 28px">Get in touch</h1>
+  <div style="width:64px;height:1px;background:#B9A65A;margin-bottom:28px"></div>
+  <p style="font-size:16px;line-height:2.15;letter-spacing:.05em;color:#26261F;max-width:38em;margin:0;text-wrap:pretty">Media inquiries, site visits, collaboration proposals, questions about our work — feel free to write to us. We will review your message and get back to you.</p>
+</div>
+
+<div style="border-top:1px solid #D9C97E;background:#F6EEB6">
+  <div style="max-width:1180px;margin:0 auto;padding:64px 60px 88px">
+
+    <form class="entry-form" novalidate>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+        <label class="ef-field">
+          <span class="ef-label">Name<i class="ef-req">Required</i></span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="ef-field">
+          <span class="ef-label">Email address<i class="ef-req">Required</i></span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+      </div>
+
+      <label class="ef-field">
+        <span class="ef-label">A short introduction<i class="ef-any">Optional</i></span>
+        <input type="text" name="intro" autocomplete="off" placeholder="Your organization or role, how you heard about SHINDO, etc.">
+      </label>
+
+      <label class="ef-field">
+        <span class="ef-label">Subject<i class="ef-req">Required</i></span>
+        <input type="text" name="subject" required autocomplete="off" placeholder="e.g. Media inquiry">
+      </label>
+
+      <label class="ef-field">
+        <span class="ef-label">Message<i class="ef-req">Required</i></span>
+        <textarea name="message" rows="7" required placeholder="Please write your question or request."></textarea>
+      </label>
+
+      <input type="text" name="website" class="ef-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="ef-submit">
+        <button type="submit">Send</button>
+        <p class="ef-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="ef-note">The information you send is used only to reply to your inquiry. See our<a href="privacy-policy.html">privacy policy</a>for details on how it is handled. To apply as a resident or commuting member, please use the<a href="recruit.html#r-contact">form on the Recruit page</a>.</p>
+    </form>
+  </div>
+</div>
+
+<div style="border-top:1px solid #D9C97E;background:#EFE49B">
+  <div style="max-width:1180px;margin:0 auto;padding:56px 60px 64px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end">
+    <div>
+      <div style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:30px;letter-spacing:.42em;line-height:1;margin-bottom:18px">SHINDO</div>
+      <p style="font-family:'Zen Old Mincho',serif;color:#4A1520;font-size:20px;line-height:2;letter-spacing:.09em;margin:0 0 26px">Building the foundations of life in Aizu and Oku-Aizu.<br>A path toward a new kind of abundance.</p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0 0 8px;line-height:2">Follow ── <a href="https://www.youtube.com/@shindoproject" target="_blank" rel="noopener">YouTube</a> ／ <a href="https://www.instagram.com/shindo_newpath/" target="_blank" rel="noopener">Instagram</a></p>
+      <p style="font-size:12px;color:#45453C;letter-spacing:.08em;margin:0;line-height:2">Published by ZEN-BU Inc.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px;letter-spacing:.1em">
+      <a href="index.html" style="border-top:1px solid #CBB96A;padding-top:10px">Home</a>
+      <a href="about.html" style="border-top:1px solid #CBB96A;padding-top:10px">About ／ What is SHINDO</a>
+      <a href="zen-bu.html" style="border-top:1px solid #CBB96A;padding-top:10px">ZEN-BU ／ The company behind SHINDO</a>
+      <a href="people.html" style="border-top:1px solid #CBB96A;padding-top:10px">People ／ Who we are</a>
+      <a href="projects.html" style="border-top:1px solid #CBB96A;padding-top:10px">Projects ／ What we do</a>
+      <a href="partnership.html" style="border-top:1px solid #CBB96A;padding-top:10px">Partnership ／ Support with funding</a>
+      <a href="recruit.html" style="border-top:1px solid #CBB96A;padding-top:10px">Recruit ／ Join us</a>
+      <a href="contact.html" style="border-top:1px solid #CBB96A;padding-top:10px">Contact ／ Get in touch</a>
+      <a href="privacy-policy.html" style="border-top:1px solid #CBB96A;padding-top:10px">Privacy ／ Privacy policy</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var form = document.querySelector('.entry-form');
+  if (!form) return;
+  var status = form.querySelector('.ef-status');
+  var button = form.querySelector('button[type="submit"]');
+  var fields = [].slice.call(form.querySelectorAll('input[required], textarea[required], select[required]'));
+  status.id = 'entry-form-status';
+
+  function say(kind, html) {
+    status.className = 'ef-status' + (kind ? ' is-' + kind : '');
+    status.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+    status.innerHTML = html;
+  }
+
+  function markInvalid(field, invalid) {
+    if (invalid) {
+      field.setAttribute('aria-invalid', 'true');
+      field.setAttribute('aria-describedby', status.id);
+    } else {
+      field.removeAttribute('aria-invalid');
+      if (field.getAttribute('aria-describedby') === status.id) field.removeAttribute('aria-describedby');
+    }
+  }
+
+  fields.forEach(function (field) {
+    field.addEventListener('input', function () { if (field.checkValidity()) markInvalid(field, false); });
+    field.addEventListener('change', function () { if (field.checkValidity()) markInvalid(field, false); });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.classList.add('ef-tried');
+
+    if (!form.checkValidity()) {
+      say('error', 'Some required fields are empty. Please check the form.');
+      fields.forEach(function (field) { markInvalid(field, !field.checkValidity()); });
+      var bad = form.querySelector(':invalid');
+      if (bad) bad.focus();
+      return;
+    }
+
+    fields.forEach(function (field) { markInvalid(field, false); });
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+    button.disabled = true;
+    say('', 'Sending…');
+
+    fetch('/api/inquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; })
+              .then(function (j) { return { ok: r.ok && j.ok === true }; });
+    }).then(function (res) {
+      button.disabled = false;
+      if (!res.ok) throw new Error('failed');
+      form.reset();
+      form.classList.remove('ef-tried');
+      say('ok', 'Sent. We will review your message and get back to you.');
+    }).catch(function () {
+      button.disabled = false;
+      say('error', 'We could not send your message. Please email us directly at <a href="mailto:official@zen-bu.co">official@zen-bu.co</a>.');
+    });
+  });
+})();
+</script>
+<script src="../design.js?v=31" onload="document.documentElement.classList.remove('js')" onerror="document.documentElement.classList.remove('js')"></script>
+</body>
+</html>

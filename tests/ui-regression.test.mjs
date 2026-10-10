@@ -142,3 +142,18 @@ test('vertical homepage typography becomes horizontal on mobile', () => {
   assert.match(homeReportCss, /@media \(max-width:\s*700px\)[\s\S]*\.report-hero h1\s*\{[^}]*writing-mode:\s*horizontal-tb/);
   assert.match(homeReportCss, /@media \(max-width:\s*700px\)[\s\S]*\.report-hero__vertical-meta\s*\{[^}]*writing-mode:\s*horizontal-tb/);
 });
+
+test('english pages are generated from the japanese pages with no untranslated strings', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const root = new URL('..', import.meta.url);
+  const out = execFileSync('python3', ['tools/build-en.py', '--check'], { cwd: root, encoding: 'utf8' });
+  assert.match(out, /すべて翻訳済み/);
+  for (const page of ['index', 'about', 'people', 'projects', 'partnership', 'recruit', 'contact', 'privacy-policy', 'people-uno', 'zen-bu']) {
+    const ja = await readFile(new URL(`../${page}.html`, import.meta.url), 'utf8');
+    const en = await readFile(new URL(`../en/${page}.html`, import.meta.url), 'utf8');
+    assert.match(ja, /class="lang-switch" href="\/en\/?[a-z-]*"/, `${page}: 日本語ページに英語への切替がある`);
+    assert.match(en, /<html lang="en">/, `${page}: 英語ページの lang`);
+    assert.match(en, /class="lang-switch" href="\/[a-z-]*"/, `${page}: 英語ページに日本語への切替がある`);
+    assert.match(en, /href="\.\.\/en\.css/, `${page}: 英語専用CSSを読み込む`);
+  }
+});
