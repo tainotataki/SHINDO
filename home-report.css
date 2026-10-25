@@ -474,3 +474,26 @@ body.redesign .report-person .report-person__role {
   letter-spacing: .05em !important;
   color: var(--report-ink-70) !important;
 }
+
+/* ヨネヨネラジオの帯。人物索引と募集のあいだに置く細い章。 */
+.report-radio { padding-top: 0 !important; }
+.report-radio__grid {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: center;
+  padding: 36px 0;
+  border-top: 1px solid var(--report-ink);
+  border-bottom: 1px solid var(--report-line);
+}
+.report-radio__art { display: block; width: 124px; }
+.report-radio__art img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; filter: saturate(.85); }
+.report-radio__title { margin: 8px 0 10px; font-size: 26px; }
+.report-radio__lead { margin: 0; max-width: 40em; font-size: 15px !important; }
+.report-radio__cta { margin: 0; white-space: nowrap; }
+@media (max-width: 700px) {
+  .report-radio__grid { grid-template-columns: 96px minmax(0, 1fr); gap: 22px; }
+  .report-radio__art { width: 96px; }
+  .report-radio__cta { grid-column: 1 / -1; }
+  .report-radio__title { font-size: 22px; }
+}

@@ -148,7 +148,7 @@ test('english pages are generated from the japanese pages with no untranslated s
   const root = new URL('..', import.meta.url);
   const out = execFileSync('python3', ['tools/build-en.py', '--check'], { cwd: root, encoding: 'utf8' });
   assert.match(out, /すべて翻訳済み/);
-  for (const page of ['index', 'about', 'people', 'projects', 'partnership', 'recruit', 'contact', 'privacy-policy', 'people-uno', 'zen-bu']) {
+  for (const page of ['index', 'about', 'people', 'projects', 'partnership', 'recruit', 'contact', 'privacy-policy', 'people-uno', 'zen-bu', 'radio']) {
     const ja = await readFile(new URL(`../${page}.html`, import.meta.url), 'utf8');
     const en = await readFile(new URL(`../en/${page}.html`, import.meta.url), 'utf8');
     assert.match(ja, /class="lang-switch" href="\/en\/?[a-z-]*"/, `${page}: 日本語ページに英語への切替がある`);
