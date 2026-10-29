@@ -21,7 +21,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 I18N = ROOT / "i18n"
 OUT = ROOT / "en"
 PAGES = ["index", "about", "people", "projects", "partnership",
-         "recruit", "contact", "privacy-policy", "people-uno", "zen-bu", "radio"]
+         "recruit", "contact", "privacy-policy", "people-uno", "zen-bu", "radio", "riku"]
 ASSET_EXT = r"(?:css|js|jpg|jpeg|png|svg|webp|ico|mp4|pdf)"
 ATTRS = ("alt", "placeholder", "aria-label", "title", "content")
 
